@@ -25,7 +25,7 @@ To get started with the Shikharji Web App, follow these steps:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/shikharji-web-app.git
+   git clone https://github.com/shikharji/frontend.git
    ```
 
 2. **Install dependencies**:
@@ -41,7 +41,7 @@ To get started with the Shikharji Web App, follow these steps:
    ```
 
 4. **Explore the app**:
-   - Open your browser and navigate to `http://localhost:3000` to view the app.
+   - Open your browser and navigate to `https://srishikharji.vercel.app/` to view the app.
 
 ## Technologies Used
 
