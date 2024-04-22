@@ -1,0 +1,279 @@
+/* hero section */
+#explore-wrapper section {
+  padding: 60px;
+}
+.explore-banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(https://cdn.pixabay.com/photo/2017/11/03/18/26/man-2915187_1280.jpg);
+  background-size: cover;
+}
+
+.explore-banner .explore-content {
+  max-width: 900px;
+  text-align: center;
+  letter-spacing: 1px;
+  word-spacing: 1.2px;
+}
+
+.explore-banner .explore-content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+.explore-banner .explore-content p {
+  font-size: 1.2em;
+  color: #fff;
+  margin: 1rem 0;
+}
+
+.explore-btn {
+  font-size: 1.5em;
+  color: #fff;
+  background: #ff0157;
+  display: inline-block;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.explore-btn:hover {
+  letter-spacing: 5px;
+}
+
+.explore-row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.explore-row .explore-col50 {
+  position: relative;
+  width: 48%;
+}
+
+.explore-titeText {
+  font-size: 2.6em;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.explore-col50 p {
+  letter-spacing: 1.2px;
+}
+
+.explore-imgbx {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.explore-imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.explore-imgbx:hover img {
+  transform: scale(1.1);
+}
+
+.explore-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.explore-text {
+  padding: 15px 0 5px;
+  /* text-align: justify; */
+}
+
+@media (max-width: 991px) {
+  .explore-banner .explore-content h2 {
+    font-size: 3em;
+    color: #fff;
+  }
+  .explore-row {
+    flex-direction: column;
+  }
+  .explore-row .explore-col50 {
+    position: relative;
+    width: 100%;
+  }
+  .explore-row .explore-col50 .explore-imgbx {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .explore-titeText {
+    font-size: 1.8em;
+    text-align: center;
+  }
+  .explore-expert .explore-content {
+    margin-top: 20px;
+  }
+}
+
+/* hero section */
+
+/* card */
+#hover-card {
+  font-family: "Poppins", sans-serif;
+  padding: 8rem 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background: #ebe7e0; */
+}
+
+#hover-card h1 {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-size: 2.75rem;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 0px #ebe7e0, -1px 1px 0px #ebe7e0;
+}
+#hover-card h1:after {
+  content: "";
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  background: #eb7e47;
+  height: 12px;
+  width: 100%;
+}
+.hover-card-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+.hoverbox {
+  position: relative;
+  /* background: rgba(46, 49, 56, 0.9); */
+  padding: 32px 28px;
+  overflow: hidden;
+  border-radius: 0px;
+  transition: 0.35s ease-in;
+}
+.hoverbox:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+  width: 0%;
+  height: 0.35rem;
+  background: #eb7e47;
+  transition: 0.5s ease;
+}
+.hoverbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.5s ease;
+  filter: blur(1) saturate(0);
+}
+.hoverbox h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+.hoverbox p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.125rem;
+  font-weight: 300;
+}
+.hoverbox a {
+  position: relative;
+  color: #fff;
+  text-decoration: unset;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: color 0.35s;
+}
+.hoverbox a:after {
+  content: ">";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  border: 2px solid #fff 5;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: all 0.35s, color 0s;
+}
+.hoverbox a:before {
+  content: "";
+  position: absolute;
+  width: 0rem;
+  height: 0.125rem;
+  background: #fff;
+  right: 0.75rem;
+  top: calc(50% - 0.025rem);
+  transition: 0.35s;
+}
+.hoverbox:hover {
+  background: rgba(41, 48, 61, 0.75);
+  box-shadow: 0px 16px 24px rgba(0, 15, 0, 0.1);
+}
+.hoverbox:hover:after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+.hoverbox:hover a:after {
+  border-color: transparent;
+  margin-left: 2rem;
+  transition: all 0.35s, color 0s;
+}
+.hoverbox:hover a:before {
+  width: 1.5rem;
+  background: #eb7e47;
+}
+.hoverbox:hover a {
+  color: #eb7e47;
+}
+.hoverbox:hover a:hover {
+  color: #ed8e5e;
+}
+.hoverbox:hover a:hover:before {
+  background: #ed8e5e;
+}
+.hoverbox:hover img {
+  transform: scale(1.2) rotate(-5deg);
+  filter: blur(1) saturate(0);
+}
+
+/* card */

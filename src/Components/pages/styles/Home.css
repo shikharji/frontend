@@ -1,0 +1,289 @@
+/* Home hero */
+.CrossFade-intro {
+  position: relative;
+  margin: 2em;
+  padding: 0.2em 0.6em;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2em;
+  max-width: 26em;
+}
+.CrossFade-intro h1 {
+  margin-bottom: 0.5em;
+  line-height: 1;
+  font-weight: 100;
+}
+#CrossFade {
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  height: 89vh;
+  overflow: hidden;
+  position: relative;
+  font: 100 50%/1.5 "Roboto", sans-serif;
+}
+#CrossFade img {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+  background: #000;
+  backface-visibility: hidden;
+  opacity: 0;
+  transform: scale(1.4) rotate(12deg);
+  animation: CrossFade 24s infinite;
+}
+#CrossFade img:nth-child(3) {
+  animation-delay: 6s;
+}
+#CrossFade img:nth-child(2) {
+  animation-delay: 12s;
+}
+#CrossFade img:nth-child(1) {
+  animation-delay: 18s;
+}
+@-moz-keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@-o-keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+@keyframes CrossFade {
+  25% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+  40% {
+    opacity: 0;
+  }
+}
+
+/* Home hero */
+
+/* home 3 nav start*/
+
+.expand-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+@media only screen and (min-width: 120px) and (max-width: 780px) {
+  .expand-container {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.expand-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: flex 0.5s ease;
+  position: relative;
+}
+
+.expand-section .expand-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color 0.8s ease;
+}
+
+.expand-section .expand-content {
+  z-index: 2;
+}
+.expand-content h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.expand-section:hover {
+  flex: 2;
+}
+.expand-section:hover h1 {
+  color: black;
+}
+.expand-section:hover .expand-overlay {
+  opacity: 0;
+}
+
+#shikharji {
+  background-image: url(https://1.bp.blogspot.com/-6_3INikYDW8/XEbzjQ5owyI/AAAAAAAAAzs/AU-PzF0pcZktUPafKD-Ga0x5Led1u5eRgCEwYBhgL/s1600/Parasnath-hill-hike-jain-pilgrimage-7.JPG);
+}
+
+#explore {
+  background-image: url(https://i.ytimg.com/vi/oFd92AxajiE/maxresdefault.jpg);
+}
+
+#jainism {
+  background-image: url(https://jainpuja.com/jain-puja/images/article-images/Jain-dharm-ko-jane.jpg);
+}
+/* home 3 nav end*/
+
+/* home quotes */
+.Quotes-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 991px) {
+  .Quotes-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.Quotes-hero .Quotes-content {
+  display: flex;
+  align-items: center;
+  padding: 60px;
+}
+@media screen and (max-width: 991px) {
+  .Quotes-hero .Quotes-content {
+    padding: 40px;
+    align-items: flex-end;
+    height: 75vh;
+  }
+}
+
+.Quotes-hero .Quotes-content blockquote {
+  font-size: 3rem;
+  font-style: italic;
+  color: #716e6e;
+  line-height: 1.375;
+  position: relative;
+}
+@media screen and (max-width: 991px) {
+  .Quotes-hero .Quotes-content blockquote {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Quotes-hero .Quotes-content blockquote {
+    font-size: 2rem;
+  }
+}
+.Quotes-hero .Quotes-content blockquote:before {
+  font-family: Arial;
+  content: "\201C";
+  color: #78c0a8;
+  font-size: 8rem;
+  position: absolute;
+  left: -5px;
+  top: -90px;
+}
+@media screen and (max-width: 991px) {
+  .Quotes-hero .Quotes-content blockquote:before {
+    font-size: 6rem;
+    top: -60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Quotes-hero .Quotes-content blockquote:before {
+    font-size: 4.2rem;
+    top: -45px;
+  }
+}
+.Quotes-hero .Quotes-content blockquote:after {
+  content: "";
+}
+.Quotes-hero .Quotes-content blockquote span {
+  display: block;
+  color: #555;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-top: 2em;
+  position: relative;
+  margin-left: 3.5em;
+}
+.Quotes-hero .Quotes-content blockquote span:before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #555;
+  left: -60px;
+  top: 50%;
+  display: block;
+}
+.Quotes-hero .Quotes-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 35vh 30vh 35vh;
+}
+@media screen and (max-width: 991px) {
+  .Quotes-hero .Quotes-images {
+    height: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .Quotes-hero .Quotes-images {
+    grid-template-rows: 20vh 10vh 20vh;
+  }
+}
+.Quotes-hero .Quotes-images .Quotes-imgBox {
+  position: relative;
+  width: 100%;
+}
+.Quotes-hero .Quotes-images .Quotes-imgBox:nth-child(1) {
+  grid-row: span 2;
+  background: red;
+}
+.Quotes-hero .Quotes-images .Quotes-imgBox:nth-child(2) {
+  background: yellow;
+}
+.Quotes-hero .Quotes-images .Quotes-imgBox:nth-child(3) {
+  background: green;
+  grid-row: span 2;
+}
+.Quotes-hero .Quotes-images .Quotes-imgBox:nth-child(4) {
+  background: blue;
+}
+.Quotes-hero .Quotes-images .Quotes-imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media only screen and (max-height: 600px) {
+  .Quotes-content {
+    min-height: 350px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .Quotes-hero .Quotes-content blockquote {
+    font-size: 5rem;
+  }
+}
+
+/* home quotes */

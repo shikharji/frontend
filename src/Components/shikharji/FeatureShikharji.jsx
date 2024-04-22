@@ -1,0 +1,672 @@
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
+import Loading from "../elements/Loading";
+import FeatureHero from "../elements/FeatureHero";
+import scrollToSection from "../elements/ScroolToSection";
+
+export default function FeatureShikharji() {
+  const featureItem = [
+    {
+      title: "Jain Temples",
+      img: "https://cdn.pixabay.com/photo/2014/01/14/06/19/manas-mandir-244142_1280.jpg",
+      description:
+        "Showcase the famous Jain temples located on Parasnath Hill and their architectural beauty and spiritual significance.",
+      route: "temples",
+    },
+    {
+      title: "Wildlife and Nature",
+      img: "https://cdn.pixabay.com/photo/2015/10/12/15/46/animal-984573_1280.jpg",
+      description:
+        "Highlight the rich biodiversity of the Parasnath Wildlife Sanctuary, which surrounds Parasnath Hill, and the importance of conservation efforts in the region.",
+      route: "wildlife",
+    },
+    {
+      title: "Local Culture",
+      img: "https://images.pexels.com/photos/235731/pexels-photo-235731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      description:
+        "Explore the local culture and traditions of the region surrounding Shikharji, including the lifestyle of the indigenous tribes and their interactions with Jain pilgrims.",
+      route: "local",
+    },
+    {
+      title: "Hotels and Facilities",
+      img: "https://cdn.pixabay.com/photo/2021/02/03/00/10/receptionists-5975962_960_720.jpg",
+      description:
+        "Showcase the various hotels and facilities available to visitors, ranging from simple lodges to more luxurious options, and the facilities provided for pilgrims and tourists.",
+      route: "hotels",
+    },
+    {
+      title: "Tonks of Tirthankaras",
+      img: "https://images.unsplash.com/photo-1689586694421-ad8b77892692?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description:
+        "Explore the tonks (temples) dedicated to the Tirthankaras on Parasnath Hill and their historical and religious significance.",
+      route: "tonks",
+    },
+  ];
+
+  const maxLength = 150; // Maximum length for description
+  const truncatedDescription = (description) => {
+    if (description.length > maxLength) {
+      return description.slice(0, maxLength) + "..."; // Truncate and add "..."
+    } else {
+      return description; // Return the original description if it's shorter
+    }
+  };
+
+  return (
+    <>
+      <section id="shikharji-point" className="custom-properties-ftw">
+        <h3 className="head-small head-centered">
+          Explore More About Shikharji
+        </h3>
+      </section>
+      <main className="blogs-wrapper">
+        <section className="blogs-hero">
+          <h1>
+            Parasnath <br /> Mountain
+          </h1>
+          <article>
+            <p>
+              Explore the geological and ecological significance of Parasnath
+              Hill, the highest peak in Jharkhand and an important pilgrimage
+              site for Jains.
+            </p>
+            <Link className="blogs-a" to="parasnath">
+              Explore the Mountain!
+            </Link>
+          </article>
+        </section>
+        <section className="breweries" id="breweries">
+          <ul>
+            {featureItem.map((item) => (
+              <>
+                <li>
+                  <figure>
+                    <img
+                      src={item.img}
+                      alt="Several hands holding beer glasses"
+                    />
+                    <figcaption>
+                      <h3>{item.title}</h3>
+                    </figcaption>
+                  </figure>
+                  <p>{truncatedDescription(item.description)}</p>
+                  <Link className="blogs-a" to={item.route}>
+                    Visit this..
+                  </Link>
+                </li>
+              </>
+            ))}
+          </ul>
+        </section>
+      </main>
+    </>
+  );
+}
+
+export function Mountain() {
+  useEffect(() => {
+    document.title = "Parasnath - Shikharji";
+  }, []);
+  return (
+    <>
+      <section id="FixedBack-hero1" class="FixedBack-hero">
+        <div class="FixedBack-inner">
+          <div class="FixedBack-copy">
+            <h1>Parasnath Hill and Shikharji</h1>
+            <p>
+              Parasnath Hill, located in the state of Jharkhand, India, is one
+              of the most sacred places for Jains. It is believed to be the
+              place where twenty of the twenty-four Jain Tirthankaras attained
+              Moksha (liberation). Shikharji, the summit of Parasnath Hill, is
+              the holiest place in Jainism and is visited by thousands of
+              pilgrims every year.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="FixedBack-content">
+        <div class="FixedBack-inner">
+          <div class="FixedBack-copy">
+            <h1>Caves of Parasnath Hill</h1>
+            <p>
+              Parasnath Hill is known for its many caves, which are of great
+              historical and archaeological significance. These caves have been
+              used by ascetics and monks for meditation and shelter for
+              centuries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="FixedBack-hero2" class="FixedBack-hero">
+        <div class="FixedBack-inner">
+          <div class="FixedBack-copy">
+            <h1>An Inspiring Quote</h1>
+            <p>
+              "In every walk with nature, one receives far more than he seeks."
+              - John Muir
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="FixedBack-content">
+        <div class="FixedBack-inner">
+          <div class="FixedBack-copy">
+            <h1>An inspiring quote</h1>
+            <p>/-- file not found --/</p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+export function Temple() {
+  useEffect(() => {
+    document.title = "Temples - Shikharji";
+  }, []);
+  return (
+    <>
+      <section
+        class="LargeHero-hero LargeHero-image-as-background"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300')`,
+        }}
+      >
+        <div class="LargeHero-hero-container">
+          <p class="LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-400">
+            Mazgine cover hero style
+          </p>
+          <h1 class="LargeHero-hero-title LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-600">
+            This is a large hero section
+          </h1>
+          <Link
+            to="/"
+            class="LargeHero-hero-button LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-800"
+            title="Click to see more"
+          >
+            Click Me
+          </Link>
+        </div>
+      </section>
+      <section class="LargeHero-main-content">
+        <h2>This is the additional content</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+      </section>
+
+      <FeatureHero
+        title="Waana Explore all Jain Temples?"
+        route="temple/all"
+        desc="Experience the richness of Jain culture and spirituality by exploring all Jain temples, each a symbol of devotion and architectural splendor."
+        image="https://cdn.pixabay.com/photo/2014/01/14/06/18/manas-mandir-244140_1280.jpg"
+      />
+    </>
+  );
+}
+export function Tonks() {
+  const [tonks, setTonks] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    document.title = "Tonks - Shikharji";
+
+    const fetchTonks = async () => {
+      try {
+        const response = await axios.get(
+          "https://api-srishikharji.vercel.app/tonks"
+        );
+        setTonks(response.data.data);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching tonks:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchTonks();
+  }, []);
+
+  return (
+    <>
+      <h1 className="center-title">All Tonks in Parasnath Hill</h1>
+      {loading ? (
+        <Loading />
+      ) : (
+        <ul className="tonks-timeline">
+          {tonks.map((item, index) => (
+            <li key={index} className="">
+              <h3 className="ff-accent">
+                {item.rank}. {item.name}
+              </h3>
+              <p>{item.description}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
+  );
+}
+export function Wildlife() {
+  useEffect(() => {
+    document.title = "Wildlife and Nature - Shikharji";
+  }, []);
+  return (
+    <>
+      <header className="wildlife-container">
+        <h2 className="wildlife-title">
+          Discover the Wildlife and Nature of Parasnath Hill
+        </h2>
+        <p className="wildlife-description">
+          Explore the diverse flora and fauna that call Parasnath Hill their
+          home. From exotic birds to rare plants, immerse yourself in the beauty
+          of nature.
+        </p>
+        <Link
+          className="wildlife-cta"
+          onClick={() => scrollToSection("wildlife-and-nature")}
+        >
+          Explore More
+        </Link>
+      </header>
+
+      {/* Now the card start */}
+
+      <div class="WildlifeCard-grid">
+        <div class="WildlifeCard-card">
+          <div class="WildlifeCard-card__img">
+            <img
+              src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+              alt=""
+            />
+          </div>
+          <div class="WildlifeCard-card__contenido">
+            <h3 class="WildlifeCard-card__title">Nature's Beauty Unveiled</h3>
+            <div class="WildlifeCard-divider"></div>
+            <p class="WildlifeCard-card__text">
+              Explore the mesmerizing beauty of nature at Parasnath Hill. From
+              lush green forests to majestic waterfalls, immerse yourself in the
+              tranquility of the natural world.
+            </p>
+            <Link to="/" class="WildlifeCard-card__readbtn">
+              read more
+            </Link>
+          </div>
+        </div>
+        <div class="WildlifeCard-card">
+          <div class="WildlifeCard-card__img">
+            <img
+              src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Zm9vZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+              alt=""
+            />
+          </div>
+          <div class="WildlifeCard-card__contenido">
+            <h3 class="WildlifeCard-card__title">Wildlife Encounters</h3>
+            <div class="WildlifeCard-divider"></div>
+            <p class="WildlifeCard-card__text">
+              Get up close and personal with the diverse wildlife of Parasnath
+              Hill. From rare species of birds to exotic animals, experience the
+              wonders of the natural world.
+            </p>
+            <Link to="/" class="WildlifeCard-card__readbtn">
+              read more
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div id="wildlife-and-nature">Wildlife and more</div>
+    </>
+  );
+}
+export function Local() {
+  useEffect(() => {
+    document.title = "Local culture - Shikharji";
+  }, []);
+  return (
+    <>
+      <header className="local-header">
+        <h1 className="local-page-title">
+          Local Culture of Shikharji Parasnath Hill
+        </h1>
+      </header>
+      <main className="local-main">
+        <section className="local-section">
+          <figure className="local-image-container">
+            <img
+              src="https://cdn.pixabay.com/photo/2017/12/29/18/47/mountains-3048299_1280.jpg"
+              alt=""
+            />
+          </figure>
+          <article className="local-content">
+            <h2 className="local-section-title">
+              Traditional Practices and Customs
+            </h2>
+
+            <p>
+              Shikharji Parasnath Hill is steeped in rich cultural traditions
+              and practices. The local population follows a unique blend of
+              customs and rituals that have been passed down through
+              generations.
+            </p>
+            <p>
+              The hill is known for its vibrant festivals, including the annual
+              pilgrimage of Jain devotees who visit the temples and tonks
+              (shrines) located on the hill. These festivals are a celebration
+              of faith and spirituality, attracting pilgrims from all over the
+              world.
+            </p>
+            <p>
+              The local cuisine is also a reflection of the region's culture,
+              with dishes that are flavorful and diverse. Visitors to Shikharji
+              Parasnath Hill can indulge in local delicacies and experience the
+              unique flavors of the area.
+            </p>
+          </article>
+        </section>
+        <section className="local-section">
+          <figure className="local-image-container">
+            <img
+              src="https://cdn.pixabay.com/photo/2020/03/18/22/46/store-4945671_1280.jpg"
+              alt=""
+            />
+          </figure>
+          <article className="local-content">
+            <h2 className="local-section-title">Art and Handicrafts</h2>
+
+            <p>
+              The artisans of Shikharji Parasnath Hill are known for their
+              exquisite craftsmanship. They produce a wide range of traditional
+              handicrafts, including pottery, textiles, and woodwork, which are
+              highly sought after for their beauty and quality.
+            </p>
+            <p>
+              Visitors to the hill can explore local markets and shops to
+              purchase these unique handicrafts, providing them with a glimpse
+              into the region's rich artistic heritage.
+            </p>
+            <p>
+              Art is also an integral part of the local culture, with many
+              artists showcasing their talents through various forms such as
+              music, dance, and theater. These artistic expressions add to the
+              vibrant cultural tapestry of Shikharji Parasnath Hill.
+            </p>
+          </article>
+        </section>
+        <section className="local-section">
+          <figure className="local-image-container">
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/14/04/24/buffalo-1822581_1280.jpg"
+              alt=""
+            />
+          </figure>
+          <article className="local-content">
+            <h2 className="local-section-title">
+              Local Traditions and Festivals
+            </h2>
+
+            <p>
+              Shikharji Parasnath Hill is home to a rich tapestry of traditions
+              and festivals that reflect the cultural diversity of the region.
+              The local population celebrates various festivals throughout the
+              year, each characterized by its unique customs and rituals.
+            </p>
+            <p>
+              One of the most prominent festivals celebrated on the hill is the
+              Mahavir Jayanti, which marks the birth anniversary of Lord
+              Mahavir, the 24th Tirthankara of Jainism. The festival is
+              celebrated with great fervor and includes rituals, prayers, and
+              processions.
+            </p>
+            <p>
+              Other festivals celebrated on the hill include Paryushan, Diwali,
+              and Holi, which are celebrated with equal enthusiasm. These
+              festivals bring the local community together and provide an
+              opportunity to celebrate their cultural heritage.
+            </p>
+          </article>
+        </section>
+      </main>
+    </>
+  );
+}
+
+export function Hotels() {
+  useEffect(() => {
+    document.title = "Hotels and facility - Shikharji";
+  }, []);
+  const HotelsList = [
+    {
+      name: "Madhuban Guest House ",
+      rating: 3.7,
+      img: "https://cdn.pixabay.com/photo/2022/11/02/19/24/hotel-7565884_1280.jpg",
+    },
+    {
+      name: "Taran Bhavan",
+      rating: 3.7,
+      img: "https://cdn.pixabay.com/photo/2018/02/24/17/17/window-3178666_1280.jpg",
+    },
+    {
+      name: "Nirmala Niwas",
+      rating: 3.7,
+      img: "https://cdn.pixabay.com/photo/2016/04/15/11/48/hotel-1330850_1280.jpg",
+    },
+    {
+      name: "Dharm Mangal Vidyapith",
+      rating: 3.7,
+      img: "https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201_1280.jpg",
+    },
+  ];
+  return (
+    <>
+      {/* hero */}
+      <section class="facility-showcase-area" id="facility-showcase">
+        <div class="facility-showcase-container">
+          <h1 class="facility-main-title" id="facility-home">
+            Hotel & Facility
+          </h1>
+
+          <p>
+            Experience luxury and comfort with our top-notch hotels and
+            facilities.
+          </p>
+          <Link
+            onClick={() => scrollToSection("all-hotels-menu")}
+            class="facility-btn facility-btn-primary"
+          >
+            Explore hotels
+          </Link>
+        </div>
+      </section>
+
+      <section id="facility-about">
+        <div class="facility-about-wrapper facility-container">
+          <div class="facility-about-text">
+            <p class="facility-small">About Us</p>
+            <h2>We've been providing exceptional services for 10 years</h2>
+            <p>
+              At Eat Right Food, we pride ourselves on providing exceptional
+              services for over a decade. Our journey began with a simple
+              mission: to promote healthy eating habits and offer delicious,
+              nutritious meals to our patrons. Over the years, we've perfected
+              our craft, combining culinary expertise with a passion for
+              wellness.
+            </p>
+          </div>
+          <div class="facility-about-img">
+            <img
+              src="https://i.postimg.cc/mgpwzmx9/about-photo.jpg"
+              alt="food"
+            />
+          </div>
+        </div>
+      </section>
+      {/* hero */}
+
+      {/* all hotels */}
+      <section id="all-hotels-menu">
+        <h2 class="all-hotels-menu-heading">Explore All hotels</h2>
+        <div class="all-hotels-menu-container facility-container">
+          {HotelsList.map((i) => {
+            return (
+              <>
+                <div class="all-hotels-menu-item">
+                  <div class="all-hotels-img">
+                    <img src={i.img} alt="" />
+                  </div>
+                  <div class="all-hotels-description">
+                    <h2 class="all-hotels-titile">{i.name}</h2>
+                    <p>Rating: {i.rating}</p>
+
+                    <p class="all-hotels-price">Price: &#8377; 250/day</p>
+                  </div>
+                </div>
+              </>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* all hotels */}
+
+      {/* foods section */}
+      <section id="all-hotels">
+        <h2>Types of food</h2>
+        <div class="all-hotels-container facility-container">
+          <div class="all-hotels-type facility-fruite">
+            <div class="facility-img-container">
+              <img src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
+              <div class="facility-img-content">
+                <h3>fruite</h3>
+                {/* <a
+                  href="https://en.wikipedia.org/wiki/Fruit"
+                  class="facility-btn facility-btn-primary"
+                  target="blank"
+                >
+                  learn more
+                </a> */}
+              </div>
+            </div>
+          </div>
+          <div class="all-hotels-type facility-vegetable">
+            <div class="facility-img-container">
+              <img src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
+              <div class="facility-img-content">
+                <h3>vegetable</h3>
+                {/* <a
+                  href="https://en.wikipedia.org/wiki/Vegetable"
+                  class="facility-btn facility-btn-primary"
+                  target="blank"
+                >
+                  learn more
+                </a> */}
+              </div>
+            </div>
+          </div>
+          <div class="all-hotels-type facility-grin">
+            <div class="facility-img-container">
+              <img src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
+              <div class="facility-img-content">
+                <h3>grin</h3>
+                {/* <a
+                  href="https://en.wikipedia.org/wiki/Grain"
+                  class="facility-btn facility-btn-primary"
+                  target="blank"
+                >
+                  learn more
+                </a> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* foods section */}
+
+      {/* review from the customer */}
+      <section id="facility-testimonials">
+        <h2 class="facility-testimonial-title">What Our Customers Say</h2>
+        <div class="facility-testimonial-container facility-container">
+          <div class="facility-testimonial-box">
+            <div class="facility-customer-detail">
+              <div class="facility-customer-photo">
+                <img
+                  src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg"
+                  alt=""
+                />
+                <p class="facility-customer-name">Ross Lee</p>
+              </div>
+            </div>
+            <div class="facility-star-rating">5 star</div>
+            <p class="facility-testimonial-text">
+              The hotel's mountain view was breathtaking! It was the perfect
+              getaway for a peaceful retreat. The rooms were comfortable, the
+              staff was friendly, and the food was delicious. Highly
+              recommended!
+            </p>
+          </div>
+          <div class="facility-testimonial-box">
+            <div class="facility-customer-detail">
+              <div class="facility-customer-photo">
+                <img
+                  src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg"
+                  alt=""
+                />
+                <p class="facility-customer-name">Amelia Watson</p>
+              </div>
+            </div>
+            <div class="facility-star-rating">4.5 Star</div>
+            <p class="facility-testimonial-text">
+              The food was exceptional! Each dish was beautifully presented and
+              bursting with flavor. The menu offered a great variety, and
+              everything was cooked to perfection. A truly memorable dining
+              experience.
+            </p>
+          </div>
+          <div class="facility-testimonial-box">
+            <div class="facility-customer-detail">
+              <div class="facility-customer-photo">
+                <img
+                  src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg"
+                  alt=""
+                />
+                <p class="facility-customer-name">Ben Roy</p>
+              </div>
+            </div>
+            <div class="facility-star-rating">4 star</div>
+            <p class="facility-testimonial-text">
+              I recently stayed at the hotel and was impressed by the level of
+              service. The staff went above and beyond to ensure my stay was
+              comfortable and enjoyable. The amenities were top-notch, and I
+              would definitely stay here again.
+            </p>
+          </div>
+        </div>
+      </section>
+      {/* review from the customer */}
+    </>
+  );
+}

@@ -1,0 +1,138 @@
+/* ui verse */
+#checkbox2 {
+  display: none;
+}
+
+.toggle2 {
+  position: relative;
+  width: 60px;
+  /* height: 60px; */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition-duration: 0.5s;
+}
+
+.nav-bars {
+  width: 100%;
+  height: 6px;
+  background-color: rgb(92, 176, 255);
+  border-radius: 6px;
+}
+
+#nav-bar5 {
+  transition-duration: 0.8s;
+}
+
+#nav-bar4,
+#nav-bar6 {
+  width: 80%;
+}
+
+#checkbox2:checked + .toggle2 .nav-bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #nav-bar5 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #nav-bar4 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 #nav-bar6 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox2:checked + .toggle2 {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+#checkbox2:checked ~ .Sidenav-menu {
+  display: block;
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ui verse */
+
+.Sidenav-wrapper {
+  align-items: center;
+  margin: 1.2rem 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Sidenav-title {
+  font-size: 2rem;
+  color: wheat;
+}
+
+/* MENU */
+.Sidenav-menu {
+  flex-basis: 100%;
+  /* max-height: 0; */
+  overflow: hidden;
+  /* margin: 0; */
+  /* max-height: 0; */
+  /* opacity: 0; */
+  /* overflow: hidden; */
+  /* transition: margin 0.5s ease-in-out, max-height 0.5s ease-in-out, */
+  /* opacity 0.3s 0.1s ease-in-out; */
+  visibility: hidden;
+
+  list-style: none;
+  /* margin: 0; */
+  /* padding: 0 2em; */
+  text-transform: uppercase;
+  display: none; /* on masque */
+}
+
+.Sidenav-menu li {
+  border-bottom: 1px solid #eee;
+}
+.Sidenav-menu li a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  color: #eee;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 65em) {
+  .Sidenav-menu {
+    flex-basis: auto;
+    /* margin: 0; */
+    /* max-height: 1000px; */
+    opacity: 1;
+    /* padding: 0; */
+    visibility: visible;
+    display: block;
+  }
+  .toggle,
+  .checkbox {
+    display: none;
+  }
+  .Sidenav-menu li {
+    border: none;
+    display: inline-block;
+  }
+
+  .Sidenav-menu li a {
+    padding: 1em;
+  }
+}

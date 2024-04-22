@@ -1,0 +1,238 @@
+/* /community Hero */
+@keyframes zoomy {
+  50% {
+    scale: 1.1;
+  }
+}
+
+.community-hero img {
+  block-size: 100dvh;
+  width: 100%;
+  object-fit: cover;
+  animation: zoomy 30s ease infinite;
+}
+
+.community-div {
+  font-size: 1.25rem;
+  z-index: 1;
+  color: white;
+  background: linear-gradient(
+    to top right in oklab,
+    oklch(40% 0.3 340 / 70%),
+    oklch(40% 0.4 200 / 70%)
+  );
+
+  display: grid;
+  gap: 1ch;
+  place-content: center;
+  place-items: center;
+}
+.community-div h1,
+.community-div p {
+  max-width: 800px;
+  margin: 0 2rem;
+}
+.community-hero {
+  max-width: 100%;
+  display: grid;
+  overflow: hidden;
+}
+.community-hero > * {
+  grid-area: 1 / 1;
+}
+
+/* /community Hero */
+
+/* about page design  */
+.about-flow-content p {
+  color: black;
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+.about-container__inner {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.about-white-box {
+  background-color: #fff;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.about-hero {
+  background-image: url(https://cdn.pixabay.com/photo/2018/11/09/16/20/photographer-3804979_1280.jpg);
+  background-size: cover;
+  background-position: center right 30%;
+  color: #fff;
+}
+.about-hero__content {
+  padding: 9.5rem 2rem;
+}
+
+.about-hero__content h1 {
+  font-family: "Baloo 2", cursive;
+  font-size: 4rem;
+  line-height: 0.82;
+}
+
+.about-hero__content p {
+  font-size: 2rem;
+  margin-top: 2rem;
+  line-height: 1.14;
+}
+
+.about-description {
+  background-color: #542330;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.about-description p {
+  max-width: 50rem;
+}
+.about-container__inner p br {
+  display: block;
+  content: "";
+  margin-top: 1.4rem;
+}
+
+.about-section-title {
+  color: #ff3369;
+  font-family: "Baloo 2", cursive;
+  font-size: 2.125rem;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+}
+
+@media (min-width: 58em) {
+  .about-container {
+    padding: 0 5rem;
+  }
+
+  .about-container__inner {
+    padding: 5rem;
+  }
+
+  .about-white-box {
+    margin-top: -5rem;
+    border-radius: 0.5em 0.5em 0 0;
+  }
+
+  .about-description {
+    padding-top: 1rem;
+    padding-bottom: 6.5rem;
+  }
+}
+
+/* meet our team */
+
+.OurTeam-wrapper {
+  margin-top: 50px;
+}
+
+.OurTeam-wrapper h1 {
+  font-family: "Allura", cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.OurTeam-team {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.OurTeam-team .OurTeam-team_member {
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #320303;
+  position: relative;
+}
+
+.OurTeam-team .OurTeam-team_member h3 {
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.OurTeam-team .OurTeam-team_member p.OurTeam-role {
+  color: #c10404c1;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.OurTeam-team .OurTeam-team_member .OurTeam-team_img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.OurTeam-team .OurTeam-team_member .OurTeam-team_img img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* meet our team */
+
+/* about page design  */
+
+/* nothing 404 page not found */
+#Nothing-holder {
+  background: url("https://cdn.pixabay.com/photo/2020/06/30/22/52/monk-5357843_640.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #000;
+  font-family: "Helvetica nueue", "helvetica", sans-serif;
+  color: #fff;
+  line-height: 1em;
+  font-size: 16px;
+}
+
+.Nothing-container {
+  padding-top: 4em;
+}
+.Nothing-container section {
+  width: 80%;
+  margin: 3em auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0 2em 1em;
+  max-width: 800px;
+}
+.Nothing-container section h1 {
+  text-transform: uppercase;
+  line-height: 1.6em;
+  text-align: center;
+  font-size: 3em;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+}
+.Nothing-container section p {
+  font-size: 1.4em;
+  line-height: 1.6em;
+  margin-bottom: 1.2em;
+}
+
+/* nothing 404 page not found */
