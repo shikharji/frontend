@@ -186,7 +186,7 @@ export function Art() {
         desc1="Jain art depicts Tirthankaras, Jain spiritual teachers, with intricate and symbolic designs, often without clothing or ornaments to symbolize detachment. Temples are adorned with sculptures and paintings illustrating Jain teachings, serving as educational tools and objects of devotion."
         desc2="Jain art emphasizes non-violence and compassion, depicting nature and animals with care. Manuscripts and paintings showcase lush landscapes and diverse flora and fauna, reflecting the Jain belief in the sanctity of all life forms."
       />
-      <h1>Art Section</h1>
+
       {loading ? (
         <Loading />
       ) : (
@@ -239,7 +239,6 @@ export function Practice() {
         desc1="Jain practice centers on non-violence (ahimsa), the cornerstone of Jain ethics, extending compassion to all living beings. This principle guides dietary choices, with many Jains adhering to a strict vegetarian diet. Fasting (upvas) is also common, especially during religious festivals and holy days, as a means of spiritual purification and self-discipline."
         desc2="Jain practice includes meditation (dhyana) and prayer (prarthana) to cultivate inner peace and spiritual growth. Pilgrimage (tirtha yatra) to sacred sites, particularly to the Five Great Vows of Jainism, is a significant practice for many Jains. Additionally, Jains engage in acts of charity (dana) and community service (seva) to promote social welfare and reduce suffering."
       />
-      <h1>Practice Section</h1>
 
       {loading ? (
         <Loading />
@@ -293,7 +292,7 @@ export function Philosophy() {
         desc1="Jain philosophy emphasizes non-violence (ahimsa), which extends beyond physical harm to include mental and emotional harm. It advocates for compassion (anekantavada), the idea that truth and reality are complex and multifaceted, and that no single viewpoint can capture the entirety of truth. This philosophy guides Jain practices, such as vegetarianism and careful consideration of one's actions to minimize harm to all living beings."
         desc2="Central to Jain philosophy is the concept of non-possessiveness (aparigraha), which teaches detachment from material possessions and the ego. Jains believe in the transmigration of souls (samsara) and seek to liberate themselves from this cycle through spiritual development and ethical living. This philosophy is reflected in Jain art, which portrays the simplicity and reverence for life that are core principles of Jainism."
       />
-      <h1>Philosophy Section</h1>
+
       {loading ? (
         <Loading />
       ) : (

@@ -1,28 +1,3 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  background-color: black;
-  color: beige;
-  text-decoration: none;
-  overflow-x: hidden;
-}
-li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-img {
-  pointer-events: none;
-}
-
 #height-100vh {
   min-height: 100vh;
   display: flex;
@@ -252,16 +227,6 @@ img {
   background-color: #c7940a;
   color: #ffffff;
 }
-/* .social {
-  display: flex;
-  justify-content: space-around;
-  font-size: 2.4em;
-  flex-direction: row;
-  margin-top: 0.5em;
-}
-.social i {
-  color: #bac6d9;
-} */
 
 .copyright {
   background-color: #25262e;

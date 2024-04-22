@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 import Home from "./Components/pages/Home";
 import Sidenav from "./Components/elements/Sidenav";
@@ -54,6 +55,7 @@ import Donate from "./Components/elements/Donate";
 function App() {
   return (
     <>
+      <Analytics />
       <Sidenav />
       <Scrolltotop />
       <Gototop />
