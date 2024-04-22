@@ -58,7 +58,3 @@ We welcome contributions to the Shikharji Web App. If you have any ideas, sugges
 ## License
 
 The Shikharji Web App is licensed under the [MIT License].
-
-```
-
-```
