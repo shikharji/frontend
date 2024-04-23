@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./App.css";
 import Home from "./Components/pages/Home";
 import Sidenav from "./Components/elements/Sidenav";
@@ -56,6 +57,7 @@ function App() {
   return (
     <>
       <Analytics />
+      <SpeedInsights />
       <Sidenav />
       <Scrolltotop />
       <Gototop />
