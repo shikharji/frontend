@@ -238,33 +238,6 @@ export function Types() {
           <div className="expand-overlay"></div>
         </div>
       </div>
-
-      {/* <div className="panels">
-        <div className="panels__container">
-          <Link to="cave" className="panel">
-            <div
-              className="panel__content"
-              style={{
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1708669530767-1bfcd6e8ec5e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
-              }}
-            >
-              <h3 className="panel__title">Cave temples</h3>
-            </div>
-          </Link>
-          <Link to="main" className="panel">
-            <div
-              className="panel__content"
-              style={{
-                backgroundImage:
-                  "url(https://cdn.pixabay.com/photo/2014/01/14/06/19/manas-mandir-244142_1280.jpg)",
-              }}
-            >
-              <h3 className="panel__title">Main temples</h3>
-            </div>
-          </Link>
-        </div>
-      </div> */}
     </>
   );
 }

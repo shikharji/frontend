@@ -17,6 +17,7 @@ export function CaveTemple() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Cave Temples";
     const fetchData = async () => {
       try {
         const response = await fetch(baseURL);
@@ -64,6 +65,8 @@ export function AncientTemple() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Ancient Temples";
+
     const fetchData = async () => {
       try {
         const response = await fetch(baseURL);
@@ -111,6 +114,8 @@ export function MainTemple() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Main Temples";
+
     const fetchData = async () => {
       try {
         const response = await fetch(baseURL);
@@ -159,6 +164,8 @@ export function WorldTemple() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Around the world Temples";
+
     const fetchData = async () => {
       try {
         const response = await fetch(baseURL);
@@ -207,6 +214,8 @@ export function IndianTemple() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    document.title = "Indian Temples";
+
     const fetchData = async () => {
       try {
         const response = await fetch(baseURL);
@@ -250,6 +259,8 @@ export function IndianTemple() {
   );
 }
 export function PakistanTemple() {
+  document.title = "Pakistan Temples";
+
   const [temples, setTemples] = useState([]);
   const [loading, setLoading] = useState(true);
 
