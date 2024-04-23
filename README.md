@@ -41,15 +41,13 @@ To get started with the Shikharji Web App, follow these steps:
    ```
 
 4. **Explore the app**:
-   - Open your browser and navigate to `https://srishikharji.vercel.app/` to view the app.
+   - Open your browser and navigate to `http://localhost:3000` to view the app.
 
 ## Technologies Used
 
-- React
-- React Router
-- Axios
-- HTML/CSS
-- JavaScript
+- Frontend: React.js, HTML, CSS, JavaScript
+- Backend: Node.js, Express.js, MongoDB
+- Deployment: Vercel (Frontend and backend)
 
 ## Contributing
 
