@@ -81,7 +81,7 @@ export default function Footer() {
             <Link to="support">Support</Link>
             <Link to="explore">More...</Link>
           </div>
-          <p>Copyright &copy; 2023 Parasnath Hill </p>
+          <p>Copyright &copy; 2024 Parasnath Hill </p>
         </div>
       </footer>
     </>
