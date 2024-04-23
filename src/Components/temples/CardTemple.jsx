@@ -3,11 +3,14 @@ import { Link } from "react-router-dom";
 export default function CardTemple({ name, id, img, description, location }) {
   // Function to truncate the description to 30 words
   const truncateDescription = (text, limit) => {
-    const words = text.split(" ");
-    if (words.length > limit) {
-      return words.slice(0, limit).join(" ") + "...";
+    if (text) {
+      const words = text.split(" ");
+      if (words.length > limit) {
+        return words.slice(0, limit).join(" ") + "...";
+      }
+      return text;
     }
-    return text;
+    return "";
   };
 
   // Truncate the description to 30 words

@@ -208,7 +208,38 @@ export function Types() {
   return (
     <>
       <h1 className="center-title">Explore temple by their types</h1>
-      <div className="panels">
+
+      <div className="expand-container">
+        <div id="Ancient-temple" className="expand-section">
+          <div className="expand-content">
+            <Link to="ancient">
+              <h1>Ancient</h1>
+            </Link>
+          </div>
+
+          <div className="expand-overlay"></div>
+        </div>
+
+        <div id="Main-temple" className="expand-section">
+          <div className="expand-content">
+            <Link to="main">
+              <h1>Main</h1>
+            </Link>
+          </div>
+          <div className="expand-overlay"></div>
+        </div>
+
+        <div id="Cave-temple" className="expand-section">
+          <div className="expand-content">
+            <Link to="cave">
+              <h1>Cave</h1>
+            </Link>
+          </div>
+          <div className="expand-overlay"></div>
+        </div>
+      </div>
+
+      {/* <div className="panels">
         <div className="panels__container">
           <Link to="cave" className="panel">
             <div
@@ -233,7 +264,7 @@ export function Types() {
             </div>
           </Link>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

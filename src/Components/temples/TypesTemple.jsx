@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Loading from "../elements/Loading";
 import CardTemple from "./CardTemple";
-import { Temple } from "./../shikharji/FeatureShikharji";
 
 const baseURL = "https://api-srishikharji.vercel.app/temples";
 
@@ -42,20 +41,71 @@ export function CaveTemple() {
         <Loading />
       ) : (
         <ul className="flex-wrap">
-          {temples.map((temple) => (
-            <CardTemple
-              name={temple.name}
-              id={temple._id}
-              description={temple.description}
-              country={Temple.country}
-            />
-          ))}
+          {temples.map((temple) => {
+            const location = `${temple.location.city}, ${temple.location.district}, ${temple.location.state}, ${temple.location.country}`;
+            return (
+              <CardTemple
+                name={temple.templeName}
+                id={temple._id}
+                img={temple.img}
+                location={location}
+                description={temple.introduction}
+              />
+            );
+          })}
         </ul>
       )}
     </>
   );
 }
 
+export function AncientTemple() {
+  const [temples, setTemples] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(baseURL);
+        const data = await response.json();
+        const filteredTemples = data.temples.filter(
+          (temple) => temple.type.toLowerCase() === "ancient"
+        );
+        setTemples(filteredTemples);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <>
+      <h1 className="center-title">Ancient Temples</h1>
+      {loading ? (
+        <Loading />
+      ) : (
+        <ul className="flex-wrap">
+          {temples.map((temple) => {
+            const location = `${temple.location.city}, ${temple.location.district}, ${temple.location.state}, ${temple.location.country}`;
+            return (
+              <CardTemple
+                name={temple.templeName}
+                id={temple._id}
+                img={temple.img}
+                location={location}
+                description={temple.introduction}
+              />
+            );
+          })}
+        </ul>
+      )}
+    </>
+  );
+}
 export function MainTemple() {
   const [temples, setTemples] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -86,14 +136,18 @@ export function MainTemple() {
         <Loading />
       ) : (
         <ul className="flex-wrap">
-          {temples.map((temple) => (
-            <CardTemple
-              name={temple.name}
-              id={temple._id}
-              description={temple.description}
-              country={Temple.country}
-            />
-          ))}
+          {temples.map((temple) => {
+            const location = `${temple.location.city}, ${temple.location.district}, ${temple.location.state}, ${temple.location.country}`;
+            return (
+              <CardTemple
+                name={temple.templeName}
+                id={temple._id}
+                img={temple.img}
+                location={location}
+                description={temple.introduction}
+              />
+            );
+          })}
         </ul>
       )}
     </>
@@ -131,14 +185,18 @@ export function WorldTemple() {
         <Loading />
       ) : (
         <ul className="flex-wrap">
-          {temples.map((temple) => (
-            <CardTemple
-              name={temple.name}
-              id={temple._id}
-              description={temple.description}
-              country={Temple.country}
-            />
-          ))}
+          {temples.map((temple) => {
+            const location = `${temple.location.city}, ${temple.location.district}, ${temple.location.state}, ${temple.location.country}`;
+            return (
+              <CardTemple
+                name={temple.templeName}
+                id={temple._id}
+                img={temple.img}
+                location={location}
+                description={temple.introduction}
+              />
+            );
+          })}
         </ul>
       )}
     </>
@@ -174,14 +232,18 @@ export function IndianTemple() {
         <Loading />
       ) : (
         <ul className="flex-wrap">
-          {temples.map((temple) => (
-            <CardTemple
-              name={temple.name}
-              id={temple._id}
-              description={temple.description}
-              country={Temple.country}
-            />
-          ))}
+          {temples.map((temple) => {
+            const location = `${temple.location.city}, ${temple.location.district}, ${temple.location.state}, ${temple.location.country}`;
+            return (
+              <CardTemple
+                name={temple.templeName}
+                id={temple._id}
+                img={temple.img}
+                location={location}
+                description={temple.introduction}
+              />
+            );
+          })}
         </ul>
       )}
     </>
@@ -217,14 +279,18 @@ export function PakistanTemple() {
         <Loading />
       ) : (
         <ul className="flex-wrap">
-          {temples.map((temple) => (
-            <CardTemple
-              name={temple.name}
-              id={temple._id}
-              description={temple.description}
-              country={Temple.country}
-            />
-          ))}
+          {temples.map((temple) => {
+            const location = `${temple.location.city}, ${temple.location.district}, ${temple.location.state}, ${temple.location.country}`;
+            return (
+              <CardTemple
+                name={temple.templeName}
+                id={temple._id}
+                img={temple.img}
+                location={location}
+                description={temple.introduction}
+              />
+            );
+          })}
         </ul>
       )}
     </>

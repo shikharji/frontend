@@ -36,6 +36,7 @@ import {
 import DetailTemple from "./Components/temples/DetailTemple";
 import Temples, { AllTemples } from "./Components/temples/Temples";
 import {
+  AncientTemple,
   CaveTemple,
   IndianTemple,
   MainTemple,
@@ -90,6 +91,7 @@ function App() {
         <Route path="/temple/all" element={<AllTemples />} />
         <Route path="/temple-detail/:id" element={<DetailTemple />} />
         <Route path="/temple/cave" element={<CaveTemple />} />
+        <Route path="/temple/ancient" element={<AncientTemple />} />
         <Route path="/temple/main" element={<MainTemple />} />
         <Route path="/temple/world" element={<WorldTemple />} />
         <Route path="/temple/indian" element={<IndianTemple />} />
