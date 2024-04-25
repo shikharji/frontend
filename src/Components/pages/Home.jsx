@@ -1,11 +1,21 @@
-import PageTitle from "../elements/PageTitle";
+import { Helmet } from "react-helmet";
 import "./styles/Home.css";
 import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-      <PageTitle title="Home" />
+      <Helmet>
+        <title>Shikharji - Explore Jainism</title>
+        <meta
+          name="description"
+          content="Explore the spiritual significance of Jainism at Shikharji, the sacred pilgrimage site nestled in the serene Parasnath Hills. Discover ancient temples, revered Tirthankaras, and the historical Parasnath Temple."
+        />
+        <meta
+          name="keywords"
+          content="Shikharji, Parasnath, Jainism, pilgrimage, Tirthankaras, spiritual, temples, ancient, sacred, Parasnath Temple, history, explore"
+        />
+      </Helmet>
       <HeroImg />
       <Quotes />
       <Home3nav />

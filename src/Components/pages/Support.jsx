@@ -1,9 +1,22 @@
+import { Helmet } from "react-helmet";
 import "./styles/Support.css";
 import { Link } from "react-router-dom";
 
 export default function Support() {
   return (
     <>
+      <Helmet>
+        <title>Support Us - Donate to Shikharji</title>
+        <meta
+          name="description"
+          content="Support the Shikharji website by making a donation. Your contribution helps us maintain and improve our platform for showcasing the spiritual and cultural significance of Jainism, temples, and the pilgrimage site."
+        />
+        <meta
+          name="keywords"
+          content="Donation, support, contribute, Shikharji, Jainism, temples, pilgrimage, spiritual, cultural, contribute"
+        />
+      </Helmet>
+
       <div className="Donation-container">
         <main>
           <div className="Donation-hero-section">

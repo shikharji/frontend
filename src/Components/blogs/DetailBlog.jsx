@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "../elements/Loading";
+import { Helmet } from "react-helmet";
 
 export default function DetailBlog() {
   const { id } = useParams();
@@ -28,6 +29,16 @@ export default function DetailBlog() {
 
   return (
     <>
+      <Helmet>
+        <title>{`${blog?.blogTitle || "Article"} - Blog`}</title>
+        <meta name="description" content={blog?.introduction || ""} />
+        <meta
+          name="keywords"
+          content={`blog, ${blog?.blogTitle || ""}, ${
+            blog?.tags?.join(", ") || ""
+          }`}
+        />
+      </Helmet>
       {loading ? (
         <Loading />
       ) : (

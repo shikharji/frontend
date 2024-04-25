@@ -11,12 +11,16 @@ export default function CardBlogs({ id, img, title, desc, category }) {
   if (desc && desc.split(" ").length > 35) {
     truncatedDesc += " ...";
   }
+
+  const defaultImgUrl =
+    "https://images.pexels.com/photos/1193335/pexels-photo-1193335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260";
+
   return (
     <>
       <div className="CardBlogs-card">
         <img
           className="CardBlogs-card-img"
-          src="https://images.pexels.com/photos/1193335/pexels-photo-1193335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+          src={img || defaultImgUrl}
           alt="Coffee"
         />
 

@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
-import PageTitle from "../elements/PageTitle";
+import { Helmet } from "react-helmet";
 
 export default function Nothing() {
   return (
     <>
-      <PageTitle title="Lost" />
+      <Helmet>
+        <title>404 Page Not Found - Shikharji</title>
+        <meta
+          name="description"
+          content="Oops! The page you are looking for could not be found. Explore other parts of our site to discover more about Shikharji and Jainism."
+        />
+      </Helmet>
+
       <div id="Nothing-holder">
         <div className="Nothing-container">
           <section>

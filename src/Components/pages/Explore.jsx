@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
 import "./styles/Explore.css";
+import { Helmet } from "react-helmet";
 
 export default function Explore() {
   return (
     <>
+      <Helmet>
+        <title>Explore Shikharji - Jainism Pilgrimage</title>
+        <meta
+          name="description"
+          content="Explore the rich heritage and spiritual significance of Jainism at Shikharji. Dive into ancient temples, learn about revered Tirthankaras, and discover the history of the Parasnath Temple. Experience the beauty and serenity of this sacred pilgrimage site."
+        />
+        <meta
+          name="keywords"
+          content="Shikharji, Parasnath, Jainism, pilgrimage, Tirthankaras, temples, ancient, sacred, Parasnath Temple, history, heritage, spiritual, explore"
+        />
+      </Helmet>
+
       <Hero />
       <Card />
     </>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "../elements/Loading";
+import { Helmet } from "react-helmet";
 
 export default function DetailTemple() {
   const { id } = useParams();
@@ -17,7 +18,6 @@ export default function DetailTemple() {
         if (data?.success) {
           setTemple(data?.temple);
           setLoading(false);
-          document.title = `${data?.temple?.templeName} - Temples`;
         }
       } catch (error) {
         console.log(error);
@@ -29,6 +29,22 @@ export default function DetailTemple() {
 
   return (
     <>
+      <Helmet>
+        <title>{`${temple?.templeName || "Temple"}`}</title>
+        <meta
+          name="description"
+          content={`Explore the details and significance of ${
+            temple?.templeName || "this temple"
+          }. Learn about its history, architecture, and cultural importance in Jainism.`}
+        />
+        <meta
+          name="keywords"
+          content={`Jain temple, Jainism, ${
+            temple?.templeName || "temple"
+          }, architecture, history, significance`}
+        />
+      </Helmet>
+
       {loading ? (
         <Loading />
       ) : (

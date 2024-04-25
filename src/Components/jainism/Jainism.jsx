@@ -1,15 +1,25 @@
 import { useEffect, useState } from "react";
 import Loading from "../elements/Loading";
-import PageTitle from "../elements/PageTitle";
 import FeatureJainism from "./FeatureJainism";
 import "./StyleJainism.css";
 import axios from "axios";
 import CardBlogs from "../blogs/CardBlogs";
+import { Helmet } from "react-helmet";
 
 export default function Jainism() {
   return (
     <>
-      <PageTitle title="Jainism" />
+      <Helmet>
+        <title>Jainism - Explore the Teachings and Heritage</title>
+        <meta
+          name="description"
+          content="Explore the profound teachings and rich heritage of Jainism. Learn about Jain texts, arts, philosophy, practices, principles, and cosmology. Dive into the spiritual depth of Jainism through insightful blogs and articles."
+        />
+        <meta
+          name="keywords"
+          content="Jainism, Jain texts, arts, philosophy, practices, principles, cosmology, blogs, spirituality, heritage, teachings"
+        />
+      </Helmet>
       <IntroHero />
       <FeatureJainism />
       <BlogJainism />

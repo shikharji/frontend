@@ -1,9 +1,20 @@
-import PageTitle from "../elements/PageTitle";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
     <>
-      <PageTitle title="About us" />
+      <Helmet>
+        <title>About Us - Shikharji Website</title>
+        <meta
+          name="description"
+          content="Learn about the creators and vision behind the Shikharji website. Discover the inspiration behind showcasing the spiritual and cultural significance of Jainism, temples, and the pilgrimage site of Shikharji."
+        />
+        <meta
+          name="keywords"
+          content="Shikharji, about us, creators, vision, Jainism, temples, pilgrimage, spiritual, cultural, inspiration"
+        />
+      </Helmet>
+
       <Hero />
       <OurTeam />
     </>

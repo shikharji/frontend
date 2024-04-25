@@ -1,16 +1,27 @@
 import { Link } from "react-router-dom";
-import PageTitle from "../elements/PageTitle";
 import "./StyleTemples.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Loading from "../elements/Loading";
 import CardTemple from "./CardTemple";
 import FeatureHero from "../elements/FeatureHero";
+import { Helmet } from "react-helmet";
 
 export default function Temples() {
   return (
     <>
-      <PageTitle title="Temples" />
+      <Helmet>
+        <title>Jain Temples - Explore Sacred Sites</title>
+        <meta
+          name="description"
+          content="Discover a comprehensive list of Jain temples around the world and in India, categorized as ancient, cave, or main temples. Explore the architectural beauty, historical significance, and spiritual aura of these sacred sites."
+        />
+        <meta
+          name="keywords"
+          content="Jain temples, temples in India, temples around the world, ancient temples, cave temples, main temples, architectural beauty, historical significance, spiritual aura"
+        />
+      </Helmet>
+
       <Hero />
       <Types />
       <Location />
@@ -109,6 +120,7 @@ export function AllTemples() {
         if (data?.success) {
           setTemples(data?.temples);
           setLoading(false);
+          document.title = "All jain temples";
         }
       } catch (error) {
         console.log(error);

@@ -1,10 +1,21 @@
 import "./StylePages.css";
-import PageTitle from "../elements/PageTitle";
+import { Helmet } from "react-helmet";
 
 export default function Communities() {
   return (
     <>
-      <PageTitle title="Community" />
+      <Helmet>
+        <title>Community - Shikharji</title>
+        <meta
+          name="description"
+          content="Join our community at Shikharji and share your thoughts, experiences, and insights about Jainism, temples, and the pilgrimage site. Connect with like-minded individuals and explore the spiritual journey together."
+        />
+        <meta
+          name="keywords"
+          content="Shikharji, community, share, posts, feeds, Jainism, temples, pilgrimage, spiritual, connect, journey"
+        />
+      </Helmet>
+
       <Hero />
     </>
   );

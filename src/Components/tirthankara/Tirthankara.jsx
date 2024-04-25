@@ -3,12 +3,23 @@ import axios from "axios";
 import "./StyleTirthankara.css";
 import CardTirthankara from "./CardTirthankara";
 import Loading from "../elements/Loading";
-import PageTitle from "../elements/PageTitle";
+import { Helmet } from "react-helmet";
 
 export default function Tirthankara() {
   return (
     <>
-      <PageTitle title="Tirthankara" />
+      <Helmet>
+        <title>Tirthankaras - Enlightened Spiritual Leaders</title>
+        <meta
+          name="description"
+          content="Learn about the Tirthankaras in Jainism, the enlightened spiritual leaders who have achieved liberation. Explore the life stories, teachings, and significance of each Tirthankara in the Jain tradition."
+        />
+        <meta
+          name="keywords"
+          content="Tirthankaras, Jainism, spiritual leaders, liberation, life stories, teachings, significance, Jain tradition"
+        />
+      </Helmet>
+
       <Hero />
       <Intro />
       <AllTirthankara />

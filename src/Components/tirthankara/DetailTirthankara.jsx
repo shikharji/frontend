@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../elements/Loading";
+import { Helmet } from "react-helmet";
 
 export default function DetailTirthankara() {
   const id = useParams().id;
@@ -17,7 +18,7 @@ export default function DetailTirthankara() {
         if (data?.tirthankar) {
           setTirthankaras([data?.tirthankar]);
           setLoading(false);
-          document.title = `${data?.tirthankar?.name} - Tirthankaras`;
+          // document.title = `${data?.tirthankar?.name} - Tirthankaras`;
         }
       } catch (error) {
         console.log(error);
@@ -28,6 +29,20 @@ export default function DetailTirthankara() {
   }, [id]);
   return (
     <>
+      <Helmet>
+        <title>{`${
+          tirthankara.length > 0 ? tirthankara[0].name : ""
+        } Tirthankara - Jainism`}</title>
+        <meta
+          name="description"
+          content={`Learn about the life, teachings, and significance of Tirthankara ${tirthankara[0]?.name}. Explore the spiritual journey and teachings of this enlightened spiritual leader in Jainism.`}
+        />
+        <meta
+          name="keywords"
+          content={`Tirthankara, Jainism, ${tirthankara[0]?.name}, spiritual leader, teachings, life, significance`}
+        />
+      </Helmet>
+
       {loading ? (
         <Loading />
       ) : (

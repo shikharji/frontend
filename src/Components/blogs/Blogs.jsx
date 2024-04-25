@@ -2,12 +2,23 @@ import React, { useEffect, useState } from "react";
 import CardBlogs from "./CardBlogs";
 import Loading from "../elements/Loading";
 import axios from "axios";
-import PageTitle from "../elements/PageTitle";
+import { Helmet } from "react-helmet";
 
 export default function Blogs() {
   return (
     <>
-      <PageTitle title="Blogs" />
+      <Helmet>
+        <title>Shikharji Blog - Explore Articles and Posts</title>
+        <meta
+          name="description"
+          content="Explore insightful articles and posts about Jainism, temples, and the pilgrimage site of Shikharji. Learn about the spiritual significance, history, and practices of Jainism through our blog."
+        />
+        <meta
+          name="keywords"
+          content="Shikharji, Jainism, temples, pilgrimage, blog, articles, posts, spirituality, history, practices, insights"
+        />
+      </Helmet>
+
       <Hero />
       <AllBlogs />
     </>
