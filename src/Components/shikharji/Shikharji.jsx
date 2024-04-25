@@ -1,9 +1,9 @@
 import "./StyleShikharji.css";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import Loading from "../elements/Loading";
 import CardBlogs from "../blogs/CardBlogs";
-import PageTitle from "../elements/PageTitle";
 import FeatureShikharji from "./FeatureShikharji";
 import { Link } from "react-router-dom";
 
@@ -17,7 +17,17 @@ const scrollToSection = (id) => {
 export default function Shikharji() {
   return (
     <>
-      <PageTitle title="Shikharji" />
+      <Helmet>
+        <title>Shikharji and Parasnath Hill</title>
+        <meta
+          name="description"
+          content="Explore the sacred pilgrimage site of Shikharji, nestled in the serene Parasnath Hills. Embark on a spiritual journey, where ancient temples and revered tonks of Tirthankaras await."
+        />
+        <meta
+          name="keywords"
+          content="Shikharji, Parasnath, Jainism, pilgrimage, Tirthankaras, spiritual, temples, tonks, ancient, sacred, journey, explore"
+        />
+      </Helmet>
       <Hero />
       <FeatureShikharji />
       <BlogShikharji />
