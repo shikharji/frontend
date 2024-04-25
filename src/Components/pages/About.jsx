@@ -1,6 +1,9 @@
+import PageTitle from "../elements/PageTitle";
+
 export default function About() {
   return (
     <>
+      <PageTitle title="About us" />
       <Hero />
       <OurTeam />
     </>
@@ -10,14 +13,14 @@ export default function About() {
 export function Hero() {
   return (
     <>
-      <div class="about-hero">
-        <div class="about-hero__content">
+      <div className="about-hero">
+        <div className="about-hero__content">
           <h1>Welcome to Our Website</h1>
           <p>Discover the beauty and significance of Jain temples</p>
         </div>
       </div>
-      <div class="about-description">
-        <div class="about-container__inner">
+      <div className="about-description">
+        <div className="about-container__inner">
           <p>
             Sri Shikharji is dedicated to showcasing the rich heritage and
             cultural significance of Jain temples, with a special focus on
@@ -32,12 +35,12 @@ export function Hero() {
         </div>
       </div>
 
-      <section class="about-main">
-        <div class="about-container">
-          <div class="about-container__inner about-white-box">
+      <section className="about-main">
+        <div className="about-container">
+          <div className="about-container__inner about-white-box">
             <main>
-              <div class="about-flow-content">
-                <h2 class="about-section-title">Our Mission and Vision:</h2>
+              <div className="about-flow-content">
+                <h2 className="about-section-title">Our Mission and Vision:</h2>
                 <p>
                   Our mission is to promote Jainism and its values by providing
                   a platform to explore and understand the significance of Jain
@@ -46,8 +49,8 @@ export function Hero() {
                   future generations.
                 </p>
               </div>
-              <div class="about-flow-content">
-                <h2 class="about-section-title">Our Brand Values:</h2>
+              <div className="about-flow-content">
+                <h2 className="about-section-title">Our Brand Values:</h2>
                 <p>
                   We believe in authenticity, respect, and inclusivity. We
                   strive to uphold these values in every aspect of our work,
@@ -56,8 +59,8 @@ export function Hero() {
                 </p>
               </div>
 
-              <div class="about-flow-content">
-                <h2 class="about-section-title">Our Process</h2>
+              <div className="about-flow-content">
+                <h2 className="about-section-title">Our Process</h2>
                 <p>
                   We research, curate, and present information about Jain
                   temples in a way that is easy to understand and navigate. Our
@@ -77,48 +80,48 @@ export function Hero() {
 export function OurTeam() {
   return (
     <>
-      <div class="OurTeam-wrapper">
+      <div className="OurTeam-wrapper">
         <h1>Meet our Team</h1>
-        <div class="OurTeam-team">
-          <div class="OurTeam-team_member">
-            <div class="OurTeam-team_img">
+        <div className="OurTeam-team">
+          <div className="OurTeam-team_member">
+            <div className="OurTeam-team_img">
               <img
                 src="https://cdn.pixabay.com/photo/2023/08/08/17/30/ai-generated-8177861_1280.jpg"
                 alt="Team_image"
               />
             </div>
             <h3>ChatGPT</h3>
-            <p class="OurTeam-role">AI Language Model</p>
+            <p className="OurTeam-role">AI Language Model</p>
             <p>
               ChatGPT is an advanced AI language model developed by OpenAI. It
               provides natural language understanding and generation
               capabilities, assisting users in various tasks and conversations.
             </p>
           </div>
-          <div class="OurTeam-team_member">
-            <div class="OurTeam-team_img">
+          <div className="OurTeam-team_member">
+            <div className="OurTeam-team_img">
               <img
                 src="https://cdn.pixabay.com/photo/2015/02/24/02/05/website-647013_1280.jpg"
                 alt="Team_image"
               />
             </div>
             <h3>CodePen</h3>
-            <p class="OurTeam-role">Online Code Editor</p>
+            <p className="OurTeam-role">Online Code Editor</p>
             <p>
               CodePen is a popular online code editor and front-end web
               development platform. It allows developers to showcase their work,
               experiment with code, and collaborate with others in real-time.
             </p>
           </div>
-          <div class="OurTeam-team_member">
-            <div class="OurTeam-team_img">
+          <div className="OurTeam-team_member">
+            <div className="OurTeam-team_img">
               <img
                 src="https://cdn.pixabay.com/photo/2019/01/30/07/45/web-3963945_1280.jpg"
                 alt="Team_image"
               />
             </div>
             <h3>Vercel</h3>
-            <p class="OurTeam-role">Cloud Platform</p>
+            <p className="OurTeam-role">Cloud Platform</p>
             <p>
               Vercel is a cloud platform for static sites and serverless
               functions. It offers seamless deployment, scalability, and

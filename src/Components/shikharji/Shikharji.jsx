@@ -28,9 +28,9 @@ export default function Shikharji() {
 export function Hero() {
   return (
     <>
-      <div class="shikharji-main_container" id="home">
-        <div class="shikharji-banner_image">
-          <div class="shikharji-banner_content">
+      <div className="shikharji-main_container" id="home">
+        <div className="shikharji-banner_image">
+          <div className="shikharji-banner_content">
             <h1>
               Explore Shikharji:
               <br />
@@ -44,8 +44,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div class="shikharji-about">
-          <h1 class="shikharji-title">About Shikharji</h1>
+        <div className="shikharji-about">
+          <h1 className="shikharji-title">About Shikharji</h1>
           <p>
             Shikharji, also known as Sammed Shikhar or Parasnath Hill, holds
             immense spiritual significance in Jainism. It is believed that
@@ -53,22 +53,22 @@ export function Hero() {
             here. The site is revered for its natural beauty and historical
             importance, attracting pilgrims and tourists from around the world.
           </p>
-          <div class="shikharji-btn">
+          <div className="shikharji-btn">
             <Link onClick={() => scrollToSection("shikharji-point")}>
               Learn More
             </Link>
           </div>
         </div>
 
-        <div class="shikharji-services">
-          <h1 class="shikharji-title">Why Visit Shikharji?</h1>
+        <div className="shikharji-services">
+          <h1 className="shikharji-title">Why Visit Shikharji?</h1>
           <p>
             Shikharji offers a unique blend of spiritual rejuvenation and
             natural beauty. Here, you can experience:
           </p>
 
-          <div class="shikharji-diff_services">
-            <div class="shikharji-diff_service_item">
+          <div className="shikharji-diff_services">
+            <div className="shikharji-diff_service_item">
               <img
                 src="https://cdn.pixabay.com/photo/2016/08/01/20/15/girl-1562025_1280.jpg"
                 alt="Service_image"
@@ -79,7 +79,7 @@ export function Hero() {
                 your spiritual self.
               </p>
             </div>
-            <div class="shikharji-diff_service_item">
+            <div className="shikharji-diff_service_item">
               <img
                 src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg"
                 alt="Service_image"
@@ -90,7 +90,7 @@ export function Hero() {
                 nature enthusiasts and photographers.
               </p>
             </div>
-            <div class="shikharji-diff_service_item">
+            <div className="shikharji-diff_service_item">
               <img
                 src="https://cdn.pixabay.com/photo/2016/06/14/17/19/india-1457099_960_720.jpg"
                 alt="Service_image"

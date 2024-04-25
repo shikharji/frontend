@@ -19,57 +19,6 @@
 
 /* qr code  */
 
-/* go to top btn  */
-
-#gototop {
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  z-index: 999;
-}
-
-.gototop-btn {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  padding: 10px 30px;
-  border: 1px solid;
-  border-radius: 1000px;
-  display: inline-block;
-  transition: all 0.3s;
-  position: relative;
-}
-
-.gototop-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(27, 27, 27, 0.5);
-}
-
-.gototop-btn:active {
-  transform: translateY(-3px);
-}
-
-.gototop-btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-  transition: all 0.3s;
-}
-
-.gototop-btn:hover::after {
-  background-color: rgb(0, 238, 255);
-  transform: scaleX(1.4) scaleY(1.5);
-  opacity: 0;
-}
-/* go to top btn  */
-
 /* feature hero  */
 .parall-container {
   text-align: center;

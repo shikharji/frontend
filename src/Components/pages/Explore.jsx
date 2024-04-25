@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "./styles/Explore.css";
-import scrollToSection from "../elements/ScroolToSection";
 
 export default function Explore() {
   return (
@@ -12,6 +11,12 @@ export default function Explore() {
 }
 
 export function Hero() {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       {" "}

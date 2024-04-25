@@ -44,20 +44,22 @@ export function Hero() {
         <Loading />
       ) : (
         <>
-          <section class="Blog-hero-articles">
+          <section className="Blog-hero-articles">
             {recentThreeArticles.map((article) => (
-              <div class="Blog-hero-article">
-                <div class="Blog-hero-left">
+              <div className="Blog-hero-article">
+                <div className="Blog-hero-left">
                   <img
                     src="https://cdn.pixabay.com/photo/2016/11/18/19/01/paris-1836415_1280.jpg"
                     alt=""
                   />
                 </div>
-                <div class="Blog-hero-right">
-                  <p class="Blog-hero-date">Juillet, 24, 2020</p>
+                <div className="Blog-hero-right">
+                  <p className="Blog-hero-date">Juillet, 24, 2020</p>
                   <h1>{article.blogTitle}</h1>
-                  <p class="Blog-hero-description">{article.introduction}</p>
-                  <p class="Blog-hero-auteur">Julie Lablonde</p>
+                  <p className="Blog-hero-description">
+                    {article.introduction}
+                  </p>
+                  <p className="Blog-hero-auteur">Julie Lablonde</p>
                 </div>
               </div>
             ))}
@@ -130,6 +132,7 @@ export function AllBlogs() {
                   title={blog.blogTitle}
                   desc={blog.introduction}
                   category={blog.subcategory}
+                  img={blog.img}
                 />
               </div>
             ))}

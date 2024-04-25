@@ -3,7 +3,13 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../elements/Loading";
 import FeatureHero from "../elements/FeatureHero";
-import scrollToSection from "../elements/ScroolToSection";
+
+const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
 
 export default function FeatureShikharji() {
   const featureItem = [
@@ -44,8 +50,8 @@ export default function FeatureShikharji() {
     },
   ];
 
-  const maxLength = 150; // Maximum length for description
   const truncatedDescription = (description) => {
+    const maxLength = 150;
     if (description.length > maxLength) {
       return description.slice(0, maxLength) + "..."; // Truncate and add "..."
     } else {
@@ -76,7 +82,7 @@ export default function FeatureShikharji() {
             </Link>
           </article>
         </section>
-        <section className="breweries" id="breweries">
+        <section className="breweries">
           <ul>
             {featureItem.map((item) => (
               <>
@@ -110,88 +116,29 @@ export function Mountain() {
   }, []);
   return (
     <>
-      <section id="FixedBack-hero1" class="FixedBack-hero">
-        <div class="FixedBack-inner">
-          <div class="FixedBack-copy">
-            <h1>Parasnath Hill and Shikharji</h1>
-            <p>
-              Parasnath Hill, located in the state of Jharkhand, India, is one
-              of the most sacred places for Jains. It is believed to be the
-              place where twenty of the twenty-four Jain Tirthankaras attained
-              Moksha (liberation). Shikharji, the summit of Parasnath Hill, is
-              the holiest place in Jainism and is visited by thousands of
-              pilgrims every year.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="FixedBack-content">
-        <div class="FixedBack-inner">
-          <div class="FixedBack-copy">
-            <h1>Caves of Parasnath Hill</h1>
-            <p>
-              Parasnath Hill is known for its many caves, which are of great
-              historical and archaeological significance. These caves have been
-              used by ascetics and monks for meditation and shelter for
-              centuries.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="FixedBack-hero2" class="FixedBack-hero">
-        <div class="FixedBack-inner">
-          <div class="FixedBack-copy">
-            <h1>An Inspiring Quote</h1>
-            <p>
-              "In every walk with nature, one receives far more than he seeks."
-              - John Muir
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="FixedBack-content">
-        <div class="FixedBack-inner">
-          <div class="FixedBack-copy">
-            <h1>An inspiring quote</h1>
-            <p>/-- file not found --/</p>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-}
-export function Temple() {
-  useEffect(() => {
-    document.title = "Temples - Shikharji";
-  }, []);
-  return (
-    <>
       <section
-        class="LargeHero-hero LargeHero-image-as-background"
+        className="LargeHero-hero LargeHero-image-as-background"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300')`,
         }}
       >
-        <div class="LargeHero-hero-container">
-          <p class="LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-400">
+        <div className="LargeHero-hero-container">
+          <p className="LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-400">
             Mazgine cover hero style
           </p>
-          <h1 class="LargeHero-hero-title LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-600">
+          <h1 className="LargeHero-hero-title LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-600">
             This is a large hero section
           </h1>
           <Link
             to="/"
-            class="LargeHero-hero-button LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-800"
+            className="LargeHero-hero-button LargeHero-animate LargeHero-fadeInLeft LargeHero-delay-800"
             title="Click to see more"
           >
             Click Me
           </Link>
         </div>
       </section>
-      <section class="LargeHero-main-content">
+      <section className="LargeHero-main-content">
         <h2>This is the additional content</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -217,7 +164,65 @@ export function Temple() {
           including versions of Lorem Ipsum.
         </p>
       </section>
+    </>
+  );
+}
+export function Temple() {
+  useEffect(() => {
+    document.title = "Temples - Shikharji";
+  }, []);
+  return (
+    <>
+      <section id="FixedBack-hero1" className="FixedBack-hero">
+        <div className="FixedBack-inner">
+          <div className="FixedBack-copy">
+            <h1>Parasnath Hill and Shikharji</h1>
+            <p>
+              Parasnath Hill, located in the state of Jharkhand, India, is one
+              of the most sacred places for Jains. It is believed to be the
+              place where twenty of the twenty-four Jain Tirthankaras attained
+              Moksha (liberation). Shikharji, the summit of Parasnath Hill, is
+              the holiest place in Jainism and is visited by thousands of
+              pilgrims every year.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <section className="FixedBack-content">
+        <div className="FixedBack-inner">
+          <div className="FixedBack-copy">
+            <h1>Caves of Parasnath Hill</h1>
+            <p>
+              Parasnath Hill is known for its many caves, which are of great
+              historical and archaeological significance. These caves have been
+              used by ascetics and monks for meditation and shelter for
+              centuries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="FixedBack-hero2" className="FixedBack-hero">
+        <div className="FixedBack-inner">
+          <div className="FixedBack-copy">
+            <h1>An Inspiring Quote</h1>
+            <p>
+              "In every walk with nature, one receives far more than he seeks."
+              - John Muir
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="FixedBack-content">
+        <div className="FixedBack-inner">
+          <div className="FixedBack-copy">
+            <h1>An inspiring quote</h1>
+            <p>/-- file not found --/</p>
+          </div>
+        </div>
+      </section>
       <FeatureHero
         title="Waana Explore all Jain Temples?"
         route="temple/all"
@@ -295,43 +300,45 @@ export function Wildlife() {
 
       {/* Now the card start */}
 
-      <div class="WildlifeCard-grid">
-        <div class="WildlifeCard-card">
-          <div class="WildlifeCard-card__img">
+      <div className="WildlifeCard-grid">
+        <div className="WildlifeCard-card">
+          <div className="WildlifeCard-card__img">
             <img
               src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
               alt=""
             />
           </div>
-          <div class="WildlifeCard-card__contenido">
-            <h3 class="WildlifeCard-card__title">Nature's Beauty Unveiled</h3>
-            <div class="WildlifeCard-divider"></div>
-            <p class="WildlifeCard-card__text">
+          <div className="WildlifeCard-card__contenido">
+            <h3 className="WildlifeCard-card__title">
+              Nature's Beauty Unveiled
+            </h3>
+            <div className="WildlifeCard-divider"></div>
+            <p className="WildlifeCard-card__text">
               Explore the mesmerizing beauty of nature at Parasnath Hill. From
               lush green forests to majestic waterfalls, immerse yourself in the
               tranquility of the natural world.
             </p>
-            <Link to="/" class="WildlifeCard-card__readbtn">
+            <Link to="/" className="WildlifeCard-card__readbtn">
               read more
             </Link>
           </div>
         </div>
-        <div class="WildlifeCard-card">
-          <div class="WildlifeCard-card__img">
+        <div className="WildlifeCard-card">
+          <div className="WildlifeCard-card__img">
             <img
               src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Zm9vZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
               alt=""
             />
           </div>
-          <div class="WildlifeCard-card__contenido">
-            <h3 class="WildlifeCard-card__title">Wildlife Encounters</h3>
-            <div class="WildlifeCard-divider"></div>
-            <p class="WildlifeCard-card__text">
+          <div className="WildlifeCard-card__contenido">
+            <h3 className="WildlifeCard-card__title">Wildlife Encounters</h3>
+            <div className="WildlifeCard-divider"></div>
+            <p className="WildlifeCard-card__text">
               Get up close and personal with the diverse wildlife of Parasnath
               Hill. From rare species of birds to exotic animals, experience the
               wonders of the natural world.
             </p>
-            <Link to="/" class="WildlifeCard-card__readbtn">
+            <Link to="/" className="WildlifeCard-card__readbtn">
               read more
             </Link>
           </div>
@@ -458,6 +465,7 @@ export function Hotels() {
   useEffect(() => {
     document.title = "Hotels and facility - Shikharji";
   }, []);
+
   const HotelsList = [
     {
       name: "Madhuban Guest House ",
@@ -483,9 +491,9 @@ export function Hotels() {
   return (
     <>
       {/* hero */}
-      <section class="facility-showcase-area" id="facility-showcase">
-        <div class="facility-showcase-container">
-          <h1 class="facility-main-title" id="facility-home">
+      <section className="facility-showcase-area" id="facility-showcase">
+        <div className="facility-showcase-container">
+          <h1 className="facility-main-title" id="facility-home">
             Hotel & Facility
           </h1>
 
@@ -495,7 +503,7 @@ export function Hotels() {
           </p>
           <Link
             onClick={() => scrollToSection("all-hotels-menu")}
-            class="facility-btn facility-btn-primary"
+            className="facility-btn facility-btn-primary"
           >
             Explore hotels
           </Link>
@@ -503,9 +511,9 @@ export function Hotels() {
       </section>
 
       <section id="facility-about">
-        <div class="facility-about-wrapper facility-container">
-          <div class="facility-about-text">
-            <p class="facility-small">About Us</p>
+        <div className="facility-about-wrapper facility-container">
+          <div className="facility-about-text">
+            <p className="facility-small">About Us</p>
             <h2>We've been providing exceptional services for 10 years</h2>
             <p>
               At Eat Right Food, we pride ourselves on providing exceptional
@@ -516,7 +524,7 @@ export function Hotels() {
               wellness.
             </p>
           </div>
-          <div class="facility-about-img">
+          <div className="facility-about-img">
             <img
               src="https://i.postimg.cc/mgpwzmx9/about-photo.jpg"
               alt="food"
@@ -528,20 +536,20 @@ export function Hotels() {
 
       {/* all hotels */}
       <section id="all-hotels-menu">
-        <h2 class="all-hotels-menu-heading">Explore All hotels</h2>
-        <div class="all-hotels-menu-container facility-container">
+        <h2 className="all-hotels-menu-heading">Explore All hotels</h2>
+        <div className="all-hotels-menu-container facility-container">
           {HotelsList.map((i) => {
             return (
               <>
-                <div class="all-hotels-menu-item">
-                  <div class="all-hotels-img">
+                <div className="all-hotels-menu-item">
+                  <div className="all-hotels-img">
                     <img src={i.img} alt="" />
                   </div>
-                  <div class="all-hotels-description">
-                    <h2 class="all-hotels-titile">{i.name}</h2>
+                  <div className="all-hotels-description">
+                    <h2 className="all-hotels-titile">{i.name}</h2>
                     <p>Rating: {i.rating}</p>
 
-                    <p class="all-hotels-price">Price: &#8377; 250/day</p>
+                    <p className="all-hotels-price">Price: &#8377; 250/day</p>
                   </div>
                 </div>
               </>
@@ -555,49 +563,28 @@ export function Hotels() {
       {/* foods section */}
       <section id="all-hotels">
         <h2>Types of food</h2>
-        <div class="all-hotels-container facility-container">
-          <div class="all-hotels-type facility-fruite">
-            <div class="facility-img-container">
+        <div className="all-hotels-container facility-container">
+          <div className="all-hotels-type facility-fruite">
+            <div className="facility-img-container">
               <img src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
-              <div class="facility-img-content">
+              <div className="facility-img-content">
                 <h3>fruite</h3>
-                {/* <a
-                  href="https://en.wikipedia.org/wiki/Fruit"
-                  class="facility-btn facility-btn-primary"
-                  target="blank"
-                >
-                  learn more
-                </a> */}
               </div>
             </div>
           </div>
-          <div class="all-hotels-type facility-vegetable">
-            <div class="facility-img-container">
+          <div className="all-hotels-type facility-vegetable">
+            <div className="facility-img-container">
               <img src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
-              <div class="facility-img-content">
+              <div className="facility-img-content">
                 <h3>vegetable</h3>
-                {/* <a
-                  href="https://en.wikipedia.org/wiki/Vegetable"
-                  class="facility-btn facility-btn-primary"
-                  target="blank"
-                >
-                  learn more
-                </a> */}
               </div>
             </div>
           </div>
-          <div class="all-hotels-type facility-grin">
-            <div class="facility-img-container">
+          <div className="all-hotels-type facility-grin">
+            <div className="facility-img-container">
               <img src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
-              <div class="facility-img-content">
+              <div className="facility-img-content">
                 <h3>grin</h3>
-                {/* <a
-                  href="https://en.wikipedia.org/wiki/Grain"
-                  class="facility-btn facility-btn-primary"
-                  target="blank"
-                >
-                  learn more
-                </a> */}
               </div>
             </div>
           </div>
@@ -608,56 +595,56 @@ export function Hotels() {
 
       {/* review from the customer */}
       <section id="facility-testimonials">
-        <h2 class="facility-testimonial-title">What Our Customers Say</h2>
-        <div class="facility-testimonial-container facility-container">
-          <div class="facility-testimonial-box">
-            <div class="facility-customer-detail">
-              <div class="facility-customer-photo">
+        <h2 className="facility-testimonial-title">What Our Customers Say</h2>
+        <div className="facility-testimonial-container facility-container">
+          <div className="facility-testimonial-box">
+            <div className="facility-customer-detail">
+              <div className="facility-customer-photo">
                 <img
                   src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg"
                   alt=""
                 />
-                <p class="facility-customer-name">Ross Lee</p>
+                <p className="facility-customer-name">Ross Lee</p>
               </div>
             </div>
-            <div class="facility-star-rating">5 star</div>
-            <p class="facility-testimonial-text">
+            <div className="facility-star-rating">5 star</div>
+            <p className="facility-testimonial-text">
               The hotel's mountain view was breathtaking! It was the perfect
               getaway for a peaceful retreat. The rooms were comfortable, the
               staff was friendly, and the food was delicious. Highly
               recommended!
             </p>
           </div>
-          <div class="facility-testimonial-box">
-            <div class="facility-customer-detail">
-              <div class="facility-customer-photo">
+          <div className="facility-testimonial-box">
+            <div className="facility-customer-detail">
+              <div className="facility-customer-photo">
                 <img
                   src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg"
                   alt=""
                 />
-                <p class="facility-customer-name">Amelia Watson</p>
+                <p className="facility-customer-name">Amelia Watson</p>
               </div>
             </div>
-            <div class="facility-star-rating">4.5 Star</div>
-            <p class="facility-testimonial-text">
+            <div className="facility-star-rating">4.5 Star</div>
+            <p className="facility-testimonial-text">
               The food was exceptional! Each dish was beautifully presented and
               bursting with flavor. The menu offered a great variety, and
               everything was cooked to perfection. A truly memorable dining
               experience.
             </p>
           </div>
-          <div class="facility-testimonial-box">
-            <div class="facility-customer-detail">
-              <div class="facility-customer-photo">
+          <div className="facility-testimonial-box">
+            <div className="facility-customer-detail">
+              <div className="facility-customer-photo">
                 <img
                   src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg"
                   alt=""
                 />
-                <p class="facility-customer-name">Ben Roy</p>
+                <p className="facility-customer-name">Ben Roy</p>
               </div>
             </div>
-            <div class="facility-star-rating">4 star</div>
-            <p class="facility-testimonial-text">
+            <div className="facility-star-rating">4 star</div>
+            <p className="facility-testimonial-text">
               I recently stayed at the hotel and was impressed by the level of
               service. The staff went above and beyond to ensure my stay was
               comfortable and enjoyable. The amenities were top-notch, and I

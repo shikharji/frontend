@@ -1,45 +1,5 @@
-/* detailjsinism blog */
-
-#jainism-blog-wrapper {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  letter-spacing: 1.2px;
-  color: white;
-}
-
-#jainism-blog-wrapper .title {
-  font-size: 2.5rem;
-  margin: 2rem 0;
-}
-#jainism-blog-wrapper .desc {
-  font-size: 1.4rem;
-  margin-bottom: 8rem;
-}
-
-#jainism-blog-wrapper h2 {
-  font-size: 1.8rem;
-  margin: 2rem 0;
-}
-
-#jainism-blog-wrapper p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-}
-
-/* Media query for large screens */
-@media (min-width: 1024px) {
-  .jainism-blog-wrapper {
-    width: 50%; /* Adjust width for larger screens */
-  }
-}
-
-/* detailjsinism blog */
-
-/* intro hero */
+/* index pages design of jainism page start */
+/* intro hero start */
 .Custom-content {
   height: 100%;
   overflow-x: hidden;
@@ -59,7 +19,6 @@
   transition: transform 0.3s ease-out;
   will-change: transform;
 }
-
 .flex-container {
   display: flex;
 }
@@ -93,7 +52,6 @@
     display: block;
   }
 }
-
 .head-large {
   margin-bottom: 5vw;
   font-size: 10vw;
@@ -123,7 +81,6 @@
   letter-spacing: 1px;
   max-width: 780px;
 }
-
 .item-parallax-media {
   overflow: hidden;
 }
@@ -136,7 +93,6 @@
   object-fit: cover;
   opacity: 0.7;
 }
-
 .img-grid {
   flex-direction: column;
   justify-content: space-around;
@@ -180,20 +136,16 @@
 .type-right .img-caption {
   left: 0;
 }
-
 .custom-properties-ftw {
-  /* padding: 2.5rem 1.5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
   height: 30vh;
 }
 
-/* intro hero */
+/* intro hero end */
 
-/* feature jainism */
-/* JainismFeatureCard */
-
+/* Jainism Feature Card start */
 .JainismFeatureCard-card-title {
   color: #262626;
   font-size: 2.5em;
@@ -204,18 +156,15 @@
 .JainismFeatureCard-card-title::first-letter {
   text-transform: uppercase;
 }
-
 .JainismFeatureCard-small-desc {
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5em;
   color: #452c2c;
 }
-
 .JainismFeatureCard-small-desc {
   font-size: 1em;
 }
-
 .JainismFeatureCard-go-corner {
   display: flex;
   align-items: center;
@@ -229,14 +178,12 @@
   background: linear-gradient(135deg, #6293c8, #384c6c);
   border-radius: 0 4px 0 32px;
 }
-
 .JainismFeatureCard-go-arrow {
   margin-top: -4px;
   margin-right: -4px;
   color: white;
   font-family: courier, sans;
 }
-
 .JainismFeatureCard-card {
   display: block;
   position: relative;
@@ -252,7 +199,6 @@
   background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .JainismFeatureCard-card:before {
   content: "";
   position: absolute;
@@ -267,22 +213,18 @@
   transform-origin: 50% 50%;
   transition: transform 0.8s ease-out;
 }
-
 .JainismFeatureCard-card:hover:before {
   transform: scale(28);
 }
-
 .JainismFeatureCard-card:hover .JainismFeatureCard-small-desc {
   transition: all 0.5s ease-out;
   color: rgba(255, 255, 255, 0.8);
 }
-
 .JainismFeatureCard-card:hover .JainismFeatureCard-card-title {
   transition: all 0.5s ease-out;
   color: #ffffff;
 }
 
-/* button */
 .JainFeatureCard-button {
   margin-top: 0.4rem;
   position: relative;
@@ -295,16 +237,13 @@
   color: #fff;
   border: none;
 }
-
 .JainFeatureCard-button:hover::before {
   transform: scaleX(1);
 }
-
 .JainFeatureCard-button-content {
   position: relative;
   z-index: 1;
 }
-
 .JainFeatureCard-button::before {
   content: "";
   position: absolute;
@@ -322,168 +261,17 @@
   );
   transition: all 0.475s;
 }
-/* button */
-/* JainismFeatureCard */
-/* feature jainism */
+/* Jainism Feature Card end */
+/* index pages design of jainism page start */
 
-/* blog card jainism */
-.Jain-blog-blog-card {
-  display: flex;
-  flex-direction: column;
-  max-width: 900px;
-  margin: 1.5rem auto;
-  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.6%;
-  background: #fff;
-  line-height: 1.45;
-  font-family: Poppins;
-  border-radius: 15px;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.Jain-blog-blog-card a {
-  color: inherit;
-}
-.Jain-blog-blog-card a:hover {
-  color: #ffc400;
-}
-.Jain-blog-blog-card:hover .Jain-blog-photo {
-  -webkit-transform: scale(1.15) rotate(2deg);
-  transform: scale(1.15) rotate(2deg);
-}
-.Jain-blog-blog-card .Jain-blog-meta {
-  position: relative;
-  z-index: 0;
-  height: 200px;
-}
-.Jain-blog-blog-card .Jain-blog-photo {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-size: cover;
-  background-position: center;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
-}
-.Jain-blog-blog-card .Jain-blog-description {
-  padding: 1rem;
-  background: #fff;
-  position: relative;
-  z-index: 1;
-}
-.Jain-blog-blog-card .Jain-blog-description h1 {
-  font-family: Poppins;
-  color: black;
-}
-.Jain-blog-blog-card .Jain-blog-description h1 {
-  line-height: 1;
-  margin: 0;
-  font-size: 1.7rem;
-}
-
-.Jain-blog-blog-card .Jain-blog-description .Jain-blog-read-more {
-  text-align: right;
-}
-.Jain-blog-blog-card .Jain-blog-description .Jain-blog-read-more a {
-  color: #ffc400;
-  font-size: 16px;
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  background: #fff7de;
-  padding: 5px 15px;
-  border-radius: 15px;
-}
-.Jain-blog-blog-card .Jain-blog-description .Jain-blog-read-more a:after {
-  content: "\f054";
-  font-family: FontAwesome;
-  margin-left: -10px;
-  opacity: 0;
-  vertical-align: middle;
-  transition: margin 0.3s, opacity 0.3s;
-}
-.Jain-blog-blog-card .Jain-blog-description .Jain-blog-read-more a:hover:after {
-  margin-left: 5px;
-  opacity: 1;
-}
-.Jain-blog-blog-card p {
-  position: relative;
-  margin: 1rem 0 0;
-  color: #555;
-  font-size: 13px;
-}
-.Jain-blog-blog-card p:first-of-type {
-  margin-top: 1.25rem;
-}
-.Jain-blog-blog-card p:first-of-type:before {
-  content: "";
-  position: absolute;
-  height: 3px;
-  background: #ffc400;
-  width: 75px;
-  top: -1rem;
-  border-radius: 3px;
-}
-.Jain-blog-blog-card:hover .Jain-blog-details {
-  left: 0%;
-}
-@media (min-width: 640px) {
-  .Jain-blog-blog-card {
-    flex-direction: row;
-  }
-  .Jain-blog-blog-card .Jain-blog-meta {
-    flex-basis: 40%;
-    height: auto;
-  }
-  .Jain-blog-blog-card .Jain-blog-description {
-    flex-basis: 60%;
-  }
-  .Jain-blog-blog-card .Jain-blog-description:before {
-    -webkit-transform: skewX(-3deg);
-    transform: skewX(-3deg);
-    content: "";
-    background: #fff;
-    width: 30px;
-    position: absolute;
-    left: -10px;
-    top: 0;
-    bottom: 0;
-    z-index: -1;
-  }
-
-  .Jain-blog-blog-card.Jain-blog-alt .Jain-blog-description:before {
-    left: inherit;
-    right: -10px;
-    -webkit-transform: skew(3deg);
-    transform: skew(3deg);
-  }
-  .Jain-blog-blog-card.Jain-blog-alt .Jain-blog-details {
-    padding-left: 25px;
-  }
-  .Jain-blog-blog-card p {
-    font-size: 16px;
-  }
-}
-
-/* blog card jainism */
-
-/* blog card jainism 2  */
-
+/* blog card jainism 2 start (inside feature)  */
 #BlogJainism2 {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  /* justify-content: center; */
-  /* align-content: center; */
   padding: 3rem;
-  /* background-color: #f5f5f5; */
   font-family: "Inter", sans-serif;
 }
-
 .BlogJainism2-card {
   display: flex;
   flex-direction: column;
@@ -508,7 +296,6 @@
 }
 .BlogJainism2-card__content {
   display: grid;
-  /* grid-template-rows: auto 1fr auto; */
   grid-row-gap: 1rem;
   padding: 1rem;
   height: 100%;
@@ -525,7 +312,6 @@
   font-size: 1rem;
   line-height: 1.4;
   color: #3d3d3d;
-  /* margin-bottom: 2.5rem; */
 }
 .BlogJainism2-card__btn {
   display: block;
@@ -544,5 +330,39 @@
   margin-left: 1rem;
   transition: 0.2s;
 }
+/* blog card jainism 2 end (inside feature)  */
 
-/* blog card jainism 2  */
+/* detail jsinism blog start (inside feature) */
+#jainism-blog-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  letter-spacing: 1.2px;
+  color: white;
+}
+#jainism-blog-wrapper .title {
+  font-size: 2.5rem;
+  margin: 2rem 0;
+}
+#jainism-blog-wrapper .desc {
+  font-size: 1.4rem;
+  margin-bottom: 8rem;
+}
+#jainism-blog-wrapper h2 {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+#jainism-blog-wrapper p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+/* Media query for large screens */
+@media (min-width: 1024px) {
+  .jainism-blog-wrapper {
+    width: 50%;
+  }
+}
+/* detail jsinism blog end (inside feature) */

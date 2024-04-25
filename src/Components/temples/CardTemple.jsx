@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 export default function CardTemple({ name, id, img, description, location }) {
-  // Function to truncate the description to 30 words
+  // Function to truncate the description
   const truncateDescription = (text, limit) => {
     if (text) {
       const words = text.split(" ");

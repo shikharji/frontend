@@ -7,7 +7,7 @@ export default function Gototop() {
 
   const scrollToTop = () => {
     scroll.scrollToTop({
-      duration: 600, // Scroll duration in milliseconds
+      duration: 300, // Scroll duration in milliseconds
       smooth: "easeInOutQuad", // Easing function
     });
   };
@@ -15,7 +15,7 @@ export default function Gototop() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.pageYOffset;
-      setIsTop(scrollTop === 0);
+      setIsTop(scrollTop < 600);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,7 +30,7 @@ export default function Gototop() {
       {!isTop && (
         <div id="gototop">
           <button onClick={scrollToTop} className="gototop-btn">
-            Go to top!
+            Back to Top!
           </button>
         </div>
       )}

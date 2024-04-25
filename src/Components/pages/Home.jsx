@@ -33,7 +33,7 @@ export function HeroImg() {
           src="https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_1280.jpg"
           alt="lost img from pixabay"
         />
-        <div class="CrossFade-intro">
+        <div className="CrossFade-intro">
           <h1>Shikharji: The Abode of Serenity</h1>
           <p>
             Explore the majestic beauty and spiritual aura of Shikharji, nestled

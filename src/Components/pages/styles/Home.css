@@ -1,4 +1,4 @@
-/* Home hero */
+/* Home hero start */
 .CrossFade-intro {
   position: relative;
   margin: 2em;
@@ -78,11 +78,9 @@
     opacity: 0;
   }
 }
-
-/* Home hero */
+/* Home hero end */
 
 /* home 3 nav start*/
-
 .expand-container {
   display: flex;
   height: 100vh;
@@ -94,7 +92,6 @@
     width: 100%;
   }
 }
-
 .expand-section {
   flex: 1;
   display: flex;
@@ -108,7 +105,6 @@
   transition: flex 0.5s ease;
   position: relative;
 }
-
 .expand-section .expand-overlay {
   background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
@@ -116,7 +112,6 @@
   position: absolute;
   transition: background-color 0.8s ease;
 }
-
 .expand-section .expand-content {
   z-index: 2;
 }
@@ -124,7 +119,6 @@
   font-size: 3rem;
   color: #fff;
 }
-
 .expand-section:hover {
   flex: 2;
 }
@@ -134,15 +128,12 @@
 .expand-section:hover .expand-overlay {
   opacity: 0;
 }
-
 #shikharji {
   background-image: url(https://1.bp.blogspot.com/-6_3INikYDW8/XEbzjQ5owyI/AAAAAAAAAzs/AU-PzF0pcZktUPafKD-Ga0x5Led1u5eRgCEwYBhgL/s1600/Parasnath-hill-hike-jain-pilgrimage-7.JPG);
 }
-
 #explore {
   background-image: url(https://i.ytimg.com/vi/oFd92AxajiE/maxresdefault.jpg);
 }
-
 #jainism {
   background-image: url(https://jainpuja.com/jain-puja/images/article-images/Jain-dharm-ko-jane.jpg);
 }
@@ -159,7 +150,7 @@
 }
 /* home 3 nav end*/
 
-/* home quotes */
+/* home quotes start*/
 .Quotes-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,7 +160,6 @@
     grid-template-columns: 1fr;
   }
 }
-
 .Quotes-hero .Quotes-content {
   display: flex;
   align-items: center;
@@ -182,7 +172,6 @@
     height: 75vh;
   }
 }
-
 .Quotes-hero .Quotes-content blockquote {
   font-size: 3rem;
   font-style: italic;
@@ -296,5 +285,4 @@
     font-size: 5rem;
   }
 }
-
-/* home quotes */
+/* home quotes end */

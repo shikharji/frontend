@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import PageTitle from "../elements/PageTitle";
 
 export default function Nothing() {
@@ -5,7 +6,7 @@ export default function Nothing() {
     <>
       <PageTitle title="Lost" />
       <div id="Nothing-holder">
-        <div class="Nothing-container">
+        <div className="Nothing-container">
           <section>
             <h1>
               We're Sorry,
@@ -18,12 +19,9 @@ export default function Nothing() {
             <p>
               Don't worry, we won't make you climb an extra hill for your
               troubles. Instead, why not return to the{" "}
-              <a
-                href="/"
-                style={{ color: "blue", textDecoration: "underline" }}
-              >
-                <strong> home page</strong>
-              </a>{" "}
+              <Link to="/">
+                <strong> HOME PAGE</strong>
+              </Link>{" "}
               and explore from there?
             </p>
           </section>

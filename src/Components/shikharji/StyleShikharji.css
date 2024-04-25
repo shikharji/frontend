@@ -1,5 +1,5 @@
-/* sikharji page intro start */
-
+/* sikharji indesx page design start  */
+/* intro start */
 .shikharji-title {
   margin-bottom: 20px;
   color: #616060;
@@ -8,7 +8,6 @@
   word-spacing: 5px;
   letter-spacing: 2px;
 }
-
 .shikharji-btn a {
   display: block;
   width: 180px;
@@ -19,8 +18,6 @@
   color: #fb2274;
   text-align: center;
 }
-
-/* Banner Image */
 .shikharji-banner_image {
   background: url("https://cdn.pixabay.com/photo/2021/11/07/02/53/road-6774756_1280.jpg")
     no-repeat top center;
@@ -31,7 +28,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .shikharji-banner_content {
   text-align: center;
   max-width: 700px;
@@ -43,52 +39,41 @@
   line-height: 38px;
   margin-bottom: 15px;
 }
-
 .shikharji-banner_content h1 span {
   color: #8a0135;
 }
-
-/* About us */
 .shikharji-about,
 .shikharji-services {
   padding: 5% 10%;
   text-align: center;
 }
-
 .shikharji-about p {
   color: wheat;
   padding: 0 15%;
-  /* max-width: 700px; */
 }
-/* Services */
 .shikharji-services {
   background: #968989;
   color: #0d0d0d;
 }
-
 .shikharji-diff_services {
   display: flex;
   margin-top: 35px;
   justify-content: space-between;
 }
-
 .shikharji-diff_service_item {
   width: 30%;
 }
-
 .shikharji-diff_service_item img {
   width: 100%;
   margin-bottom: 25px;
 }
-
 .shikharji-diff_service_item h3 {
   color: #130564;
   margin-bottom: 15px;
 }
+/* intro end  */
 
-/* sikharji page intro end */
-
-/* feature */
+/* shikharji feature items */
 .blogs-a {
   background-color: goldenrod;
   text-decoration: none;
@@ -98,28 +83,21 @@
   display: inline-block;
   transition: all 0.3s;
 }
-
 .blogs-a:hover {
   opacity: 0.6;
 }
-
-/* Styles for the hero image */
 .blogs-hero {
-  /* Photo by mnm.all on Unsplash */
   background: url("https://cdn.pixabay.com/photo/2022/01/11/08/47/temple-6929982_960_720.jpg")
     center;
   background-size: cover;
   padding: 4rem 2rem;
-  /* grid styles */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   align-items: center;
 }
-
 .blogs-hero > * {
   color: white;
 }
-
 .blogs-hero > h1 {
   font-size: 3rem;
   padding-bottom: 1rem;
@@ -129,33 +107,26 @@
     font-size: 5rem;
   }
 }
-
 .blogs-hero > article > p {
   font-size: 1.5rem;
   font-weight: 200;
 }
-
 .blogs-hero > article > a {
   padding: 1rem;
   margin-top: 0.75rem;
 }
-
-/* breweries styles */
 .breweries {
   padding: 2rem;
 }
-
 .breweries > ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1rem;
 }
-
 .breweries > ul > li {
   border: 1px solid #e2e2e2;
   border-radius: 0.5rem;
 }
-
 .breweries > ul > li > figure {
   max-height: 220px;
   overflow: hidden;
@@ -163,70 +134,37 @@
   border-top-right-radius: 0.5rem;
   position: relative;
 }
-
 .breweries > ul > li > figure > img {
   width: 100%;
 }
-
 .breweries > ul > li > figure > figcaption {
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
 }
-
 .breweries > ul > li > figure > figcaption > h3 {
   color: white;
   padding: 0.75rem;
   font-size: 1.25rem;
 }
-
 .breweries > ul > li > p {
   font-size: 1rem;
   line-height: 1.5;
   padding: 1rem 0.75rem;
   color: #666666;
 }
-
 .breweries > ul > li > a {
   padding: 0.5rem 1rem;
   margin: 0.5rem;
 }
-/* feature */
+/* shikharji feature items */
+
+/* sikharji index page end */
 
 /* now the sub route shikharji feature start */
 
-/* parasnath hill */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-}
-
-.accordion {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  flex: 1 1 100%; /* Initially, each item takes up 100% width (1 item per row) */
-  margin: 0;
-  padding: 0;
-  transition: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-@media (min-width: 768px) {
-  .accordion {
-    flex: 1; /* On screens larger than 768px (desktop), revert to original flex value (column layout) */
-  }
-}
-
-.accordion:hover {
-  flex: 1 1 65vw; /* Adjusted flex properties on hover for larger width */
-}
-
-/* parasnath hill */
-
-/* temples of madhuban */
-
+/* parasnath start */
 .LargeHero-hero {
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -358,11 +296,552 @@
 .LargeHero-delay-800 {
   animation-delay: 0.8s;
 }
+/* parasnath end */
 
-/* temples of madhuban */
+/* jain temple start */
+#FixedBack-hero1 {
+  background: url(https://4.bp.blogspot.com/_AQ0vcRxFu0A/S9shDGGyMTI/AAAAAAAAAYk/kn3WTkY2LoQ/s1600/IMG_0714.JPG);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+#FixedBack-hero2 {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21555/Melissani-cave-natural.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+.FixedBack-hero,
+.FixedBack-content {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+.FixedBack-inner {
+  min-height: 600px;
+  position: relative;
+}
+.FixedBack-hero .FixedBack-inner {
+  background: rgba(0, 0, 0, 0.7)
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC)
+    repeat;
+}
+.FixedBack-copy {
+  position: absolute;
+  top: 50%;
+  height: 10em;
+  margin-top: -5em;
+  width: 100%;
+}
+.FixedBack-hero h1,
+.FixedBack-hero p {
+  color: #fff;
+}
+.FixedBack-content h1,
+.FixedBack-content p {
+  color: #333;
+}
+/* jain temple end */
 
-/* tonks */
+/* wildlife and nature start */
+.wildlife-container {
+  background: linear-gradient(
+      rgba(176, 189, 200, 0.4) 7%,
+      rgba(173, 136, 200, 0.4) 100%
+    ),
+    url("https://cdn.pixabay.com/photo/2020/01/07/06/22/peacock-4746848_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 0.1px;
+  block-size: 100vh;
+  background-size: cover;
+  inline-size: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.wildlife-title,
+.wildlife-description {
+  color: rgb(5, 5, 5);
+  text-align: center;
+  max-width: 700px;
+  margin: 0;
+}
+.wildlife-title {
+  font-size: 3.2rem;
+  margin-block-start: 12.5rem;
+  margin-block-end: 1rem;
+}
+.wildlife-description {
+  font-size: 1.7rem;
+  margin-block-end: 1rem;
+}
+.wildlife-cta {
+  color: rgb(95, 135, 237);
+  background-color: white;
+  border-radius: 6px;
+  padding-block-end: 15px;
+  padding-block-start: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  inline-size: 9rem;
+  margin: 0 auto;
+}
+.wildlife-cta:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(91, 129, 223);
+}
+/* wildlife card start */
+.WildlifeCard-card__img img {
+  width: 100%;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+.WildlifeCard-card {
+  text-align: center;
+}
+.WildlifeCard-card__title {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  color: #ffffff;
+  line-height: 35px;
+  font-size: 24px;
+}
+.WildlifeCard-card__text {
+  font-family: "Hind", sans-serif;
+  color: #717171;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+.WildlifeCard-card__readbtn {
+  font-family: "Hind", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #a1a1a1;
+  text-decoration: none;
+  line-height: 26px;
+  transition: all ease 0.3s;
+  position: relative;
+}
+.WildlifeCard-divider {
+  background-color: #e1e1e1;
+  height: 2px;
+  max-width: 30px;
+  margin: 15px auto 20px;
+}
+.WildlifeCard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 35px;
+  max-width: 1300px;
+  margin: 50px auto;
+  padding: 0 10px;
+}
+/* wildlife card end */
+/* wildlife and nature end*/
 
+/* local culture start */
+.local-page-title {
+  text-align: center;
+}
+.local-page-title::after {
+  content: "↓";
+  display: block;
+  font-size: 2em;
+  opacity: 0;
+  transform: translateY(-24px);
+  animation: fadein 800ms 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+.local-header {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.local-section {
+  transform-origin: center top;
+  transform: scaleY(calc(1 - 0.1));
+}
+.local-section > * {
+  transform-origin: center top;
+  transform: scaleY(calc(1 / (1 - 0.1)));
+}
+.local-section-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: bold;
+  line-height: 1.125;
+  padding: 1rem 2rem;
+}
+.local-content p {
+  padding: 1rem 2rem;
+}
+.local-content {
+  position: relative;
+  margin: -40vh auto 0;
+  padding: var(--space);
+  max-width: 55ch;
+  width: calc(100% - 8vmin);
+  background: hsla(5, 15%, 5%, 0.9);
+}
+.local-image-container {
+  position: sticky;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+}
+.local-image-container img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.local-image-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    hsla(5, 15%, 5%, 0) 0%,
+    hsla(5, 15%, 5%, 0.013) 8.1%,
+    hsla(5, 15%, 5%, 0.049) 15.5%,
+    hsla(5, 15%, 5%, 0.104) 22.5%,
+    hsla(5, 15%, 5%, 0.175) 29%,
+    hsla(5, 15%, 5%, 0.259) 35.3%,
+    hsla(5, 15%, 5%, 0.352) 41.2%,
+    hsla(5, 15%, 5%, 0.45) 47.1%,
+    hsla(5, 15%, 5%, 0.55) 52.9%,
+    hsla(5, 15%, 5%, 0.648) 58.8%,
+    hsla(5, 15%, 5%, 0.741) 64.7%,
+    hsla(5, 15%, 5%, 0.825) 71%,
+    hsla(5, 15%, 5%, 0.896) 77.5%,
+    hsla(5, 15%, 5%, 0.951) 84.5%,
+    hsla(5, 15%, 5%, 0.987) 91.9%,
+    hsl(5, 15%, 5%) 100%
+  );
+}
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* local culture end */
+
+/* Facilities start */
+
+.facility-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+.facility-btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+}
+.facility-btn-primary {
+  color: #fff;
+  background: #16a083;
+}
+.facility-btn-primary:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
+.facility-showcase-area {
+  height: 50vh;
+  background: linear-gradient(
+      rgba(240, 240, 240, 0.144),
+      rgba(255, 255, 255, 0.336)
+    ),
+    url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #555;
+}
+
+.facility-showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.6rem;
+}
+
+.facility-main-title {
+  text-transform: uppercase;
+  margin-top: 1.5em;
+}
+/* ......//about us//...... */
+#facility-about {
+  padding: 50px 0;
+  background: #f5f5f7;
+}
+.facility-about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+#facility-about h2 {
+  font-size: 2.3rem;
+  color: black;
+}
+#facility-about p {
+  font-size: 1.2rem;
+  color: #555;
+}
+.facility-about-img {
+  flex: 1 1 400px;
+  padding: 30px;
+  transform: translateX(150%);
+  animation: about-img-animation 1s ease-in-out forwards;
+}
+@keyframes about-img-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+.facility-about-text {
+  flex: 1 1 400px;
+  padding: 30px;
+  margin: auto;
+  transform: translate(-150%);
+  animation: about-text-animation 1s ease-in-out forwards;
+}
+@keyframes about-text-animation {
+  100% {
+    transform: translate(0);
+  }
+}
+.facility-about-img img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+  margin: auto;
+  object-fit: cover;
+  object-position: right;
+}
+/* ..........////Food category///........... */
+#all-hotels {
+  padding: 5rem 0 10rem 0;
+}
+#all-hotels h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  color: #555;
+}
+.all-hotels-container {
+  display: flex;
+  justify-content: space-between;
+}
+.all-hotels-container img {
+  display: block;
+  width: 100%;
+  margin: auto;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.facility-img-container {
+  margin: 0 1rem;
+  position: relative;
+}
+.facility-img-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+.facility-img-content h3 {
+  color: #fff;
+  font-size: 2.2rem;
+}
+.facility-img-content a {
+  font-size: 1.2rem;
+}
+.facility-img-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.871);
+  opacity: 0;
+  z-index: 1;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+}
+.facility-img-container:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.facility-img-container:hover .facility-img-content {
+  opacity: 1;
+  top: 40%;
+}
+
+/* .........../Food Menu/............ */
+.all-hotels-menu-heading {
+  text-align: center;
+  font-size: 3.4rem;
+  font-weight: 400;
+  color: #948080;
+  margin: 2rem 0;
+}
+.all-hotels-menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 0px 30px 0px;
+}
+.all-hotels-menu-container img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.all-hotels-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.all-hotels-description {
+  margin: auto 1.5rem;
+}
+.facility-font-title {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #444;
+}
+.all-hotels-description p {
+  font-size: 1.4rem;
+  color: #555;
+  font-weight: 500;
+}
+.all-hotels-description .food-price {
+  color: #117964;
+  font-weight: 700;
+}
+
+/* ........./ Testimonial /.......... */
+#facility-testimonials {
+  padding: 5rem 0;
+  background: rgba(243, 243, 243);
+}
+.facility-testimonial-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #555;
+}
+.facility-testimonial-container {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+  padding: 1rem;
+  color: rgb(205, 40, 40);
+}
+.facility-testimonial-box .facility-checked {
+  color: #ff9529;
+}
+.facility-testimonial-box .facility-testimonial-text {
+  margin: 1rem 0;
+  color: #444;
+}
+.facility-testimonial-box {
+  text-align: center;
+  padding: 1rem;
+}
+.facility-customer-photo img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  /* ......./ food /......... */
+  .all-hotels-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .all-hotels-type:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .all-hotels-type {
+    box-shadow: 5px 5px 10px 0 #aaa;
+  }
+  .facility-img-container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .facility-testimonial-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .all-hotels-menu-container img {
+    margin: auto;
+  }
+  .all-hotels-menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .facility-form-container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .facility-img-container h3 {
+    font-size: 1.5rem;
+  }
+  .facility-img-container .facility-btn {
+    font-size: 0.7rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .facility-showcase-area {
+    height: 50vmax;
+  }
+}
+
+/* Facilities end */
+
+/* tonks start */
 .tonks-timeline::before {
   margin: 0;
   min-height: 100vh;
@@ -370,7 +849,6 @@
   background-color: #0e1525;
   color: #b0b4be;
 }
-
 .tonks-timeline {
   list-style: none;
   width: min(100% - 2rem, 60rem);
@@ -420,18 +898,15 @@
   border-radius: 50%;
   transform: translate(-50%, 50%);
 }
-
 @media (min-width: 50em) {
   .tonks-timeline {
     width: min(90%, 800px);
     margin: 5rem auto;
   }
-
   .tonks-timeline::before {
     left: 50%;
     transform: translate(-50%);
   }
-
   .tonks-timeline li {
     width: 42%;
     position: relative;
@@ -465,626 +940,4 @@
     border-color: transparent #272f41 transparent transparent;
   }
 }
-
-/* tonks */
-
-/* wildlife and nature */
-.wildlife-container {
-  background: linear-gradient(
-      rgba(176, 189, 200, 0.4) 7%,
-      rgba(173, 136, 200, 0.4) 100%
-    ),
-    url("https://cdn.pixabay.com/photo/2020/01/07/06/22/peacock-4746848_1280.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  padding-top: 0.1px;
-  block-size: 100vh;
-  /* min-block-size: 150vh; */
-  background-size: cover;
-  inline-size: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  /* justify-content: space-around; */
-  flex-direction: column;
-}
-
-.wildlife-title,
-.wildlife-description {
-  color: rgb(5, 5, 5);
-  text-align: center;
-  max-width: 700px;
-  margin: 0;
-}
-.wildlife-title {
-  font-size: 3.2rem;
-  margin-block-start: 12.5rem;
-  margin-block-end: 1rem;
-}
-.wildlife-description {
-  font-size: 1.7rem;
-  margin-block-end: 1rem;
-}
-.wildlife-cta {
-  color: rgb(95, 135, 237);
-  background-color: white;
-  border-radius: 6px;
-  padding-block-end: 15px;
-  padding-block-start: 15px;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  display: block;
-  inline-size: 9rem;
-  margin: 0 auto;
-}
-.wildlife-cta:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(91, 129, 223);
-}
-
-/* wildlife card start */
-.WildlifeCard-card__img img {
-  width: 100%;
-  vertical-align: top;
-  margin-bottom: 30px;
-}
-.WildlifeCard-card {
-  text-align: center;
-}
-.WildlifeCard-card__title {
-  font-family: "Montserrat", sans-serif;
-  text-transform: capitalize;
-  color: #ffffff;
-  line-height: 35px;
-  font-size: 24px;
-}
-.WildlifeCard-card__text {
-  font-family: "Hind", sans-serif;
-  color: #717171;
-  font-size: 16px;
-  line-height: 26px;
-  margin-bottom: 20px;
-}
-.WildlifeCard-card__readbtn {
-  font-family: "Hind", sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #a1a1a1;
-  text-decoration: none;
-  line-height: 26px;
-  transition: all ease 0.3s;
-  position: relative;
-}
-
-.WildlifeCard-divider {
-  background-color: #e1e1e1;
-  height: 2px;
-  max-width: 30px;
-  margin: 15px auto 20px;
-}
-.WildlifeCard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 35px;
-  max-width: 1300px;
-  margin: 50px auto;
-  padding: 0 10px;
-}
-
-/* wildlife card end */
-
-/* wildlife and nature */
-
-/* local culture */
-.local-page-title {
-  text-align: center;
-}
-
-.local-page-title::after {
-  content: "↓";
-  display: block;
-  font-size: 2em;
-  opacity: 0;
-  transform: translateY(-24px);
-  animation: fadein 800ms 500ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-.local-header {
-  display: grid;
-  place-items: center;
-  height: 100vh;
-}
-
-.local-section {
-  transform-origin: center top;
-  transform: scaleY(calc(1 - 0.1));
-}
-
-.local-section > * {
-  transform-origin: center top;
-  transform: scaleY(calc(1 / (1 - 0.1)));
-}
-
-.local-section-title {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: bold;
-  line-height: 1.125;
-  padding: 1rem 2rem;
-}
-.local-content p {
-  padding: 1rem 2rem;
-}
-
-.local-content {
-  position: relative;
-  margin: -40vh auto 0;
-  padding: var(--space);
-  max-width: 55ch;
-  width: calc(100% - 8vmin);
-  background: hsla(5, 15%, 5%, 0.9);
-}
-
-.local-image-container {
-  position: sticky;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -2;
-}
-
-.local-image-container img {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.local-image-container::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: linear-gradient(
-    to bottom,
-    hsla(5, 15%, 5%, 0) 0%,
-    hsla(5, 15%, 5%, 0.013) 8.1%,
-    hsla(5, 15%, 5%, 0.049) 15.5%,
-    hsla(5, 15%, 5%, 0.104) 22.5%,
-    hsla(5, 15%, 5%, 0.175) 29%,
-    hsla(5, 15%, 5%, 0.259) 35.3%,
-    hsla(5, 15%, 5%, 0.352) 41.2%,
-    hsla(5, 15%, 5%, 0.45) 47.1%,
-    hsla(5, 15%, 5%, 0.55) 52.9%,
-    hsla(5, 15%, 5%, 0.648) 58.8%,
-    hsla(5, 15%, 5%, 0.741) 64.7%,
-    hsla(5, 15%, 5%, 0.825) 71%,
-    hsla(5, 15%, 5%, 0.896) 77.5%,
-    hsla(5, 15%, 5%, 0.951) 84.5%,
-    hsla(5, 15%, 5%, 0.987) 91.9%,
-    hsl(5, 15%, 5%) 100%
-  );
-}
-
-@keyframes fadein {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* local culture */
-
-/* parasnath mountain */
-#FixedBack-hero1 {
-  background: url(https://4.bp.blogspot.com/_AQ0vcRxFu0A/S9shDGGyMTI/AAAAAAAAAYk/kn3WTkY2LoQ/s1600/IMG_0714.JPG);
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
-#FixedBack-hero2 {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21555/Melissani-cave-natural.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
-.FixedBack-hero,
-.FixedBack-content {
-  text-align: center;
-  position: relative;
-  width: 100%;
-}
-.FixedBack-inner {
-  min-height: 600px;
-  position: relative;
-}
-.FixedBack-hero .FixedBack-inner {
-  background: rgba(0, 0, 0, 0.7)
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC)
-    repeat;
-}
-.FixedBack-copy {
-  position: absolute;
-  top: 50%;
-  height: 10em;
-  margin-top: -5em;
-  width: 100%;
-}
-.FixedBack-hero h1,
-.FixedBack-hero p {
-  color: #fff;
-}
-.FixedBack-content h1,
-.FixedBack-content p {
-  color: #333;
-}
-
-/* parasnath mountain */
-
-/* Facilities */
-
-/* more hero and food facility */
-/* ///////////..utility classes../////////// */
-
-.facility-container {
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
-}
-
-.facility-btn {
-  display: inline-block;
-  padding: 0.5em 1.5em;
-  text-decoration: none;
-  border-radius: 50px;
-  cursor: pointer;
-  outline: none;
-  margin-top: 1em;
-  text-transform: uppercase;
-  font-weight: small;
-}
-
-.facility-btn-primary {
-  color: #fff;
-  background: #16a083;
-}
-
-.facility-btn-primary:hover {
-  background: #117964;
-  transition: background 0.3s ease-in-out;
-}
-
-/* ............//// Showcase styling ////......... */
-
-.facility-showcase-area {
-  height: 50vh;
-  background: linear-gradient(
-      rgba(240, 240, 240, 0.144),
-      rgba(255, 255, 255, 0.336)
-    ),
-    url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #555;
-}
-
-.facility-showcase-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 1.6rem;
-}
-
-.facility-main-title {
-  text-transform: uppercase;
-  margin-top: 1.5em;
-}
-
-/* ......//about us//...... */
-
-#facility-about {
-  padding: 50px 0;
-  background: #f5f5f7;
-}
-
-.facility-about-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#facility-about h2 {
-  font-size: 2.3rem;
-  color: black;
-}
-
-#facility-about p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-.facility-about-img {
-  flex: 1 1 400px;
-  padding: 30px;
-  transform: translateX(150%);
-  animation: about-img-animation 1s ease-in-out forwards;
-}
-
-@keyframes about-img-animation {
-  100% {
-    transform: translate(0);
-  }
-}
-
-.facility-about-text {
-  flex: 1 1 400px;
-  padding: 30px;
-  margin: auto;
-  transform: translate(-150%);
-  animation: about-text-animation 1s ease-in-out forwards;
-}
-
-@keyframes about-text-animation {
-  100% {
-    transform: translate(0);
-  }
-}
-
-.facility-about-img img {
-  display: block;
-  height: 400px;
-  max-width: 100%;
-  margin: auto;
-  object-fit: cover;
-  object-position: right;
-}
-
-/* ..........////Food category///........... */
-
-#all-hotels {
-  padding: 5rem 0 10rem 0;
-}
-
-#all-hotels h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  color: #555;
-}
-
-.all-hotels-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.all-hotels-container img {
-  display: block;
-  width: 100%;
-  margin: auto;
-  max-height: 300px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.facility-img-container {
-  margin: 0 1rem;
-  position: relative;
-}
-
-.facility-img-content {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  z-index: 2;
-  text-align: center;
-  transition: all 0.3s ease-in-out 0.1s;
-}
-
-.facility-img-content h3 {
-  color: #fff;
-  font-size: 2.2rem;
-}
-
-.facility-img-content a {
-  font-size: 1.2rem;
-}
-
-.facility-img-container::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.871);
-  opacity: 0;
-  z-index: 1;
-
-  transform: scaleY(0);
-  transform-origin: 100% 100%;
-  transition: all 0.3s ease-in-out;
-}
-
-.facility-img-container:hover::after {
-  opacity: 1;
-  transform: scaleY(1);
-}
-
-.facility-img-container:hover .facility-img-content {
-  opacity: 1;
-  top: 40%;
-}
-
-/* .........../Food Menu/............ */
-
-.all-hotels-menu-heading {
-  text-align: center;
-  font-size: 3.4rem;
-  font-weight: 400;
-  color: #948080;
-  margin: 2rem 0;
-}
-
-.all-hotels-menu-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 50px 0px 30px 0px;
-}
-
-.all-hotels-menu-container img {
-  display: block;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.all-hotels-menu-item {
-  display: flex;
-  flex: 1 1 600px;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
-}
-
-.all-hotels-description {
-  margin: auto 1.5rem;
-}
-
-.facility-font-title {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #444;
-}
-
-.all-hotels-description p {
-  font-size: 1.4rem;
-  color: #555;
-  font-weight: 500;
-}
-
-.all-hotels-description .food-price {
-  color: #117964;
-  font-weight: 700;
-}
-
-/* ........./ Testimonial /.......... */
-
-#facility-testimonials {
-  padding: 5rem 0;
-  background: rgba(243, 243, 243);
-}
-
-.facility-testimonial-title {
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 400;
-  color: #555;
-}
-
-.facility-testimonial-container {
-  display: flex;
-  justify-content: space-between;
-  font-size: 1.4rem;
-  padding: 1rem;
-  color: rgb(205, 40, 40);
-}
-
-.facility-testimonial-box .facility-checked {
-  color: #ff9529;
-}
-
-.facility-testimonial-box .facility-testimonial-text {
-  margin: 1rem 0;
-  color: #444;
-}
-
-.facility-testimonial-box {
-  text-align: center;
-  padding: 1rem;
-}
-
-.facility-customer-photo img {
-  display: block;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
-  margin: auto;
-}
-
-@media (max-width: 768px) {
-  /* ......./ food /......... */
-
-  .all-hotels-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .all-hotels-type:not(:last-child) {
-    margin-bottom: 3rem;
-  }
-
-  .all-hotels-type {
-    box-shadow: 5px 5px 10px 0 #aaa;
-  }
-
-  .facility-img-container {
-    margin: 0;
-  }
-}
-
-@media (max-width: 500px) {
-  .facility-testimonial-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .all-hotels-menu-container img {
-    margin: auto;
-  }
-
-  .all-hotels-menu-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .facility-form-container {
-    width: 90%;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .facility-img-container h3 {
-    font-size: 1.5rem;
-  }
-
-  .facility-img-container .facility-btn {
-    font-size: 0.7rem;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 500px) {
-  .facility-showcase-area {
-    height: 50vmax;
-  }
-}
-
-/* more hero and food facility */
-
-/* Facilities */
+/* tonks end */
