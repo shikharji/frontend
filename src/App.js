@@ -52,7 +52,6 @@ import {
   Wildlife,
 } from "./Components/shikharji/FeatureShikharji";
 import DetailJainism from "./Components/jainism/DetailJainism";
-import Donate from "./Components/elements/Donate";
 
 function App() {
   return (
@@ -106,7 +105,6 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-detail/:id" element={<DetailBlog />} />
       </Routes>
-      <Donate />
       <Footer />
     </>
   );

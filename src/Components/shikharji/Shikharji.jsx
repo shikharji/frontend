@@ -150,23 +150,26 @@ export function BlogShikharji() {
         <Loading />
       ) : (
         <>
-          <h1 className="center-title">All shikharji Articles</h1>
-          <div className="CardBlogs-container">
-            {blogs.slice(0, visibleBlogs).map((blog) => (
-              <div key={blog._id}>
-                <CardBlogs
-                  id={blog._id}
-                  title={blog.blogTitle}
-                  tags={blog.tags}
-                  desc={blog.introduction}
-                />
-              </div>
-            ))}
-            {visibleBlogs < blogs.length && (
-              <button className="load-more-btn" onClick={loadMore}>
-                Load More
-              </button>
-            )}
+          {" "}
+          <div className="blog-slider" x-data="{start: true, end: false}">
+            <h1 className="blog-slider-title">All shikharji Articles</h1>
+            <div className="blog-slider__content" x-ref="slider">
+              {blogs.slice(0, visibleBlogs).map((blog) => (
+                <div key={blog._id}>
+                  <CardBlogs
+                    id={blog._id}
+                    title={blog.blogTitle}
+                    tags={blog.tags}
+                    desc={blog.introduction}
+                  />
+                </div>
+              ))}
+              {visibleBlogs < blogs.length && (
+                <button className="load-more-btn" onClick={loadMore}>
+                  Load More
+                </button>
+              )}
+            </div>
           </div>
         </>
       )}
