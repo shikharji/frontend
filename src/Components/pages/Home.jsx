@@ -28,10 +28,22 @@ export function HeroImg() {
   return (
     <>
       <div id="CrossFade">
-        <img src={images.cloudAboveMountain} alt="lost img from pixabay" />
-        <img src={images.foggyRoadView} alt="lost img from pixabay" />
-        <img src={images.fogTreeMountain} alt="lost img from pixabay" />
-        <img src={images.mountainsAboveCloud} alt="lost img from pixabay" />
+        <img
+          src={images.cloudAboveMountain}
+          alt="Clouds hovering above mountains, creating a scenic view."
+        />
+        <img
+          src={images.foggyRoadView}
+          alt="Foggy road view, illustrating a serene and tranquil environment."
+        />
+        <img
+          src={images.fogTreeMountain}
+          alt="Foggy mountain landscape with trees, creating a mystical atmosphere."
+        />
+        <img
+          src={images.mountainsAboveCloud}
+          alt="View of mountains above the clouds, showcasing a breathtaking scenery."
+        />
         <div className="CrossFade-intro">
           <h1>Shikharji: The Abode of Serenity</h1>
           <p>

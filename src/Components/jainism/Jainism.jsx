@@ -5,6 +5,7 @@ import "./StyleJainism.css";
 import axios from "axios";
 import CardBlogs from "../blogs/CardBlogs";
 import { Helmet } from "react-helmet";
+import * as image from "../assets/jainism/Export";
 
 export default function Jainism() {
   return (
@@ -34,8 +35,8 @@ export function IntroHero() {
         <section className="Custom-block section-part">
           <figure className="item-parallax-media">
             <img
-              src="https://images.unsplash.com/photo-1689586695982-82072c5e545d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
+              src={image.jainismIntroHero}
+              alt="Introduction to Jainism, showcasing its history and principles."
             />
           </figure>
           <div className="item-parallax-content flex-container">
@@ -53,8 +54,8 @@ export function IntroHero() {
           <div className="item-parallax-content flex-container img-grid">
             <figure className="img-gridItem type-right">
               <img
-                src="https://cdn.pixabay.com/photo/2016/05/10/21/50/meditation-1384758_1280.jpg"
-                alt=""
+                src={image.jainismMeditation}
+                alt="Meditation in Jainism, focusing on spiritual contemplation and self-awareness."
               />
               <figcaption className="img-caption">
                 <h2 className="head-small">Importance of Soul</h2>
@@ -69,8 +70,8 @@ export function IntroHero() {
             </figure>
             <figure className="img-gridItem type-left">
               <img
-                src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
+                src={image.jainismMind}
+                alt="Mindfulness in Jainism, highlighting the importance of mental clarity and purity."
               />
               <figcaption className="img-caption">
                 <h2 className="head-small">Importance of Mind</h2>
@@ -88,8 +89,8 @@ export function IntroHero() {
         <section className="Custom-block">
           <figure className="item-parallax-media">
             <img
-              src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/46992/noah-silliman-141979.jpg"
-              alt=""
+              src={image.jainismLive}
+              alt="Live a Jain way of life, emphasizing simplicity and non-violence."
             />
           </figure>
           <div className="item-parallax-content flex-container">

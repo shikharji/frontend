@@ -38,6 +38,12 @@
   text-transform: uppercase;
   line-height: 38px;
   margin-bottom: 15px;
+  color: rgb(255, 255, 255);
+}
+@media screen and (min-width: 1000px) {
+  .shikharji-banner_content h1 {
+    color: rgb(0, 0, 0);
+  }
 }
 .shikharji-banner_content h1 span {
   color: #8a0135;
