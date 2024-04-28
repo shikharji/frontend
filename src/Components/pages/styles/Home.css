@@ -141,14 +141,25 @@
 
 /* for temple page image */
 #Ancient-temple {
-  background-image: url(https://cdn.pixabay.com/photo/2018/03/14/18/04/jain-temple-3225898_1280.jpg);
+  background-image: url("../../assets/temples/nav/ancient_jain_temple.jpg");
 }
 #Main-temple {
-  background-image: url(https://cdn.pixabay.com/photo/2014/01/14/06/19/manas-mandir-244142_1280.jpg);
+  background-image: url("../../assets/temples/nav/main_jain_temple.jpg");
 }
 #Cave-temple {
-  background-image: url(https://images.unsplash.com/photo-1708669530767-1bfcd6e8ec5e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-image: url("../../assets/temples/nav/cave_jain_temple.jpg");
 }
+
+#indian-temple {
+  background-image: url("../../assets/temples/nav/indian_jain_temple.jpg");
+}
+#pakistan-temple {
+  background-image: url("../../assets/temples/nav/pakistan_jain_temple.jpg");
+}
+#world-temple {
+  background-image: url("../../assets/temples/nav/world_jain_temple.jpg");
+}
+/* for temple page image */
 /* home 3 nav end*/
 
 /* home quotes start*/

@@ -6,6 +6,7 @@ import Loading from "../elements/Loading";
 import CardTemple from "./CardTemple";
 import FeatureHero from "../elements/FeatureHero";
 import { Helmet } from "react-helmet";
+import * as image from "../assets/temples/Export";
 
 export default function Temples() {
   return (
@@ -41,8 +42,7 @@ export function Hero() {
       <section
         className="Feature-Hero"
         style={{
-          backgroundImage:
-            "url(https://cdn.pixabay.com/photo/2019/06/01/09/53/ranakpur-4243758_1280.jpg)",
+          backgroundImage: `url(${image.templeHeroImage})`,
         }}
       >
         <div className="Feature-Hero-content">
@@ -57,8 +57,7 @@ export function Hero() {
         <div
           className="Feature-Teaser-image"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1684990214842-a5b1c8761a4e?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+            backgroundImage: `url(${image.templeArchitecture})`,
           }}
         ></div>
         <div className="Feature-Teaser-content">
@@ -74,8 +73,7 @@ export function Hero() {
         <div
           className="Feature-Teaser-image"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1633135612391-13c8a576b836?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+            backgroundImage: `url(${image.templeSpiritual})`,
           }}
         ></div>
         <div className="Feature-Teaser-content">
@@ -90,8 +88,7 @@ export function Hero() {
         <div
           className="Feature-Teaser-image"
           style={{
-            backgroundImage:
-              "url(https://images.pexels.com/photos/10986718/pexels-photo-10986718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
+            backgroundImage: `url(${image.templeAncient})`,
           }}
         ></div>
         <div className="Feature-Teaser-content">
@@ -169,47 +166,34 @@ export function AllTemples() {
 export function Location() {
   return (
     <>
-      <div id="height-100vh">
-        <h1 className="center-title">Explore temples by Location</h1>
-        <div className="temple-Location-wrapper">
-          <div className="temple-Location-card">
-            <h3 className="temple-Location-card-title">Around the world</h3>
-            <p className="temple-Location-card-content">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
-            </p>
-            <button className="temple-Location-card-btn">
-              <Link to="world">See all..</Link>
-            </button>
+      <h1 className="center-title">Explore temple by their Locations</h1>
+      <div className="expand-container">
+        <div id="indian-temple" className="expand-section">
+          <div className="expand-content">
+            <Link to="indian">
+              <h1>Indian</h1>
+            </Link>
           </div>
-          <div className="temple-Location-card">
-            <h3 className="temple-Location-card-title">
-              Indian Divine Temples
-            </h3>
-            <p className="temple-Location-card-content">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
-            </p>
-            <button className="temple-Location-card-btn">
-              {" "}
-              <Link to="indian">See all..</Link>
-            </button>
+
+          <div className="expand-overlay"></div>
+        </div>
+
+        <div id="pakistan-temple" className="expand-section">
+          <div className="expand-content">
+            <Link to="pakistan">
+              <h1>Pakistan</h1>
+            </Link>
           </div>
-          <div className="temple-Location-card">
-            <h3 className="temple-Location-card-title">
-              Pakistan Sacred temples
-            </h3>
-            <p className="temple-Location-card-content">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old.
-            </p>
-            <button className="temple-Location-card-btn">
-              <Link to="pakistan">See all..</Link>
-            </button>
+          <div className="expand-overlay"></div>
+        </div>
+
+        <div id="world-temple" className="expand-section">
+          <div className="expand-content">
+            <Link to="world">
+              <h1>World</h1>
+            </Link>
           </div>
+          <div className="expand-overlay"></div>
         </div>
       </div>
     </>
