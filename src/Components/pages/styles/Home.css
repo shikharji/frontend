@@ -128,17 +128,15 @@
 .expand-section:hover .expand-overlay {
   opacity: 0;
 }
+
 #shikharji {
-  background-image: url("../../assets/Home/Parasnath-hill.JPG");
+  background-image: url("../../assets/home/parasnath_hill.jpg");
 }
-/* #shikharji {
-  background-image: url(https://1.bp.blogspot.com/-6_3INikYDW8/XEbzjQ5owyI/AAAAAAAAAzs/AU-PzF0pcZktUPafKD-Ga0x5Led1u5eRgCEwYBhgL/s1600/Parasnath-hill-hike-jain-pilgrimage-7.JPG);
-} */
 #explore {
-  background-image: url(https://i.ytimg.com/vi/oFd92AxajiE/maxresdefault.jpg);
+  background-image: url("../../assets/home/explore_space_station.jpg");
 }
 #jainism {
-  background-image: url(https://jainpuja.com/jain-puja/images/article-images/Jain-dharm-ko-jane.jpg);
+  background-image: url("../../assets/home/jain_dharma.jpg");
 }
 
 /* for temple page image */

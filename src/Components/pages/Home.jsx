@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
-import "./styles/Home.css";
 import { Link } from "react-router-dom";
+import "./styles/Home.css";
+import * as images from "../assets/home/Export";
 
 export default function Home() {
   return (
@@ -27,22 +28,10 @@ export function HeroImg() {
   return (
     <>
       <div id="CrossFade">
-        <img
-          src="https://cdn.pixabay.com/photo/2022/10/23/12/50/trees-7541217_1280.jpg"
-          alt="lost img from pixabay"
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2022/03/28/10/06/mountain-7097104_1280.jpg"
-          alt="lost img from pixabay"
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2021/11/17/16/59/mountain-6804152_1280.jpg"
-          alt="lost img from pixabay"
-        />
-        <img
-          src="https://cdn.pixabay.com/photo/2013/10/02/23/03/mountains-190055_1280.jpg"
-          alt="lost img from pixabay"
-        />
+        <img src={images.cloudAboveMountain} alt="lost img from pixabay" />
+        <img src={images.fogTreeMountain} alt="lost img from pixabay" />
+        <img src={images.fogTreeMountain} alt="lost img from pixabay" />
+        <img src={images.mountainsAboveCloud} alt="lost img from pixabay" />
         <div className="CrossFade-intro">
           <h1>Shikharji: The Abode of Serenity</h1>
           <p>
@@ -111,26 +100,26 @@ export function Quotes() {
         <div className="Quotes-box Quotes-images">
           <div className="Quotes-imgBox">
             <img
-              src="https://cdn.pixabay.com/photo/2016/04/24/20/56/man-1350599_1280.jpg"
-              alt="Img1"
+              src={images.manPrayingNature}
+              alt="Man praying in a serene natural environment."
             />
           </div>
           <div className="Quotes-imgBox">
             <img
-              src="https://cdn.pixabay.com/photo/2023/04/03/01/34/ai-generated-7895764_1280.jpg"
-              alt="Img2"
+              src={images.aiMeditationWoman}
+              alt="AI-generated depiction of a woman meditating"
             />
           </div>
           <div className="Quotes-imgBox">
             <img
-              src="https://cdn.pixabay.com/photo/2020/11/26/15/28/woman-5779323_1280.jpg"
-              alt="Img3"
+              src={images.womanContemplatingSky}
+              alt="Female sitting and gazing up at the daytime sky."
             />
           </div>
           <div className="Quotes-imgBox">
             <img
-              src="https://cdn.pixabay.com/photo/2024/04/05/05/17/yoga-8676568_1280.jpg"
-              alt="Img4"
+              src={images.spiritualConceptsIllustration}
+              alt="Illustration depicting spiritual and philosophical concepts with symbolic imagery."
             />
           </div>
         </div>
