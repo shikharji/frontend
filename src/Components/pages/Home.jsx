@@ -29,7 +29,7 @@ export function HeroImg() {
     <>
       <div id="CrossFade">
         <img src={images.cloudAboveMountain} alt="lost img from pixabay" />
-        <img src={images.fogTreeMountain} alt="lost img from pixabay" />
+        <img src={images.foggyRoadView} alt="lost img from pixabay" />
         <img src={images.fogTreeMountain} alt="lost img from pixabay" />
         <img src={images.mountainsAboveCloud} alt="lost img from pixabay" />
         <div className="CrossFade-intro">

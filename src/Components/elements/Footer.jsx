@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import support_donate from "../assets/others/support_donate.jpg";
 
 export default function Footer() {
   return (
@@ -89,7 +90,7 @@ export function Donate() {
           <div className="Donate-card__img-container">
             <img
               className="Donate-card__img"
-              src="https://images.unsplash.com/photo-1493863641943-9b68992a8d07?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3Njk2NjY&ixlib=rb-4.0.3&q=80&w=400"
+              src={support_donate}
               alt="A man a camera"
             />
           </div>

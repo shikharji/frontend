@@ -4,8 +4,8 @@ import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import Loading from "../elements/Loading";
 import CardBlogs from "../blogs/CardBlogs";
-import FeatureShikharji from "./FeatureShikharji";
 import { Link } from "react-router-dom";
+import * as image from "../assets/shikharji/Export";
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -46,16 +46,17 @@ export function Hero() {
               <br />
               <span> A Journey to Spiritual Awakening</span>
             </h1>
-            <p>
-              Discover the sacred pilgrimage site of Shikharji, nestled in the
-              serene Parasnath Hills. Embark on a spiritual journey, where
-              ancient temples and revered tonks of Tirthankaras await.
-            </p>
           </div>
         </div>
 
         <div className="shikharji-about">
           <h1 className="shikharji-title">About Shikharji</h1>
+          <p>
+            Discover the sacred pilgrimage site of Shikharji, nestled in the
+            serene Parasnath Hills. Embark on a spiritual journey, where ancient
+            temples and revered tonks of Tirthankaras await.
+          </p>{" "}
+          <br />
           <p>
             Shikharji, also known as Sammed Shikhar or Parasnath Hill, holds
             immense spiritual significance in Jainism. It is believed that
@@ -80,8 +81,8 @@ export function Hero() {
           <div className="shikharji-diff_services">
             <div className="shikharji-diff_service_item">
               <img
-                src="https://cdn.pixabay.com/photo/2016/08/01/20/15/girl-1562025_1280.jpg"
-                alt="Service_image"
+                src={image.girlSittingPeacefully}
+                alt="Girl sitting peacefully in a serene natural setting."
               />
               <h3>Spiritual Tranquility</h3>
               <p>
@@ -91,8 +92,8 @@ export function Hero() {
             </div>
             <div className="shikharji-diff_service_item">
               <img
-                src="https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_1280.jpg"
-                alt="Service_image"
+                src={image.wayToMountain}
+                alt="Path leading to the mountain, symbolizing the journey to Shikharji."
               />
               <h3>Natural Beauty</h3>
               <p>
@@ -102,8 +103,8 @@ export function Hero() {
             </div>
             <div className="shikharji-diff_service_item">
               <img
-                src="https://cdn.pixabay.com/photo/2016/06/14/17/19/india-1457099_960_720.jpg"
-                alt="Service_image"
+                src={image.cultureVisit}
+                alt="Cultural visit to Shikharji showcasing local traditions and customs."
               />
               <h3>Cultural Heritage</h3>
               <p>
@@ -114,6 +115,107 @@ export function Hero() {
           </div>
         </div>
       </div>
+    </>
+  );
+}
+
+export function FeatureShikharji() {
+  const featureItem = [
+    {
+      title: "Jain Temples",
+      img: image.jainTempleShikharji,
+      description:
+        "Showcase the famous Jain temples located on Parasnath Hill and their architectural beauty and spiritual significance.",
+      alt: "ain temples in Shikharji, known for their architectural beauty and spiritual significance.",
+      route: "temples",
+    },
+    {
+      title: "Wildlife and Nature",
+      img: image.wildlifeShikharji,
+      description:
+        "Highlight the rich biodiversity of the Parasnath Wildlife Sanctuary, which surrounds Parasnath Hill, and the importance of conservation efforts in the region.",
+      alt: "Wildlife and nature in Shikharji, showcasing the biodiversity of the region.",
+      route: "wildlife",
+    },
+    {
+      title: "Local Culture",
+      img: image.cultureShikharji,
+      description:
+        "Explore the local culture and traditions of the region surrounding Shikharji, including the lifestyle of the indigenous tribes and their interactions with Jain pilgrims.",
+      alt: "Cultural aspects of Shikharji, showcasing local traditions and heritage.",
+      route: "local",
+    },
+    {
+      title: "Hotels and Facilities",
+      img: image.hotelsShikharji,
+      description:
+        "Showcase the various hotels and facilities available to visitors, ranging from simple lodges to more luxurious options, and the facilities provided for pilgrims and tourists.",
+      alt: "Hotels and accommodation options in Shikharji for tourists and pilgrims.",
+      route: "hotels",
+    },
+    {
+      title: "Tonks of Tirthankaras",
+      img: image.tonksShikharji,
+      description:
+        "Explore the tonks (temples) dedicated to the Tirthankaras on Parasnath Hill and their historical and religious significance.",
+      alt: "Tonks (pilgrimage centers) in Shikharji, important for Jain devotees.",
+      route: "tonks",
+    },
+  ];
+
+  const truncatedDescription = (description) => {
+    const maxLength = 150;
+    if (description.length > maxLength) {
+      return description.slice(0, maxLength) + "..."; // Truncate and add "..."
+    } else {
+      return description; // Return the original description if it's shorter
+    }
+  };
+
+  return (
+    <>
+      <section id="shikharji-point" className="custom-properties-ftw">
+        <h3 className="head-small head-centered">
+          Explore More About Shikharji
+        </h3>
+      </section>
+      <main className="blogs-wrapper">
+        <section className="blogs-hero">
+          <h1>
+            Parasnath <br /> Mountain
+          </h1>
+          <article>
+            <p>
+              Explore the geological and ecological significance of Parasnath
+              Hill, the highest peak in Jharkhand and an important pilgrimage
+              site for Jains.
+            </p>
+            <Link className="blogs-a" to="parasnath">
+              Explore the Mountain!
+            </Link>
+          </article>
+        </section>
+        <section className="breweries">
+          <ul>
+            {featureItem.map((item) => (
+              <>
+                <li>
+                  <figure>
+                    <img src={item.img} alt={item.alt} />
+                    <figcaption>
+                      <h3>{item.title}</h3>
+                    </figcaption>
+                  </figure>
+                  <p>{truncatedDescription(item.description)}</p>
+                  <Link className="blogs-a" to={item.route}>
+                    Visit this..
+                  </Link>
+                </li>
+              </>
+            ))}
+          </ul>
+        </section>
+      </main>
     </>
   );
 }

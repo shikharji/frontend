@@ -19,14 +19,14 @@
   text-align: center;
 }
 .shikharji-banner_image {
-  background: url("https://cdn.pixabay.com/photo/2021/11/07/02/53/road-6774756_1280.jpg")
-    no-repeat top center;
+  background: url("../assets/shikharji/shikharji_hero.jpg") no-repeat top center;
   background-size: cover;
   width: 100%;
   height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.8;
 }
 .shikharji-banner_content {
   text-align: center;
@@ -87,8 +87,7 @@
   opacity: 0.6;
 }
 .blogs-hero {
-  background: url("https://cdn.pixabay.com/photo/2022/01/11/08/47/temple-6929982_960_720.jpg")
-    center;
+  background: url("../assets/shikharji/mountain_shikharji.jpg") center;
   background-size: cover;
   padding: 4rem 2rem;
   display: grid;
