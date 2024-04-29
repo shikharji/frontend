@@ -1,4 +1,4 @@
-import qr from "./GooglePay_QR.png";
+import qr from "./GooglePay_QR.jpg";
 
 export default function Qrcode() {
   return (

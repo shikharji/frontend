@@ -1,5 +1,6 @@
 import "./StylePages.css";
 import { Helmet } from "react-helmet";
+import Hero_img from "../assets/others/community_page_hero.jpg";
 
 export default function Communities() {
   return (
@@ -26,7 +27,7 @@ export function Hero() {
     <>
       <header className="community-hero">
         <img
-          src="https://assets.codepen.io/2585/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
+          src={Hero_img}
           alt="a wooden table is viewed top down where it is covered in laptops, coffee, and cables, appearing to be a table for lots of productivity."
         />
         <div className="community-div">
