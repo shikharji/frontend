@@ -98,6 +98,7 @@ export function OurTeam() {
             <div className="OurTeam-team_img">
               <img
                 src="https://cdn.pixabay.com/photo/2023/08/08/17/30/ai-generated-8177861_1280.jpg"
+                loading="lazy"
                 alt="Team_image"
               />
             </div>
@@ -113,6 +114,7 @@ export function OurTeam() {
             <div className="OurTeam-team_img">
               <img
                 src="https://cdn.pixabay.com/photo/2015/02/24/02/05/website-647013_1280.jpg"
+                loading="lazy"
                 alt="Team_image"
               />
             </div>
@@ -128,6 +130,7 @@ export function OurTeam() {
             <div className="OurTeam-team_img">
               <img
                 src="https://cdn.pixabay.com/photo/2019/01/30/07/45/web-3963945_1280.jpg"
+                loading="lazy"
                 alt="Team_image"
               />
             </div>

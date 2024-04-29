@@ -61,6 +61,7 @@ export function Hero() {
                 <div className="Blog-hero-left">
                   <img
                     src="https://cdn.pixabay.com/photo/2016/11/18/19/01/paris-1836415_1280.jpg"
+                    loading="lazy"
                     alt=""
                   />
                 </div>

@@ -30,11 +30,17 @@ export function BlogJainism2({ id, img, title, desc }) {
     <>
       <div className="BlogJainism2-card">
         {img ? (
-          <img className="BlogJainism2-card__img" src={img} alt={title} />
+          <img
+            className="BlogJainism2-card__img"
+            src={img}
+            loading="lazy"
+            alt={title}
+          />
         ) : (
           <img
             className="BlogJainism2-card__img"
             src="https://cdn.pixabay.com/photo/2022/09/25/00/41/germany-7477388_960_720.jpg"
+            loading="lazy"
             alt={title}
           />
         )}

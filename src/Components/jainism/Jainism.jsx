@@ -36,6 +36,7 @@ export function IntroHero() {
           <figure className="item-parallax-media">
             <img
               src={image.jainismIntroHero}
+              loading="lazy"
               alt="Introduction to Jainism, showcasing its history and principles."
             />
           </figure>
@@ -55,6 +56,7 @@ export function IntroHero() {
             <figure className="img-gridItem type-right">
               <img
                 src={image.jainismMeditation}
+                loading="lazy"
                 alt="Meditation in Jainism, focusing on spiritual contemplation and self-awareness."
               />
               <figcaption className="img-caption">
@@ -71,6 +73,7 @@ export function IntroHero() {
             <figure className="img-gridItem type-left">
               <img
                 src={image.jainismMind}
+                loading="lazy"
                 alt="Mindfulness in Jainism, highlighting the importance of mental clarity and purity."
               />
               <figcaption className="img-caption">
@@ -90,6 +93,7 @@ export function IntroHero() {
           <figure className="item-parallax-media">
             <img
               src={image.jainismLive}
+              loading="lazy"
               alt="Live a Jain way of life, emphasizing simplicity and non-violence."
             />
           </figure>

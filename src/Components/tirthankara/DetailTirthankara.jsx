@@ -185,6 +185,7 @@ export function Teaching({ teachings }) {
               <p>{getTeachingDescription(teaching)}</p>
               <img
                 src="https://assets.codepen.io/2301174/icon-supervisor.svg"
+                loading="lazy"
                 alt="lost"
               />
             </div>

@@ -21,6 +21,7 @@ export default function CardBlogs({ id, img, title, desc, category }) {
         <img
           className="CardBlogs-card-img"
           src={img || defaultImgUrl}
+          loading="lazy"
           alt="Coffee"
         />
 

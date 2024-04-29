@@ -15,6 +15,7 @@ export default function CardTirthankara({
         <li className="card3">
           <img
             src="https://wallpapercave.com/wp/wp3639691.jpg"
+            loading="lazy"
             alt="Philadelphia skyline."
             className="card__img"
           />

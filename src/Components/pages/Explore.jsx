@@ -121,7 +121,12 @@ export function Card() {
             return (
               <>
                 <div className="hoverbox">
-                  <img className="hoverbox__image" src={i.img} alt="Test Img" />
+                  <img
+                    className="hoverbox__image"
+                    src={i.img}
+                    loading="lazy"
+                    alt="Test Img"
+                  />
                   <h3>{i.name}</h3>
                   <p>
                     Have fun with it. For the lack of a better word I call them

@@ -82,6 +82,7 @@ export function Hero() {
             <div className="shikharji-diff_service_item">
               <img
                 src={image.girlSittingPeacefully}
+                loading="lazy"
                 alt="Girl sitting peacefully in a serene natural setting."
               />
               <h3>Spiritual Tranquility</h3>
@@ -93,6 +94,7 @@ export function Hero() {
             <div className="shikharji-diff_service_item">
               <img
                 src={image.wayToMountain}
+                loading="lazy"
                 alt="Path leading to the mountain, symbolizing the journey to Shikharji."
               />
               <h3>Natural Beauty</h3>
@@ -104,6 +106,7 @@ export function Hero() {
             <div className="shikharji-diff_service_item">
               <img
                 src={image.cultureVisit}
+                loading="lazy"
                 alt="Cultural visit to Shikharji showcasing local traditions and customs."
               />
               <h3>Cultural Heritage</h3>
@@ -201,7 +204,7 @@ export function FeatureShikharji() {
               <>
                 <li>
                   <figure>
-                    <img src={item.img} alt={item.alt} />
+                    <img src={item.img} loading="lazy" alt={item.alt} />
                     <figcaption>
                       <h3>{item.title}</h3>
                     </figcaption>

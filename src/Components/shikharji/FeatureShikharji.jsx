@@ -206,6 +206,7 @@ export function Wildlife() {
           <div className="WildlifeCard-card__img">
             <img
               src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+              loading="lazy"
               alt=""
             />
           </div>
@@ -228,6 +229,7 @@ export function Wildlife() {
           <div className="WildlifeCard-card__img">
             <img
               src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Zm9vZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
+              loading="lazy"
               alt=""
             />
           </div>
@@ -266,6 +268,7 @@ export function Local() {
           <figure className="local-image-container">
             <img
               src="https://cdn.pixabay.com/photo/2017/12/29/18/47/mountains-3048299_1280.jpg"
+              loading="lazy"
               alt=""
             />
           </figure>
@@ -299,6 +302,7 @@ export function Local() {
           <figure className="local-image-container">
             <img
               src="https://cdn.pixabay.com/photo/2020/03/18/22/46/store-4945671_1280.jpg"
+              loading="lazy"
               alt=""
             />
           </figure>
@@ -328,6 +332,7 @@ export function Local() {
           <figure className="local-image-container">
             <img
               src="https://cdn.pixabay.com/photo/2016/11/14/04/24/buffalo-1822581_1280.jpg"
+              loading="lazy"
               alt=""
             />
           </figure>
@@ -428,6 +433,7 @@ export function Hotels() {
           <div className="facility-about-img">
             <img
               src="https://i.postimg.cc/mgpwzmx9/about-photo.jpg"
+              loading="lazy"
               alt="food"
             />
           </div>
@@ -444,7 +450,7 @@ export function Hotels() {
               <>
                 <div className="all-hotels-menu-item">
                   <div className="all-hotels-img">
-                    <img src={i.img} alt="" />
+                    <img src={i.img} loading="lazy" alt="" />
                   </div>
                   <div className="all-hotels-description">
                     <h2 className="all-hotels-titile">{i.name}</h2>
@@ -467,7 +473,11 @@ export function Hotels() {
         <div className="all-hotels-container facility-container">
           <div className="all-hotels-type facility-fruite">
             <div className="facility-img-container">
-              <img src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
+              <img
+                src="https://i.postimg.cc/yxThVPXk/food1.jpg"
+                loading="lazy"
+                alt="error"
+              />
               <div className="facility-img-content">
                 <h3>fruite</h3>
               </div>
@@ -475,7 +485,11 @@ export function Hotels() {
           </div>
           <div className="all-hotels-type facility-vegetable">
             <div className="facility-img-container">
-              <img src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
+              <img
+                src="https://i.postimg.cc/Nffm6Rkk/food2.jpg"
+                loading="lazy"
+                alt="error"
+              />
               <div className="facility-img-content">
                 <h3>vegetable</h3>
               </div>
@@ -483,7 +497,11 @@ export function Hotels() {
           </div>
           <div className="all-hotels-type facility-grin">
             <div className="facility-img-container">
-              <img src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
+              <img
+                src="https://i.postimg.cc/76ZwsPsd/food3.jpg"
+                loading="lazy"
+                alt="error"
+              />
               <div className="facility-img-content">
                 <h3>grin</h3>
               </div>
@@ -503,6 +521,7 @@ export function Hotels() {
               <div className="facility-customer-photo">
                 <img
                   src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg"
+                  loading="lazy"
                   alt=""
                 />
                 <p className="facility-customer-name">Ross Lee</p>
@@ -521,6 +540,7 @@ export function Hotels() {
               <div className="facility-customer-photo">
                 <img
                   src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg"
+                  loading="lazy"
                   alt=""
                 />
                 <p className="facility-customer-name">Amelia Watson</p>
@@ -539,6 +559,7 @@ export function Hotels() {
               <div className="facility-customer-photo">
                 <img
                   src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg"
+                  loading="lazy"
                   alt=""
                 />
                 <p className="facility-customer-name">Ben Roy</p>

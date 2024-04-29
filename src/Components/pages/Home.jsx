@@ -30,18 +30,22 @@ export function HeroImg() {
       <div id="CrossFade">
         <img
           src={images.cloudAboveMountain}
+          loading="lazy"
           alt="Clouds hovering above mountains, creating a scenic view."
         />
         <img
           src={images.foggyRoadView}
+          loading="lazy"
           alt="Foggy road view, illustrating a serene and tranquil environment."
         />
         <img
           src={images.fogTreeMountain}
+          loading="lazy"
           alt="Foggy mountain landscape with trees, creating a mystical atmosphere."
         />
         <img
           src={images.mountainsAboveCloud}
+          loading="lazy"
           alt="View of mountains above the clouds, showcasing a breathtaking scenery."
         />
         <div className="CrossFade-intro">
@@ -113,24 +117,28 @@ export function Quotes() {
           <div className="Quotes-imgBox">
             <img
               src={images.manPrayingNature}
+              loading="lazy"
               alt="Man praying in a serene natural environment."
             />
           </div>
           <div className="Quotes-imgBox">
             <img
               src={images.aiMeditationWoman}
+              loading="lazy"
               alt="AI-generated depiction of a woman meditating"
             />
           </div>
           <div className="Quotes-imgBox">
             <img
               src={images.womanContemplatingSky}
+              loading="lazy"
               alt="Female sitting and gazing up at the daytime sky."
             />
           </div>
           <div className="Quotes-imgBox">
             <img
               src={images.spiritualConceptsIllustration}
+              loading="lazy"
               alt="Illustration depicting spiritual and philosophical concepts with symbolic imagery."
             />
           </div>

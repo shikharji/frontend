@@ -28,6 +28,7 @@ export function Hero() {
       <header className="community-hero">
         <img
           src={Hero_img}
+          loading="lazy"
           alt="a wooden table is viewed top down where it is covered in laptops, coffee, and cables, appearing to be a table for lots of productivity."
         />
         <div className="community-div">
