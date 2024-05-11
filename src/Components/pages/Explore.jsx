@@ -83,6 +83,7 @@ export function Hero() {
               <div className="explore-imgbx">
                 <img
                   src="https://cdn.pixabay.com/photo/2019/10/29/10/07/man-4586576_1280.jpg"
+                  loading="lazy"
                   alt="Man view"
                 />
               </div>
