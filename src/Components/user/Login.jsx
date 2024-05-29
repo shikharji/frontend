@@ -23,7 +23,7 @@ export default function Login() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:4000/user/login",
+        "https://api-srishikharji.vercel.app/user/login",
         formData
       );
       if (response.status === 200) {

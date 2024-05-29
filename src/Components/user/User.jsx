@@ -16,7 +16,7 @@ const UserProfile = () => {
     const userId = localStorage.getItem("Token");
     if (userId) {
       axios
-        .get(`http://localhost:4000/user/profile/${userId}`)
+        .get(`https://api-srishikharji.vercel.app/user/profile/${userId}`)
         .then((response) => setUser(response.data))
         .catch((error) => console.error(error));
     }

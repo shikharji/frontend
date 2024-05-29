@@ -25,7 +25,10 @@ export default function Register() {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.post("http://localhost:4000/user/register", formData);
+      await axios.post(
+        "https://api-srishikharji.vercel.app/user/register",
+        formData
+      );
       alert("Check your Gmail to Register successfully!");
       setFormData({ name: "", email: "", password: "" });
       navigate("/user/login");

@@ -8,7 +8,9 @@ export default function Products() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/products");
+        const response = await axios.get(
+          "https://api-srishikharji.vercel.app/products"
+        );
         if (response.data && Array.isArray(response.data.products)) {
           setProducts(response.data.products);
         } else {

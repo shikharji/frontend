@@ -10,7 +10,7 @@ export default function DetailProduct() {
     const fetchProduct = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:4000/products/${id}`
+          `https://api-srishikharji.vercel.app/products/${id}`
         );
         setProduct(response.data.product);
       } catch (error) {
