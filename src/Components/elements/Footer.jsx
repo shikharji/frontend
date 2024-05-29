@@ -47,10 +47,10 @@ export default function Footer() {
                 <Link to="community">Community</Link>
               </li>
               <li>
-                <Link to="about">About us</Link>
+                <Link to="shop">Shop now!</Link>
               </li>
               <li>
-                <Link to="support">Support</Link>
+                <Link to="user/register">Join now!</Link>
               </li>
             </ul>
           </div>

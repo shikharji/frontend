@@ -53,6 +53,13 @@ import {
 } from "./Components/shikharji/FeatureShikharji";
 import DetailJainism from "./Components/jainism/DetailJainism";
 
+import User from "./Components/user/User";
+import Register from "./Components/user/Register";
+import Login from "./Components/user/Login";
+import VerifyEmail from "./Components/user/VerifyEmail";
+import Shop from "./Components/shop/Shop";
+import DetailProduct from "./Components/shop/DetailProduct";
+
 function App() {
   return (
     <>
@@ -96,11 +103,19 @@ function App() {
         <Route path="/temple/indian" element={<IndianTemple />} />
         <Route path="/temple/pakistan" element={<PakistanTemple />} />
 
+        <Route path="/user" element={<User />} />
+        <Route path="/user/register" element={<Register />} />
+        <Route path="/user/login" element={<Login />} />
+        <Route path="/verify-email/:token" element={<VerifyEmail />} />
+
         <Route path="/explore" element={<Explore />} />
         <Route path="/community" element={<Communities />} />
         <Route path="/about" element={<About />} />
         <Route path="/support" element={<Support />} />
         <Route path="/support/qr" element={<Qrcode />} />
+
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/products/:id" element={<DetailProduct />} />
 
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blog-detail/:id" element={<DetailBlog />} />

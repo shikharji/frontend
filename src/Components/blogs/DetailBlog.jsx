@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "../elements/Loading";
 import { Helmet } from "react-helmet";
+import Comments from "./Comments";
 
 export default function DetailBlog() {
   const { id } = useParams();
@@ -26,7 +27,6 @@ export default function DetailBlog() {
     };
     getBlogDetail();
   }, [id]);
-
   return (
     <>
       <Helmet>
@@ -52,6 +52,7 @@ export default function DetailBlog() {
           />
         </>
       )}
+      {blog && <Comments postId={blog._id} />}
     </>
   );
 }

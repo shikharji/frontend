@@ -13,6 +13,7 @@ export default function Sidenav() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
   return (
     <>
       <nav className="Sidenav-wrapper">
@@ -25,7 +26,7 @@ export default function Sidenav() {
           checked={isOpen}
           onChange={toggleMenu}
         />
-        <label className="toggle toggle2" for="checkbox2">
+        <label className="toggle toggle2" htmlFor="checkbox2">
           <div id="nav-bar4" className="nav-bars"></div>
           <div id="nav-bar5" className="nav-bars"></div>
           <div id="nav-bar6" className="nav-bars"></div>
