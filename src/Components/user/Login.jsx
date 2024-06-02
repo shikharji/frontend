@@ -46,7 +46,7 @@ export default function Login() {
         setErrorMessage("Server error. Please try again later.");
       }
     } finally {
-      setLoading(false); // Reset loading state after request completes
+      setLoading(false);
     }
   };
 

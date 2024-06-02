@@ -20,25 +20,79 @@ export default function Register() {
       [name]: value,
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setErrorMessage(""); // Clear any previous error messages
+
     try {
-      await axios.post(
-        "https://api-srishikharji.vercel.app/user/register",
+      console.log("Sending form data:", formData);
+
+      // Validate form data before sending
+      if (!formData.name || !formData.email || !formData.password) {
+        throw new Error("All fields are required.");
+      }
+
+      // Send request to the backend
+      const response = await axios.post(
+        "https://api-shikharji.vercel.app/user/register",
         formData
       );
-      alert("Check your Gmail to Register successfully!");
-      setFormData({ name: "", email: "", password: "" });
-      navigate("/user/login");
-    } catch (error) {
-      if (error.response && error.response.status === 409) {
-        setErrorMessage("Please use a different email or try Login.");
-        alert("Email is already registered. ");
+
+      console.log("Server response:", response);
+
+      if (response.status === 201) {
+        alert("Check your Gmail to Register successfully!");
+        setFormData({ name: "", email: "", password: "" });
+        navigate("/user/login");
       } else {
-        setErrorMessage("Failed to register user.");
-        alert("Please try again.");
+        throw new Error("Unexpected response from the server.");
+      }
+    } catch (error) {
+      console.error("Error details:", error);
+
+      // Check for Axios-specific errors
+      if (axios.isAxiosError(error)) {
+        if (error.response) {
+          // Server responded with a status other than 2xx
+          console.error("Error response data:", error.response.data);
+          console.error("Error response status:", error.response.status);
+          console.error("Error response headers:", error.response.headers);
+
+          switch (error.response.status) {
+            case 400:
+              setErrorMessage("Bad request. Please check your input.");
+              break;
+            case 409:
+              setErrorMessage("Email is already registered.");
+              break;
+            case 500:
+              setErrorMessage("Internal server error. Please try again later.");
+              break;
+            default:
+              setErrorMessage(
+                `Error: ${
+                  error.response.data.message ||
+                  "An error occurred. Please try again."
+                }`
+              );
+              break;
+          }
+        } else if (error.request) {
+          // Request was made but no response was received
+          console.error("Error request:", error.request);
+          setErrorMessage(
+            "No response from the server. Please check your network connection."
+          );
+        } else {
+          // Something happened in setting up the request that triggered an error
+          console.error("Error message:", error.message);
+          setErrorMessage(`Error: ${error.message}`);
+        }
+      } else {
+        // Non-Axios errors
+        console.error("General error:", error);
+        setErrorMessage(`Error: ${error.message}`);
       }
     } finally {
       setLoading(false);

@@ -12,7 +12,7 @@ export default function VerifyEmail() {
     const verifyEmail = async () => {
       try {
         const response = await axios.get(
-          `https://api-srishikharji.vercel.app/user/verify-email/${token}`
+          `https://api-shikharji.vercel.app/user/verify-email/${token}`
         );
         console.log("Response:", response);
         setMessage(response.data.message);
