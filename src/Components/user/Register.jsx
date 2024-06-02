@@ -35,7 +35,7 @@ export default function Register() {
 
       // Send request to the backend
       const response = await axios.post(
-        "https://api-shikharji.vercel.app/user/register",
+        "https://api-srishikharji.vercel.app/user/register",
         formData
       );
 
