@@ -6,6 +6,7 @@ import axios from "axios";
 import CardBlogs from "../blogs/CardBlogs";
 import { Helmet } from "react-helmet";
 import * as image from "../assets/jainism/Export";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function Jainism() {
   return (
@@ -121,9 +122,7 @@ export function BlogJainism() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/blogs/jainism"
-        );
+        const response = await axios.get(`${apiUrl}/blogs/jainism`);
         if (response.data.success) {
           setBlogs(response.data.blogs);
           setLoading(false);

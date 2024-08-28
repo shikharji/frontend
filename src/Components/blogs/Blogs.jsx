@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CardBlogs from "./CardBlogs";
 import Loading from "../elements/Loading";
 import axios from "axios";
 import { Helmet } from "react-helmet";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function Blogs() {
   return (
@@ -32,9 +33,7 @@ export function Hero() {
   useEffect(() => {
     const fetchRecentArticles = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/blogs"
-        );
+        const response = await axios.get(`${apiUrl}/blogs`);
         setArticles(response.data?.blogs || []);
         setLoading(false);
       } catch (error) {
@@ -110,9 +109,7 @@ export function AllBlogs() {
   useEffect(() => {
     const getAllBlogs = async () => {
       try {
-        const { data } = await axios.get(
-          "https://api-srishikharji.vercel.app/blogs"
-        );
+        const { data } = await axios.get(`${apiUrl}/blogs`);
         if (data?.success) {
           setBlogs(shuffle(data?.blogs));
           setLoading(false);

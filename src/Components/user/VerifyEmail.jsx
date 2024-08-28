@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function VerifyEmail() {
   const { token } = useParams();
@@ -12,7 +13,7 @@ export default function VerifyEmail() {
     const verifyEmail = async () => {
       try {
         const response = await axios.get(
-          `https://api-srishikharji.vercel.app/user/verify-email/${token}`
+          `${apiUrl}/user/verify-email/${token}`
         );
         console.log("Response:", response);
         setMessage(response.data.message);

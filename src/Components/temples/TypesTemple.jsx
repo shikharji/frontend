@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Loading from "../elements/Loading";
 import CardTemple from "./CardTemple";
+import apiUrl from "../utils/GetApiUrl";
 
-const baseURL = "https://api-srishikharji.vercel.app/temples";
+const baseURL = `${apiUrl}/temples`;
 
 export default function TypesTemple() {
   return (

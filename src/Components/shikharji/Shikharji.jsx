@@ -6,6 +6,7 @@ import Loading from "../elements/Loading";
 import CardBlogs from "../blogs/CardBlogs";
 import { Link } from "react-router-dom";
 import * as image from "../assets/shikharji/Export";
+import apiUrl from "../utils/GetApiUrl";
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -230,9 +231,7 @@ export function BlogShikharji() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/blogs/shikharji"
-        );
+        const response = await axios.get(`${apiUrl}/blogs/shikharji`);
         if (response.data.success) {
           setBlogs(response.data.blogs);
           setLoading(false);

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../elements/Loading";
 import { Helmet } from "react-helmet";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function DetailTirthankara() {
   const id = useParams().id;
@@ -11,9 +12,7 @@ export default function DetailTirthankara() {
   useEffect(() => {
     const getTirthankaraDetail = async () => {
       try {
-        const { data } = await axios.get(
-          `https://api-srishikharji.vercel.app/tirthankar/${id}`
-        );
+        const { data } = await axios.get(`${apiUrl}/tirthankar/${id}`);
         console.log("Data:", data);
         if (data?.tirthankar) {
           setTirthankaras([data?.tirthankar]);

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { BlogJainism2 } from "./BlogJainism";
 import Loading from "../elements/Loading";
+import apiUrl from "../utils/GetApiUrl";
 
 const JainismItems = [
   {
@@ -108,9 +109,7 @@ export function Cosmology() {
     document.title = "Cosmology in jainism";
     const fetchCosmology = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/jainism/cosmology"
-        );
+        const response = await axios.get(`${apiUrl}/jainism/cosmology`);
         setCosmology(response.data.blogs);
         setLoading(false);
       } catch (error) {
@@ -160,9 +159,7 @@ export function Art() {
     document.title = "Art in jainism";
     const fetchArt = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/jainism/art"
-        );
+        const response = await axios.get(`${apiUrl}/jainism/art`);
         setArt(response.data.blogs);
         setLoading(false);
       } catch (error) {
@@ -214,9 +211,7 @@ export function Practice() {
     document.title = "Practice in jainism";
     const fetchPractice = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/jainism/practice"
-        );
+        const response = await axios.get(`${apiUrl}/jainism/practice`);
         setPractice(response.data.blogs);
         setLoading(false);
       } catch (error) {
@@ -267,9 +262,7 @@ export function Philosophy() {
     document.title = "Philosophy in jainism";
     const fetchPhilosophy = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/jainism/philosophy"
-        );
+        const response = await axios.get(`${apiUrl}/jainism/philosophy`);
         setPhilosophy(response.data.blogs);
         setLoading(false);
       } catch (error) {
@@ -320,9 +313,7 @@ export function Principle() {
     document.title = "Principle in jainism";
     const fetchPrinciples = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/jainism/principle"
-        );
+        const response = await axios.get(`${apiUrl}/jainism/principle`);
         setPrinciples(response.data.blogs);
         setLoading(false);
       } catch (error) {
@@ -374,9 +365,7 @@ export function Texts() {
     document.title = "Texts in jainism";
     const fetchTexts = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/jainism/texts"
-        );
+        const response = await axios.get(`${apiUrl}/jainism/texts`);
         setTexts(response.data.blogs);
         setLoading(false);
       } catch (error) {

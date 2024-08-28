@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./User.css";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -34,10 +35,7 @@ export default function Register() {
       }
 
       // Send request to the backend
-      const response = await axios.post(
-        "https://api-srishikharji.vercel.app/user/register",
-        formData
-      );
+      const response = await axios.post(`${apiUrl}/user/register`, formData);
 
       console.log("Server response:", response);
 

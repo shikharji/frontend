@@ -4,6 +4,7 @@ import axios from "axios";
 import Loading from "../elements/Loading";
 import { Helmet } from "react-helmet";
 import Comments from "./Comments";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function DetailBlog() {
   const { id } = useParams();
@@ -13,9 +14,7 @@ export default function DetailBlog() {
   useEffect(() => {
     const getBlogDetail = async () => {
       try {
-        const { data } = await axios.get(
-          `https://api-srishikharji.vercel.app/blogs/${id}`
-        );
+        const { data } = await axios.get(`${apiUrl}/blogs/${id}`);
         if (data?.success) {
           setBlog(data?.blog);
           setLoading(false);

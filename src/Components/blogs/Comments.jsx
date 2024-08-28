@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function Comments({ postId }) {
   const [body, setBody] = useState("");
@@ -9,9 +10,7 @@ export default function Comments({ postId }) {
   useEffect(() => {
     const fetchComments = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:4000/comment/${postId}/comment`
-        );
+        const response = await axios.get(`${apiUrl}/comment/${postId}/comment`);
         setComments(response.data);
       } catch (error) {
         console.error(error);

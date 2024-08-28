@@ -2,15 +2,14 @@ import axios from "axios";
 import "./Products.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/products"
-        );
+        const response = await axios.get(`${apiUrl}/products`);
         if (response.data && Array.isArray(response.data.products)) {
           setProducts(response.data.products);
         } else {

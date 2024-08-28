@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loading from "../elements/Loading";
 import { Helmet } from "react-helmet";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function DetailTemple() {
   const { id } = useParams();
@@ -17,9 +18,7 @@ export default function DetailTemple() {
   useEffect(() => {
     const getTempleDetail = async () => {
       try {
-        const { data } = await axios.get(
-          `https://api-srishikharji.vercel.app/temples/${id}`
-        );
+        const { data } = await axios.get(`${apiUrl}/temples/${id}`);
         if (data?.success) {
           setTemple(data?.temple);
           setLoading(false);

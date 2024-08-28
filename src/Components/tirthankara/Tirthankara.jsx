@@ -4,6 +4,7 @@ import "./StyleTirthankara.css";
 import CardTirthankara from "./CardTirthankara";
 import Loading from "../elements/Loading";
 import { Helmet } from "react-helmet";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function Tirthankara() {
   return (
@@ -95,9 +96,7 @@ export function AllTirthankara() {
   useEffect(() => {
     const getAllTirthankar = async () => {
       try {
-        const { data } = await axios.get(
-          "https://api-srishikharji.vercel.app/tirthankar"
-        );
+        const { data } = await axios.get(`${apiUrl}/tirthankar`);
         if (data?.success) {
           setTirthankar(data?.tirthankar);
           setLoading(false);

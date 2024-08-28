@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function Login() {
   const [formData, setFormData] = useState({
@@ -22,10 +23,7 @@ export default function Login() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post(
-        "https://api-srishikharji.vercel.app/user/login",
-        formData
-      );
+      const response = await axios.post(`${apiUrl}/user/login`, formData);
       if (response.status === 200) {
         setErrorMessage("Login successful!");
         alert("Login successful!");

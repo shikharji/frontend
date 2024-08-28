@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function User() {
   return (
@@ -16,7 +17,7 @@ const UserProfile = () => {
     const userId = localStorage.getItem("Token");
     if (userId) {
       axios
-        .get(`https://api-srishikharji.vercel.app/user/profile/${userId}`)
+        .get(`${apiUrl}/user/profile/${userId}`)
         .then((response) => setUser(response.data))
         .catch((error) => console.error(error));
     }

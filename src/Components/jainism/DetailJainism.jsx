@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../elements/Loading";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function DetailJainism() {
   const { id } = useParams();
@@ -10,9 +11,7 @@ export default function DetailJainism() {
   useEffect(() => {
     async function fetchBlog() {
       try {
-        const response = await fetch(
-          `https://api-srishikharji.vercel.app/jainism/${id}`
-        );
+        const response = await fetch(`${apiUrl}/jainism/${id}`);
         const data = await response.json();
         setBlog(data.blog);
         setLoading(false);

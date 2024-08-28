@@ -7,6 +7,7 @@ import CardTemple from "./CardTemple";
 import FeatureHero from "../elements/FeatureHero";
 import { Helmet } from "react-helmet";
 import * as image from "../assets/temples/Export";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function Temples() {
   return (
@@ -111,9 +112,7 @@ export function AllTemples() {
   useEffect(() => {
     const getAllTemples = async () => {
       try {
-        const { data } = await axios.get(
-          "https://api-srishikharji.vercel.app/temples"
-        );
+        const { data } = await axios.get(`${apiUrl}/temples`);
         if (data?.success) {
           setTemples(data?.temples);
           setLoading(false);

@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import apiUrl from "../utils/GetApiUrl";
 
 export default function DetailProduct() {
   const { id } = useParams();
@@ -9,9 +10,7 @@ export default function DetailProduct() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          `https://api-srishikharji.vercel.app/products/${id}`
-        );
+        const response = await axios.get(`${apiUrl}/products/${id}`);
         setProduct(response.data.product);
       } catch (error) {
         console.error("Error fetching product details:", error);

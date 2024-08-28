@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "../elements/Loading";
 import FeatureHero from "../elements/FeatureHero";
+import apiUrl from "../utils/GetApiUrl";
 
 const scrollToSection = (id) => {
   const element = document.getElementById(id);
@@ -142,9 +143,7 @@ export function Tonks() {
 
     const fetchTonks = async () => {
       try {
-        const response = await axios.get(
-          "https://api-srishikharji.vercel.app/tonks"
-        );
+        const response = await axios.get(`${apiUrl}/tonks`);
         setTonks(response.data.data);
         setLoading(false);
       } catch (error) {
