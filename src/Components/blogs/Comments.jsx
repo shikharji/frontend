@@ -23,14 +23,11 @@ export default function Comments({ postId }) {
     e.preventDefault();
     try {
       const userId = localStorage.getItem("Token");
-      const response = await axios.post(
-        `http://localhost:4000/comment/${postId}/comment`,
-        {
-          topic,
-          body,
-          userId,
-        }
-      );
+      const response = await axios.post(`${apiUrl}/comment/${postId}/comment`, {
+        topic,
+        body,
+        userId,
+      });
       const newComment = response.data;
       setComments([newComment, ...comments]); // Add the new comment to the existing comments array
       setBody("");

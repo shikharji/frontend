@@ -21,76 +21,31 @@ export default function Register() {
       [name]: value,
     });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setErrorMessage(""); // Clear any previous error messages
+    setErrorMessage("");
 
     try {
-      console.log("Sending form data:", formData);
-
-      // Validate form data before sending
       if (!formData.name || !formData.email || !formData.password) {
         throw new Error("All fields are required.");
       }
 
-      // Send request to the backend
       const response = await axios.post(`${apiUrl}/user/register`, formData);
 
-      console.log("Server response:", response);
-
+      // Check if the response status is 409 to handle the "Email already exists" error
       if (response.status === 201) {
         alert("Check your Gmail to Register successfully!");
         setFormData({ name: "", email: "", password: "" });
         navigate("/user/login");
-      } else {
-        throw new Error("Unexpected response from the server.");
       }
     } catch (error) {
-      console.error("Error details:", error);
-
-      // Check for Axios-specific errors
-      if (axios.isAxiosError(error)) {
-        if (error.response) {
-          // Server responded with a status other than 2xx
-          console.error("Error response data:", error.response.data);
-          console.error("Error response status:", error.response.status);
-          console.error("Error response headers:", error.response.headers);
-
-          switch (error.response.status) {
-            case 400:
-              setErrorMessage("Bad request. Please check your input.");
-              break;
-            case 409:
-              setErrorMessage("Email is already registered.");
-              break;
-            case 500:
-              setErrorMessage("Internal server error. Please try again later.");
-              break;
-            default:
-              setErrorMessage(
-                `Error: ${
-                  error.response.data.message ||
-                  "An error occurred. Please try again."
-                }`
-              );
-              break;
-          }
-        } else if (error.request) {
-          // Request was made but no response was received
-          console.error("Error request:", error.request);
-          setErrorMessage(
-            "No response from the server. Please check your network connection."
-          );
-        } else {
-          // Something happened in setting up the request that triggered an error
-          console.error("Error message:", error.message);
-          setErrorMessage(`Error: ${error.message}`);
-        }
+      if (error.response && error.response.status === 409) {
+        alert("Email already exist");
+        setErrorMessage(error.response.data.message);
       } else {
-        // Non-Axios errors
-        console.error("General error:", error);
-        setErrorMessage(`Error: ${error.message}`);
+        alert(error.message);
       }
     } finally {
       setLoading(false);
