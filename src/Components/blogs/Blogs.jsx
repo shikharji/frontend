@@ -20,7 +20,7 @@ export default function Blogs() {
         />
       </Helmet>
 
-      <Hero />
+      {/* <Hero /> */}
       <AllBlogs />
     </>
   );
@@ -86,32 +86,33 @@ export function AllBlogs() {
   const [loading, setLoading] = useState(true);
   const [visibleBlogs, setVisibleBlogs] = useState(5);
 
-  function shuffle(array) {
-    let currentIndex = array.length,
-      randomIndex;
+  // function shuffle(array) {
+  //   let currentIndex = array.length,
+  //     randomIndex;
 
-    // While there remain elements to shuffle...
-    while (currentIndex !== 0) {
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
+  //   // While there remain elements to shuffle...
+  //   while (currentIndex !== 0) {
+  //     // Pick a remaining element...
+  //     randomIndex = Math.floor(Math.random() * currentIndex);
+  //     currentIndex--;
 
-      // And swap it with the current element.
-      [array[currentIndex], array[randomIndex]] = [
-        array[randomIndex],
-        array[currentIndex],
-      ];
-    }
+  //     // And swap it with the current element.
+  //     [array[currentIndex], array[randomIndex]] = [
+  //       array[randomIndex],
+  //       array[currentIndex],
+  //     ];
+  //   }
 
-    return array;
-  }
+  //   return array;
+  // }
 
   useEffect(() => {
     const getAllBlogs = async () => {
       try {
         const { data } = await axios.get(`${apiUrl}/blogs`);
         if (data?.success) {
-          setBlogs(shuffle(data?.blogs));
+          // setBlogs(shuffle(data?.blogs));
+          setBlogs(data?.blogs);
           setLoading(false);
         }
       } catch (error) {

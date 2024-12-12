@@ -1,4 +1,4 @@
-const isProduction = false;
+const isProduction = true;
 // Set to true for production, false for local
 
 const apiConfig = {
