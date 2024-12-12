@@ -1,5 +1,4 @@
-import React from "react";
-import "./StyleTirthankara.css";
+// import "./StyleTirthankara.css";
 import { Link } from "react-router-dom";
 
 export default function CardTirthankara({
@@ -32,9 +31,7 @@ export default function CardTirthankara({
             <li>Birth place: {birthPlace}</li>
           </ul>
 
-          <Link to={`/tirthankara-detail/${id}`} target="_blank">
-            Learn More →
-          </Link>
+          <Link to={`/tirthankara-detail/${id}`}>Learn More →</Link>
         </li>
       </ul>
     </>

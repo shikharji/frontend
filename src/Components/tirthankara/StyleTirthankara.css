@@ -1,8 +1,8 @@
 /* design of the index page of tirthankara start here */
 /* Hero Main tirthankara */
 #HeroTirthankara {
-  background: linear-gradient(rgba(46, 45, 45, 0.867), rgba(0, 0, 0, 0.867)),
-    url("https://assets.codepen.io/2585/sean-pollock-PhYq704ffdA-unsplash.jpg");
+  background: linear-gradient(rgba(46, 45, 45, 0.4), rgba(0, 0, 0, 0.7)),
+    url("https://i.postimg.cc/8CX5Q5zF/tirthankara-hero.jpg");
   background-size: cover;
   background-position: center;
   display: grid;
@@ -14,17 +14,18 @@
 #HeroTirthankara h1 {
   text-wrap: balance;
   max-inline-size: 25ch;
-  font-size: clamp(2rem, 3rem, 4rem);
+  font-size: clamp(1rem, 2.2rem, 3.3rem);
   margin-inline: auto;
   color: white;
   text-shadow: 0 1px 1px #000;
 }
 #HeroTirthankara p {
   text-wrap: balance;
+  font-family: "Trebuchet MS";
   max-inline-size: 60ch;
-  font-size: 1.25rem;
+  font-size: 1.14rem;
   margin-inline: auto;
-  color: hsl(0, 4%, 54%);
+  color: hsl(0, 4%, 62%);
 }
 /* hero Main tirthankara */
 
