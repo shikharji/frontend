@@ -1,52 +1,77 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import toast from "react-hot-toast";
 import "./User.css";
 import apiUrl from "../utils/GetApiUrl";
 
 export default function Register() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-  const [errorMessage, setErrorMessage] = useState("");
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [otp, setOtp] = useState("");
+  const [otpSent, setOtpSent] = useState(false);
+  const [otpVerified, setOtpVerified] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!email || !password || !name) {
+      toast.error("Please fill in name, email, and password to register.");
+      return;
+    }
+    setLoading(true);
+    try {
+      await axios.post(`${apiUrl}/user/create-user`, {
+        name,
+        email,
+        password,
+      });
+      toast.success("OTP sent to your email! Verify it.");
+      setOtpSent(true);
+    } catch (error) {
+      let errorMessage = error.message;
+      if (error.response && error.response.data) {
+        errorMessage = error.response.data.message;
+      }
+      toast.error(
+        <div>
+          <b>Failed to send OTP!</b>
+          <p>{errorMessage}</p>
+        </div>
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleOtpVerify = async (event) => {
+    event.preventDefault();
+    if (!otp) {
+      toast.error("Please enter OTP to verify.");
+      return;
+    }
     setLoading(true);
-    setErrorMessage("");
-
     try {
-      if (!formData.name || !formData.email || !formData.password) {
-        throw new Error("All fields are required.");
-      }
-
-      const response = await axios.post(`${apiUrl}/user/register`, formData);
-
-      // Check if the response status is 409 to handle the "Email already exists" error
-      if (response.status === 201) {
-        alert("Check your Gmail to Register successfully!");
-        setFormData({ name: "", email: "", password: "" });
-        navigate("/user/login");
-      }
+      await axios.post(`${apiUrl}/user/verify-otp`, {
+        email,
+        otp,
+      });
+      toast.success("OTP verified successfully!");
+      setOtpVerified(true);
+      setTimeout(() => navigate("/user/login"), 2000);
     } catch (error) {
-      if (error.response && error.response.status === 409) {
-        alert("Email already exist");
-        setErrorMessage(error.response.data.message);
-      } else {
-        alert(error.message);
+      let errorMessage = error.message;
+      if (error.response && error.response.data) {
+        errorMessage = error.response.data.message;
       }
+      toast.error(
+        <div>
+          <b>Failed to verify OTP!</b>
+          <p>{errorMessage}</p>
+        </div>
+      );
     } finally {
       setLoading(false);
     }
@@ -54,64 +79,49 @@ export default function Register() {
 
   return (
     <>
-      <div className="register-form-wrapper">
-        <div className="register-form-box">
-          <form className="register-form" onSubmit={handleSubmit}>
-            <span className="register-title">Sign up</span>
-            <span className="register-subtitle">
-              Create a free account with your email.
-            </span>
-            <div className="register-form-container">
-              <input
-                type="text"
-                class="input"
-                placeholder="Full Name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                class="input"
-                placeholder="Email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="password"
-                class="input"
-                placeholder="Password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
-            </div>{" "}
-            {loading && (
-              <div className="loading-container">
-                <svg id="register-loading" viewBox="25 25 50 50">
-                  <circle r="20" cy="50" cx="50"></circle>
-                </svg>
-              </div>
-            )}
-            <button type="submit">Sign up</button>
-          </form>
-
-          <div className="register-form-section">
-            <p>
-              Have an account? <Link to="/user/login">Log in</Link>{" "}
-            </p>
-          </div>
-        </div>
+      <div className="user-signup">
+        <h1>Sign Up</h1>
+        <form onSubmit={otpVerified ? null : handleSubmit}>
+          <input
+            type="text"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            placeholder="Password"
+          />
+          {otpSent && !otpVerified && (
+            <input
+              type="number"
+              value={otp}
+              onChange={(event) => setOtp(event.target.value)}
+              placeholder="Enter OTP"
+            />
+          )}
+          {otpSent && !otpVerified && (
+            <button onClick={handleOtpVerify}>Verify OTP</button>
+          )}
+          {!otpSent && (
+            <button type="submit">
+              {loading ? <p>Loading...</p> : "Sign Up"}
+            </button>
+          )}
+          <p>
+            Already have an account?{" "}
+            <Link to="/user/login">Try logging in.</Link>
+          </p>
+        </form>
       </div>
-      {errorMessage && (
-        <div className="error-message-container">
-          <h1 className="error-message">{errorMessage}</h1>
-        </div>
-      )}
     </>
   );
 }
