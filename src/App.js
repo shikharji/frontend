@@ -16,7 +16,7 @@ import Support from "./Components/pages/Support";
 import Gototop from "./Components/elements/Gototop";
 import Explore from "./Components/pages/Explore";
 import Qrcode from "./Components/elements/Qrcode";
-import Scrolltotop from "./Components/elements/Scrolltotop";
+// import Scrolltotop from "./Components/elements/Scrolltotop";
 import Nothing from "./Components/pages/Nothing";
 import Communities from "./Components/pages/Communities";
 
@@ -66,7 +66,7 @@ function App() {
       <Analytics />
       <SpeedInsights />
       <Sidenav />
-      <Scrolltotop />
+      {/* <Scrolltotop /> */}
       <Gototop />
 
       <Routes>

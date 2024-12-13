@@ -30,7 +30,7 @@ export default function Gototop() {
       {!isTop && (
         <div id="gototop">
           <button onClick={scrollToTop} className="gototop-btn">
-            Back to Top!
+            🔝
           </button>
         </div>
       )}

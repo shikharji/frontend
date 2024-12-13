@@ -351,17 +351,17 @@
 /* wildlife and nature start */
 .wildlife-container {
   background: linear-gradient(
-      rgba(176, 189, 200, 0.4) 7%,
-      rgba(173, 136, 200, 0.4) 100%
+      rgba(19, 79, 128, 0.3) 7%,
+      rgba(173, 136, 200, 0.3) 100%
     ),
-    url("https://cdn.pixabay.com/photo/2020/01/07/06/22/peacock-4746848_1280.jpg");
+    url("https://images.pexels.com/photos/2196587/pexels-photo-2196587.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 0.1px;
-  block-size: 100vh;
+  block-size: 90vh;
   background-size: cover;
   inline-size: 100%;
   position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -370,74 +370,19 @@
 .wildlife-description {
   color: rgb(5, 5, 5);
   text-align: center;
-  max-width: 700px;
-  margin: 0;
+  max-width: 600px;
 }
 .wildlife-title {
-  font-size: 3.2rem;
-  margin-block-start: 12.5rem;
+  font-size: 2.8rem;
+  margin-block-start: 9.5rem;
   margin-block-end: 1rem;
 }
 .wildlife-description {
   font-size: 1.7rem;
   margin-block-end: 1rem;
 }
-.wildlife-cta {
-  color: rgb(95, 135, 237);
-  background-color: white;
-  border-radius: 6px;
-  padding-block-end: 15px;
-  padding-block-start: 15px;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: center;
-  display: block;
-  inline-size: 9rem;
-  margin: 0 auto;
-}
-.wildlife-cta:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(91, 129, 223);
-}
+
 /* wildlife card start */
-.WildlifeCard-card__img img {
-  width: 100%;
-  vertical-align: top;
-  margin-bottom: 30px;
-}
-.WildlifeCard-card {
-  text-align: center;
-}
-.WildlifeCard-card__title {
-  font-family: "Montserrat", sans-serif;
-  text-transform: capitalize;
-  color: #ffffff;
-  line-height: 35px;
-  font-size: 24px;
-}
-.WildlifeCard-card__text {
-  font-family: "Hind", sans-serif;
-  color: #717171;
-  font-size: 16px;
-  line-height: 26px;
-  margin-bottom: 20px;
-}
-.WildlifeCard-card__readbtn {
-  font-family: "Hind", sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #a1a1a1;
-  text-decoration: none;
-  line-height: 26px;
-  transition: all ease 0.3s;
-  position: relative;
-}
-.WildlifeCard-divider {
-  background-color: #e1e1e1;
-  height: 2px;
-  max-width: 30px;
-  margin: 15px auto 20px;
-}
 .WildlifeCard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -445,6 +390,50 @@
   max-width: 1300px;
   margin: 50px auto;
   padding: 0 10px;
+}
+.WildlifeCard-card {
+  text-align: center;
+}
+.WildlifeCard-card img {
+  max-width: 96%;
+  vertical-align: top;
+  margin-bottom: 30px;
+}
+.WildlifeCard-card div h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  color: #ffffff;
+  line-height: 35px;
+  font-size: 24px;
+}
+.WildlifeCard-card div hr {
+  background-color: #e1e1e1;
+  height: 2px;
+  max-width: 30px;
+  margin: 15px auto 20px;
+}
+.WildlifeCard-card div p {
+  font-family: "Hind", sans-serif;
+  color: #717171;
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.WildlifeCard-card div a {
+  font-family: "Hind", sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 3rem;
+  padding: 1rem;
+  border: 2px solid red;
+  transition: all ease 0.5s;
+  position: relative;
+}
+.WildlifeCard-card div a:hover {
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  background-color: red;
 }
 /* wildlife card end */
 /* wildlife and nature end*/
@@ -546,42 +535,15 @@
 
 /* Facilities start */
 
-.facility-container {
-  max-width: 1200px;
-  width: 90%;
-  margin: auto;
-}
-.facility-btn {
-  display: inline-block;
-  padding: 0.5em 1.5em;
-  text-decoration: none;
-  border-radius: 50px;
-  cursor: pointer;
-  outline: none;
-  margin-top: 1em;
-  text-transform: uppercase;
-}
-.facility-btn-primary {
-  color: #fff;
-  background: #16a083;
-}
-.facility-btn-primary:hover {
-  background: #117964;
-  transition: background 0.3s ease-in-out;
-}
 .facility-showcase-area {
-  height: 50vh;
-  background: linear-gradient(
-      rgba(240, 240, 240, 0.144),
-      rgba(255, 255, 255, 0.336)
-    ),
+  height: 60vh;
+  background: linear-gradient(rgba(81, 130, 130, 0.1), #ac0e0e1a),
     url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #555;
+  color: #343433;
 }
-
 .facility-showcase-container {
   display: flex;
   flex-direction: column;
@@ -590,51 +552,57 @@
   height: 100%;
   font-size: 1.6rem;
 }
-
-.facility-main-title {
+.facility-showcase-container h1 {
   text-transform: uppercase;
   margin-top: 1.5em;
 }
-/* ......//about us//...... */
-#facility-about {
+.facility-showcase-container p {
+  max-width: 600px;
+  margin: 1rem;
+}
+.facility-showcase-container a {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  color: #fff;
+  background: #16a083;
+}
+.facility-showcase-container a:hover {
+  background: #117964;
+  transition: background 0.3s ease-in-out;
+}
+
+/* about us start */
+.facility-about {
   padding: 50px 0;
-  background: #f5f5f7;
+  background: #acacad;
 }
 .facility-about-wrapper {
   display: flex;
   flex-wrap: wrap;
 }
-#facility-about h2 {
+.facility-about-text h2 {
   font-size: 2.3rem;
   color: black;
 }
-#facility-about p {
+.facility-about-text p {
   font-size: 1.2rem;
   color: #555;
 }
 .facility-about-img {
   flex: 1 1 400px;
   padding: 30px;
-  transform: translateX(150%);
-  animation: about-img-animation 1s ease-in-out forwards;
-}
-@keyframes about-img-animation {
-  100% {
-    transform: translate(0);
-  }
 }
 .facility-about-text {
   flex: 1 1 400px;
   padding: 30px;
   margin: auto;
-  transform: translate(-150%);
-  animation: about-text-animation 1s ease-in-out forwards;
 }
-@keyframes about-text-animation {
-  100% {
-    transform: translate(0);
-  }
-}
+
 .facility-about-img img {
   display: block;
   height: 400px;
@@ -643,76 +611,10 @@
   object-fit: cover;
   object-position: right;
 }
-/* ..........////Food category///........... */
-#all-hotels {
-  padding: 5rem 0 10rem 0;
-}
-#all-hotels h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 400;
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  color: #555;
-}
-.all-hotels-container {
-  display: flex;
-  justify-content: space-between;
-}
-.all-hotels-container img {
-  display: block;
-  width: 100%;
-  margin: auto;
-  max-height: 300px;
-  object-fit: cover;
-  object-position: center;
-}
-.facility-img-container {
-  margin: 0 1rem;
-  position: relative;
-}
-.facility-img-content {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  z-index: 2;
-  text-align: center;
-  transition: all 0.3s ease-in-out 0.1s;
-}
-.facility-img-content h3 {
-  color: #fff;
-  font-size: 2.2rem;
-}
-.facility-img-content a {
-  font-size: 1.2rem;
-}
-.facility-img-container::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.871);
-  opacity: 0;
-  z-index: 1;
-  transform: scaleY(0);
-  transform-origin: 100% 100%;
-  transition: all 0.3s ease-in-out;
-}
-.facility-img-container:hover::after {
-  opacity: 1;
-  transform: scaleY(1);
-}
-.facility-img-container:hover .facility-img-content {
-  opacity: 1;
-  top: 40%;
-}
+/* about us end */
+/* facility end  */
 
-/* .........../Food Menu/............ */
+/* hotel start */
 .all-hotels-menu-heading {
   text-align: center;
   font-size: 3.4rem;
@@ -725,7 +627,14 @@
   flex-wrap: wrap;
   padding: 50px 0px 30px 0px;
 }
-.all-hotels-menu-container img {
+
+.all-hotels-menu-item {
+  display: flex;
+  flex: 1 1 600px;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+}
+.all-hotels-img img {
   display: block;
   width: 250px;
   height: 250px;
@@ -733,31 +642,17 @@
   object-fit: cover;
   object-position: center;
 }
-.all-hotels-menu-item {
-  display: flex;
-  flex: 1 1 600px;
-  justify-content: space-evenly;
-  margin-bottom: 3rem;
-}
 .all-hotels-description {
   margin: auto 1.5rem;
-}
-.facility-font-title {
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #444;
 }
 .all-hotels-description p {
   font-size: 1.4rem;
   color: #555;
   font-weight: 500;
 }
-.all-hotels-description .food-price {
-  color: #117964;
-  font-weight: 700;
-}
+/* hotel end  */
 
-/* ........./ Testimonial /.......... */
+/*  Testimonial start */
 #facility-testimonials {
   padding: 5rem 0;
   background: rgba(243, 243, 243);
@@ -773,20 +668,14 @@
   justify-content: space-between;
   font-size: 1.4rem;
   padding: 1rem;
-  color: rgb(205, 40, 40);
+  color: rgb(2, 2, 2);
 }
-.facility-testimonial-box .facility-checked {
-  color: #ff9529;
-}
-.facility-testimonial-box .facility-testimonial-text {
-  margin: 1rem 0;
-  color: #444;
-}
+
 .facility-testimonial-box {
   text-align: center;
   padding: 1rem;
 }
-.facility-customer-photo img {
+.facility-testimonial-box img {
   display: block;
   width: 150px;
   height: 150px;
@@ -795,24 +684,8 @@
   border-radius: 50%;
   margin: auto;
 }
-@media (max-width: 768px) {
-  /* ......./ food /......... */
-  .all-hotels-container {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .all-hotels-type:not(:last-child) {
-    margin-bottom: 3rem;
-  }
-  .all-hotels-type {
-    box-shadow: 5px 5px 10px 0 #aaa;
-  }
-  .facility-img-container {
-    margin: 0;
-  }
-}
 
-@media (max-width: 500px) {
+@media (max-width: 570px) {
   .facility-testimonial-container {
     flex-direction: column;
     text-align: center;
@@ -823,24 +696,6 @@
   .all-hotels-menu-item {
     flex-direction: column;
     text-align: center;
-  }
-  .facility-form-container {
-    width: 90%;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1200px) {
-  .facility-img-container h3 {
-    font-size: 1.5rem;
-  }
-  .facility-img-container .facility-btn {
-    font-size: 0.7rem;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 500px) {
-  .facility-showcase-area {
-    height: 50vmax;
   }
 }
 

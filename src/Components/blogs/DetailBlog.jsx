@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import Loading from "../elements/Loading";
 import { Helmet } from "react-helmet";
-import Comments from "./Comments";
 import apiUrl from "../utils/GetApiUrl";
+import axios from "axios";
 
 export default function DetailBlog() {
   const { id } = useParams();
@@ -44,6 +43,7 @@ export default function DetailBlog() {
         <>
           <BlogArticle
             title={blog.blogTitle}
+            img={blog.img}
             intro={blog.introduction}
             sections={blog.sections}
             conclusion={blog.conclusion}
@@ -51,7 +51,6 @@ export default function DetailBlog() {
           />
         </>
       )}
-      {blog && <Comments postId={blog._id} />}
     </>
   );
 }
@@ -60,6 +59,7 @@ export function BlogArticle({
   title,
   quotes,
   intro,
+  img,
   conclusion,
   sections = [],
 }) {
@@ -67,7 +67,7 @@ export function BlogArticle({
     <>
       <main id="BlogArticle-main">
         <h1>{title}</h1>
-
+        <img src={img} alt="Lost" />
         <h2>A Short Introduction:</h2>
 
         <p>

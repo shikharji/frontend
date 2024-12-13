@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import CardBlogs from "./CardBlogs";
-import Loading from "../elements/Loading";
-import axios from "axios";
 import { Helmet } from "react-helmet";
 import apiUrl from "../utils/GetApiUrl";
+import Loading from "../elements/Loading";
+import axios from "axios";
+import "./StyleBlogs.css";
 
 export default function Blogs() {
   return (
@@ -20,63 +21,7 @@ export default function Blogs() {
         />
       </Helmet>
 
-      {/* <Hero /> */}
       <AllBlogs />
-    </>
-  );
-}
-
-export function Hero() {
-  const [articles, setArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchRecentArticles = async () => {
-      try {
-        const response = await axios.get(`${apiUrl}/blogs`);
-        setArticles(response.data?.blogs || []);
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching recent articles:", error);
-        setLoading(false);
-      }
-    };
-
-    fetchRecentArticles();
-  }, []);
-
-  const recentThreeArticles = articles.slice(0, 3);
-
-  return (
-    <>
-      <h2 className="center-title">Recent Articles</h2>
-      {loading ? (
-        <Loading />
-      ) : (
-        <>
-          <section className="Blog-hero-articles">
-            {recentThreeArticles.map((article) => (
-              <div className="Blog-hero-article">
-                <div className="Blog-hero-left">
-                  <img
-                    src="https://cdn.pixabay.com/photo/2016/11/18/19/01/paris-1836415_1280.jpg"
-                    loading="lazy"
-                    alt=""
-                  />
-                </div>
-                <div className="Blog-hero-right">
-                  <p className="Blog-hero-date">Juillet, 24, 2020</p>
-                  <h1>{article.blogTitle}</h1>
-                  <p className="Blog-hero-description">
-                    {article.introduction}
-                  </p>
-                  <p className="Blog-hero-auteur">Julie Lablonde</p>
-                </div>
-              </div>
-            ))}
-          </section>
-        </>
-      )}
     </>
   );
 }

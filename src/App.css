@@ -1,15 +1,3 @@
-/* #height-100vh {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-} */
-/* .my-container {
-  margin: 0 auto;
-  padding: 15px;
-  max-width: 1000px;
-} */
 .flex-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -235,40 +223,16 @@
   z-index: 999;
 }
 .gototop-btn {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  padding: 10px 30px;
-  border: 1px solid;
-  border-radius: 1000px;
-  display: inline-block;
+  font-size: 2rem;
+  padding: 8px;
+  border: none;
+  border-radius: 2rem;
   transition: all 0.3s;
   position: relative;
 }
 .gototop-btn:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(27, 27, 27, 0.5);
-}
-.gototop-btn:active {
-  transform: translateY(-3px);
-}
-.gototop-btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-  transition: all 0.3s;
-}
-.gototop-btn:hover::after {
-  background-color: rgb(0, 238, 255);
-  transform: scaleX(1.4) scaleY(1.5);
-  opacity: 0;
+  box-shadow: 0 10px 20px rgba(27, 27, 27, 2.5);
 }
 /* go to top btn  */
 
@@ -314,94 +278,3 @@
 }
 
 /* blog wrapper slider  */
-
-/* comment design */
-.comment-card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 350px;
-  display: flex;
-  flex-direction: column;
-}
-
-.comment-title {
-  font-size: 24px;
-  font-weight: 600;
-  text-align: center;
-  color: #121315;
-}
-
-.comment-form {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.comment-group {
-  position: relative;
-}
-
-.comment-form .comment-group label {
-  font-size: 14px;
-  color: rgb(99, 102, 102);
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  background-color: #fff;
-  transition: all 0.3s ease;
-}
-
-.comment-form .comment-group input,
-.comment-form .comment-group textarea {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  outline: 0;
-  width: 100%;
-  background-color: transparent;
-}
-
-.comment-form .comment-group input:placeholder-shown + label,
-.comment-form .comment-group textarea:placeholder-shown + label {
-  top: 10px;
-  background-color: transparent;
-}
-
-.comment-form .comment-group input:focus,
-.comment-form .comment-group textarea:focus {
-  border-color: #3366cc;
-}
-
-.comment-form .comment-group input:focus + label,
-.comment-form .comment-group textarea:focus + label {
-  top: -10px;
-  left: 10px;
-  background-color: #fff;
-  color: #3366cc;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.comment-form .comment-group textarea {
-  resize: none;
-  height: 100px;
-}
-
-.comment-form button {
-  background-color: #3366cc;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.comment-form button:hover {
-  background-color: #27408b;
-}
-
-/* comment design */

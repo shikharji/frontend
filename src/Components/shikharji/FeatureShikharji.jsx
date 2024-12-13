@@ -175,10 +175,38 @@ export function Tonks() {
     </>
   );
 }
+
 export function Wildlife() {
   useEffect(() => {
     document.title = "Wildlife and Nature - Shikharji";
   }, []);
+
+  const data = [
+    {
+      title: "Nature's Beauty Unveiled",
+      desc: "Explore the mesmerizing beauty of nature at Parasnath Hill. From lush green forests to majestic waterfalls, immerse yourself in the tranquility of the natural world.",
+      img: "https://images.pexels.com/photos/2132180/pexels-photo-2132180.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      link: "",
+    },
+    {
+      title: "Wildlife Encounters",
+      desc: "Get up close and personal with the diverse wildlife of Parasnath Hill. From rare species of birds to exotic animals, experience the wonders of the natural world.",
+      img: "https://cdn.pixabay.com/photo/2021/06/24/12/27/elephants-6361065_1280.jpg",
+      link: "",
+    },
+    {
+      title: "Rare Plant Species",
+      desc: "Parasnath Hill is home to several rare and endangered plant species, including the likes of Madhuca longifolia and Holarrhena antidysenterica.",
+      img: "https://images.pexels.com/photos/35196/water-plant-green-fine-layers.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      link: "",
+    },
+    {
+      title: "Exotic Birds",
+      desc: "Parasnath Hill is a birdwatcher's paradise, with over 100 species of birds documented, including the likes of the Indian Peafowl, Red- headed Vulture, and the majestic Changeable Hawk Eagle.",
+      img: "https://cdn.pixabay.com/photo/2023/03/06/08/15/humming-bird-7832894_1280.jpg",
+      link: "",
+    },
+  ];
   return (
     <>
       <header className="wildlife-container">
@@ -190,67 +218,29 @@ export function Wildlife() {
           home. From exotic birds to rare plants, immerse yourself in the beauty
           of nature.
         </p>
-        <Link
-          className="wildlife-cta"
-          onClick={() => scrollToSection("wildlife-and-nature")}
-        >
-          Explore More
-        </Link>
       </header>
 
-      {/* Now the card start */}
-
       <div className="WildlifeCard-grid">
-        <div className="WildlifeCard-card">
-          <div className="WildlifeCard-card__img">
-            <img
-              src="https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-              loading="lazy"
-              alt=""
-            />
-          </div>
-          <div className="WildlifeCard-card__contenido">
-            <h3 className="WildlifeCard-card__title">
-              Nature's Beauty Unveiled
-            </h3>
-            <div className="WildlifeCard-divider"></div>
-            <p className="WildlifeCard-card__text">
-              Explore the mesmerizing beauty of nature at Parasnath Hill. From
-              lush green forests to majestic waterfalls, immerse yourself in the
-              tranquility of the natural world.
-            </p>
-            <Link to="/" className="WildlifeCard-card__readbtn">
-              read more
-            </Link>
-          </div>
-        </div>
-        <div className="WildlifeCard-card">
-          <div className="WildlifeCard-card__img">
-            <img
-              src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Zm9vZHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=500&q=60"
-              loading="lazy"
-              alt=""
-            />
-          </div>
-          <div className="WildlifeCard-card__contenido">
-            <h3 className="WildlifeCard-card__title">Wildlife Encounters</h3>
-            <div className="WildlifeCard-divider"></div>
-            <p className="WildlifeCard-card__text">
-              Get up close and personal with the diverse wildlife of Parasnath
-              Hill. From rare species of birds to exotic animals, experience the
-              wonders of the natural world.
-            </p>
-            <Link to="/" className="WildlifeCard-card__readbtn">
-              read more
-            </Link>
-          </div>
-        </div>
+        {data.map((item, index) => (
+          <>
+            <div className="WildlifeCard-card" key={index}>
+              <img src={item.img} loading="lazy" alt="" />
+              <div>
+                <h3>{item.title}</h3>
+                <hr></hr>
+                <p>{item.desc}</p>
+                <Link to="/">KNOW MORE</Link>
+              </div>
+            </div>
+          </>
+        ))}
       </div>
 
       <div id="wildlife-and-nature">Wildlife and more</div>
     </>
   );
 }
+
 export function Local() {
   useEffect(() => {
     document.title = "Local culture - Shikharji";
@@ -375,32 +365,59 @@ export function Hotels() {
     {
       name: "Madhuban Guest House ",
       rating: 3.7,
+      price: 250,
       img: "https://cdn.pixabay.com/photo/2022/11/02/19/24/hotel-7565884_1280.jpg",
     },
     {
       name: "Taran Bhavan",
       rating: 3.7,
+      price: 350,
       img: "https://cdn.pixabay.com/photo/2018/02/24/17/17/window-3178666_1280.jpg",
     },
     {
       name: "Nirmala Niwas",
       rating: 3.7,
+      price: 450,
       img: "https://cdn.pixabay.com/photo/2016/04/15/11/48/hotel-1330850_1280.jpg",
     },
     {
       name: "Dharm Mangal Vidyapith",
       rating: 3.7,
+      price: 550,
       img: "https://cdn.pixabay.com/photo/2016/06/10/01/05/hotel-room-1447201_1280.jpg",
     },
   ];
+
+  const RatingList = [
+    {
+      name: "Aman singh",
+      rating: 5,
+      img: "https://i.postimg.cc/5Nrw360Y/male-photo1.jpg",
+      review:
+        "The hotel's mountain view was breathtaking! It was the perfect getaway for a peaceful retreat. The rooms were comfortable, the staff was friendly, and the food was delicious. Highly recommended!",
+    },
+    {
+      name: "Manish pandey",
+      rating: 4,
+      img: "https://i.postimg.cc/sxd2xCD2/female-photo1.jpg",
+      review:
+        "The food was exceptional! Each dish was beautifully presented and bursting with flavor. The menu offered a great variety, and everything was cooked to perfection. A truly memorable dining experience.",
+    },
+    {
+      name: "Ashutosh ranjan",
+      rating: 4.5,
+      img: "https://i.postimg.cc/fy90qvkV/male-photo3.jpg",
+      review:
+        "I recently stayed at the hotel and was impressed by the level of service. The staff went above and beyond to ensure my stay was comfortable and enjoyable. The amenities were top-notch, and I would definitely stay here again.",
+    },
+  ];
+
   return (
     <>
       {/* hero */}
-      <section className="facility-showcase-area" id="facility-showcase">
+      <section className="facility-showcase-area">
         <div className="facility-showcase-container">
-          <h1 className="facility-main-title" id="facility-home">
-            Hotel & Facility
-          </h1>
+          <h1>Hotel & Facility</h1>
 
           <p>
             Experience luxury and comfort with our top-notch hotels and
@@ -415,10 +432,10 @@ export function Hotels() {
         </div>
       </section>
 
-      <section id="facility-about">
-        <div className="facility-about-wrapper facility-container">
+      <section className="facility-about">
+        <div className="facility-about-wrapper">
           <div className="facility-about-text">
-            <p className="facility-small">About Us</p>
+            <p>About Us</p>
             <h2>We've been providing exceptional services for 10 years</h2>
             <p>
               At Eat Right Food, we pride ourselves on providing exceptional
@@ -431,9 +448,9 @@ export function Hotels() {
           </div>
           <div className="facility-about-img">
             <img
-              src="https://i.postimg.cc/mgpwzmx9/about-photo.jpg"
+              src="https://images.pexels.com/photos/7820324/pexels-photo-7820324.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               loading="lazy"
-              alt="food"
+              alt="Reception"
             />
           </div>
         </div>
@@ -443,19 +460,29 @@ export function Hotels() {
       {/* all hotels */}
       <section id="all-hotels-menu">
         <h2 className="all-hotels-menu-heading">Explore All hotels</h2>
-        <div className="all-hotels-menu-container facility-container">
+        <div className="all-hotels-menu-container">
           {HotelsList.map((i) => {
+            const emailSubject = `Hotel Booking Request: ${i.name}`;
+            const emailBody = `Hello,\n\nI am interested in booking the hotel "${i.name}" priced at ₹${i.price}/day.\n\nPlease let me know the availability.\n\nThank you!`;
             return (
               <>
                 <div className="all-hotels-menu-item">
                   <div className="all-hotels-img">
-                    <img src={i.img} loading="lazy" alt="" />
+                    <img src={i.img} loading="lazy" alt="Lost" />
                   </div>
                   <div className="all-hotels-description">
                     <h2 className="all-hotels-titile">{i.name}</h2>
                     <p>Rating: {i.rating}</p>
-
-                    <p className="all-hotels-price">Price: &#8377; 250/day</p>
+                    <p className="all-hotels-price">
+                      Price: &#8377; {i.price}/day
+                    </p>
+                    <a
+                      href={`mailto:astroman6569@gmail.com?subject=${encodeURIComponent(
+                        emailSubject
+                      )}&body=${encodeURIComponent(emailBody)}`}
+                    >
+                      Know more..
+                    </a>
                   </div>
                 </div>
               </>
@@ -466,112 +493,18 @@ export function Hotels() {
 
       {/* all hotels */}
 
-      {/* foods section */}
-      <section id="all-hotels">
-        <h2>Types of food</h2>
-        <div className="all-hotels-container facility-container">
-          <div className="all-hotels-type facility-fruite">
-            <div className="facility-img-container">
-              <img
-                src="https://i.postimg.cc/yxThVPXk/food1.jpg"
-                loading="lazy"
-                alt="error"
-              />
-              <div className="facility-img-content">
-                <h3>fruite</h3>
-              </div>
-            </div>
-          </div>
-          <div className="all-hotels-type facility-vegetable">
-            <div className="facility-img-container">
-              <img
-                src="https://i.postimg.cc/Nffm6Rkk/food2.jpg"
-                loading="lazy"
-                alt="error"
-              />
-              <div className="facility-img-content">
-                <h3>vegetable</h3>
-              </div>
-            </div>
-          </div>
-          <div className="all-hotels-type facility-grin">
-            <div className="facility-img-container">
-              <img
-                src="https://i.postimg.cc/76ZwsPsd/food3.jpg"
-                loading="lazy"
-                alt="error"
-              />
-              <div className="facility-img-content">
-                <h3>grin</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* foods section */}
-
       {/* review from the customer */}
       <section id="facility-testimonials">
         <h2 className="facility-testimonial-title">What Our Customers Say</h2>
-        <div className="facility-testimonial-container facility-container">
-          <div className="facility-testimonial-box">
-            <div className="facility-customer-detail">
-              <div className="facility-customer-photo">
-                <img
-                  src="https://i.postimg.cc/5Nrw360Y/male-photo1.jpg"
-                  loading="lazy"
-                  alt=""
-                />
-                <p className="facility-customer-name">Ross Lee</p>
-              </div>
+        <div className="facility-testimonial-container">
+          {RatingList.map((i) => (
+            <div className="facility-testimonial-box" key={i.id}>
+              <img src={i.img} loading="lazy" alt={i.name} />
+              <p>{i.name}</p>
+              <p>{"⭐".repeat(i.rating)}</p>
+              <p>{i.review}</p>
             </div>
-            <div className="facility-star-rating">5 star</div>
-            <p className="facility-testimonial-text">
-              The hotel's mountain view was breathtaking! It was the perfect
-              getaway for a peaceful retreat. The rooms were comfortable, the
-              staff was friendly, and the food was delicious. Highly
-              recommended!
-            </p>
-          </div>
-          <div className="facility-testimonial-box">
-            <div className="facility-customer-detail">
-              <div className="facility-customer-photo">
-                <img
-                  src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg"
-                  loading="lazy"
-                  alt=""
-                />
-                <p className="facility-customer-name">Amelia Watson</p>
-              </div>
-            </div>
-            <div className="facility-star-rating">4.5 Star</div>
-            <p className="facility-testimonial-text">
-              The food was exceptional! Each dish was beautifully presented and
-              bursting with flavor. The menu offered a great variety, and
-              everything was cooked to perfection. A truly memorable dining
-              experience.
-            </p>
-          </div>
-          <div className="facility-testimonial-box">
-            <div className="facility-customer-detail">
-              <div className="facility-customer-photo">
-                <img
-                  src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg"
-                  loading="lazy"
-                  alt=""
-                />
-                <p className="facility-customer-name">Ben Roy</p>
-              </div>
-            </div>
-            <div className="facility-star-rating">4 star</div>
-            <p className="facility-testimonial-text">
-              I recently stayed at the hotel and was impressed by the level of
-              service. The staff went above and beyond to ensure my stay was
-              comfortable and enjoyable. The amenities were top-notch, and I
-              would definitely stay here again.
-            </p>
-          </div>
+          ))}
         </div>
       </section>
       {/* review from the customer */}

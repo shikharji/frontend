@@ -1,49 +1,10 @@
-/* blog hero start */
-.Blog-hero-articles {
-  margin-top: 30px;
-  margin: 10px 80px;
-}
-.Blog-hero-articles .Blog-hero-article {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-.Blog-hero-articles .Blog-hero-article .Blog-hero-left img {
-  height: 300px;
-  width: 500px;
-}
-.Blog-hero-articles .Blog-hero-article .Blog-hero-right {
-  margin-left: 40px;
-  max-width: 50%;
-}
-.Blog-hero-articles .Blog-hero-article .Blog-hero-right p .Blog-hero-date {
-  color: #7f7e7e;
-}
-.Blog-hero-articles
-  .Blog-hero-article
-  .Blog-hero-right
-  p.Blog-hero-description {
-  color: #ffffff;
-}
-@media screen and (max-width: 640px) {
-  .Blog-hero-articles .Blog-hero-article .Blog-hero-left img {
-    height: 100%;
-    width: 100%;
-  }
-  .Blog-hero-articles .Blog-hero-article .Blog-hero-right {
-    margin: 0px;
-    max-width: 100%;
-  }
-}
-
-/* blog hero end */
-
 /* blog detail article start */
 #BlogArticle-main blockquote {
-  border-left: 5px solid;
+  border-left: 3px solid;
   margin: 2rem 0;
+  color: aqua;
   padding: 1em 40px;
-  font-size: 1.2em;
+  font-size: 0.9em;
 }
 #BlogArticle-main blockquote:before {
   content: "\00201C";
@@ -60,31 +21,44 @@
   font-weight: 900;
 }
 #BlogArticle-main {
-  line-height: 2em;
-  padding: 0 2rem;
+  line-height: 1.8em;
+  padding: 0 5%;
   font-size: 1.3em;
   letter-spacing: 1px;
-  max-width: 600px;
+  word-spacing: 2px;
+  max-width: 850px;
+  color: whitesmoke;
   margin: 0 auto;
   margin-bottom: 9rem;
 }
 #BlogArticle-main h1 {
   margin-top: 6rem;
+  line-height: 1.3em !important;
 }
 #BlogArticle-main p {
   margin-top: 1rem;
+  color: #d1cece;
+  font-size: 1.2rem;
+}
+#BlogArticle-main p b {
+  color: #7f7e7e;
+  font-size: 1rem;
+}
+#BlogArticle-main img {
+  max-width: 95%;
+  border-radius: 1.5rem;
+  margin: 2rem 0;
 }
 #BlogArticle-main h2:before {
   content: "";
   display: block;
-  width: 10%;
+  width: 30%;
   border-top: 0.15em solid #333;
-  padding-top: 1em;
-  margin-top: 4rem;
+  margin: 1.3rem 0 3.3rem 0;
 }
 /* blog detail article end */
 
-/* blog card 2 start */
+/* blog card start */
 .CardBlogs-container {
   display: flex;
   flex-wrap: wrap;
@@ -154,4 +128,4 @@
   border-style: none;
   cursor: pointer;
 }
-/* blog card 2 end */
+/* blog card  end */

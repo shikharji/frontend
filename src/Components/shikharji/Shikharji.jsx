@@ -262,6 +262,7 @@ export function BlogShikharji() {
                 <div key={blog._id}>
                   <CardBlogs
                     id={blog._id}
+                    img={blog.img}
                     title={blog.blogTitle}
                     tags={blog.tags}
                     desc={blog.introduction}
