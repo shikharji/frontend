@@ -9,12 +9,6 @@ export default function DetailTemple() {
   const { id } = useParams();
   const [temple, setTemple] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [comments, setComments] = useState([]);
-  const [commentData, setCommentData] = useState({
-    topic: "",
-    body: "",
-    userId: "",
-  });
   useEffect(() => {
     const getTempleDetail = async () => {
       try {
@@ -31,83 +25,8 @@ export default function DetailTemple() {
     getTempleDetail();
   }, [id]);
 
-  useEffect(() => {
-    const getComments = async () => {
-      try {
-        const { data } = await axios.get(
-          `http://localhost:4000/comment/temple/${id}/comments?resourceType=temple`
-        );
-        console.log("API Response:", data);
-        if (data?.success) {
-          setComments(data?.comments);
-          console.log("Comments:", data?.comments);
-        } else {
-          console.log("No Comments Found");
-        }
-      } catch (error) {
-        console.log("API Error:", error);
-      }
-    };
-    getComments();
-  }, [id]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setCommentData({
-      ...commentData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const userId = localStorage.getItem("Token");
-      const response = await axios.post(
-        `http://localhost:4000/comment/temple/${id}/comments?resourceType=temple`,
-        {
-          topic: commentData.topic,
-          body: commentData.body,
-          userId: userId,
-        }
-      );
-      setComments([...comments, response.data]);
-      setCommentData({ topic: "", body: "" });
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   return (
     <>
-      {/* Display existing comments */}
-      {comments.length > 0 ? (
-        comments.map((comment) => (
-          <div key={comment._id}>
-            <h3>{comment.topic}</h3>
-            <p>{comment.body}</p>
-          </div>
-        ))
-      ) : (
-        <p>No comments</p>
-      )}
-      {/* Form to add a new comment */}
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="topic"
-          placeholder="Comment Topic"
-          value={commentData.topic}
-          onChange={handleChange}
-        />
-        <textarea
-          name="body"
-          placeholder="Your Comment"
-          value={commentData.body}
-          onChange={handleChange}
-        ></textarea>
-        <button type="submit">Add Comment</button>
-      </form>
       <Helmet>
         <title>{`${temple?.templeName || "Temple"}`}</title>
         <meta

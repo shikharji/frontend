@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import apiUrl from "../utils/GetApiUrl";
+import Loading from "../elements/Loading";
 
 export default function DetailProduct() {
   const { id } = useParams();
@@ -44,7 +45,7 @@ export default function DetailProduct() {
   };
 
   if (!product) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
   return (
     <>
@@ -61,49 +62,25 @@ export function SingleProduct({ product, handleBuyNow }) {
           <div className="col-2">
             <img src={product.img} id="ProductImg" alt="Product" />
             <div className="small-img-row">
-              <div className="small-img-col">
-                <img
-                  src="https://github.com/khushiTyagi12/Ecommerce-Website-Design/blob/main/gallery-1.jpg?raw=true"
-                  alt="Product"
-                />
-              </div>
-              <div className="small-img-col">
-                <img
-                  src="https://github.com/khushiTyagi12/Ecommerce-Website-Design/blob/main/gallery-2.jpg?raw=true"
-                  alt="Product"
-                />
-              </div>
-              <div className="small-img-col">
-                <img
-                  src="https://github.com/khushiTyagi12/Ecommerce-Website-Design/blob/main/gallery-3.jpg?raw=true"
-                  alt="Product"
-                />
-              </div>
-              <div className="small-img-col">
-                <img
-                  src="https://github.com/khushiTyagi12/Ecommerce-Website-Design/blob/main/gallery-4.jpg?raw=true"
-                  alt="Product"
-                />
-              </div>
+              {product.moreImage.map((image, index) => (
+                <div className="small-img-col" key={index}>
+                  <img src={image} alt={`Lost Product ${index + 1}`} />
+                </div>
+              ))}
             </div>
           </div>
           <div className="col-2">
+            <p className="price">₹ {product.price}</p>
             <h1>{product.name}</h1>
-            <h4>{product.description}</h4>
-            <h3>${product.price}</h3>
+            <p>{product.description}</p>
 
             <button className="buy-now-btn" onClick={handleBuyNow}>
               Buy now..
             </button>
-            <h3>
-              Product Details <i className="fa fa-indent"></i>
-            </h3>
+
+            <p className="product-detail">Product Details 👇</p>
             <br />
-            <p>
-              Give your summer wardrobe a style upgrade with the HRX Men's
-              Active T-shirt. Team it with a pair of shorts for your morning
-              workout or denims for an evening out with the guys.
-            </p>
+            <p>{product.details}</p>
           </div>
         </div>
       </div>

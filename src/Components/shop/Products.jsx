@@ -1,8 +1,9 @@
-import axios from "axios";
-import "./Products.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import apiUrl from "../utils/GetApiUrl";
+import axios from "axios";
+import "./Products.css";
+import Loading from "../elements/Loading";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
@@ -33,7 +34,7 @@ export default function Products() {
               <SingleProduct key={product._id} product={product} />
             ))
           ) : (
-            <p>Loading...</p>
+            <Loading />
           )}
         </div>
       </div>
@@ -58,13 +59,10 @@ export function SingleProduct({ product }) {
             <div class="product-label">
               <div class="product-name">
                 <h1>{product.name}</h1>
-                <p class="price">${product.price}</p>
+                <p class="price">₹ {product.price}</p>
                 <p>{product.description}</p>
               </div>
-              <h3>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                iusto facilis dignissimos maiores molestias adipisci obcaecati .
-              </h3>
+              <h3>{product.details}</h3>
             </div>
           </div>
         </div>

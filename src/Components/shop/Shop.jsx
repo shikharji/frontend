@@ -24,7 +24,7 @@ export function ProductRating() {
             src="https://github.com/khushiTyagi12/Ecommerce-Website-Design/blob/main/user-1.png?raw=true"
             alt="lost"
           />
-          <h3>Khushi</h3>
+          <h3>Charlie</h3>
         </div>
 
         <div class="col-3">
@@ -38,7 +38,7 @@ export function ProductRating() {
             src="https://github.com/khushiTyagi12/Ecommerce-Website-Design/blob/main/user-2.png?raw=true"
             alt="lost"
           />
-          <h3>Gaurav</h3>
+          <h3>Ashu</h3>
         </div>
 
         <div class="col-3">
@@ -51,7 +51,7 @@ export function ProductRating() {
             src="https://github.com/khushiTyagi12/Ecommerce-Website-Design/blob/main/user-3.png?raw=true"
             alt="lost"
           />
-          <h3>Ananya</h3>
+          <h3>Astroman</h3>
         </div>
       </div>
     </>
