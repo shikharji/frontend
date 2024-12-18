@@ -22,6 +22,7 @@ export default function Jainism() {
           content="Jainism, Jain texts, arts, philosophy, practices, principles, cosmology, blogs, spirituality, heritage, teachings"
         />
       </Helmet>
+
       <IntroHero />
       <FeatureJainism />
       <BlogJainism />

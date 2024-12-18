@@ -7,6 +7,7 @@ export default function CardTirthankara({
   name,
   symbol,
   birthPlace,
+  deathplace,
 }) {
   return (
     <>
@@ -21,14 +22,10 @@ export default function CardTirthankara({
           <h1>
             {rank}. {name}
           </h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eaque
-            deleniti nobis blanditiis omnis, aliquam laborum at nulla voluptas
-            officiis!
-          </p>
           <ul className="card3-ul">
             <li>Symbol: {symbol}</li>
             <li>Birth place: {birthPlace}</li>
+            <li>Nirvana : {deathplace}</li>
           </ul>
 
           <Link to={`/tirthankara-detail/${id}`}>Learn More →</Link>

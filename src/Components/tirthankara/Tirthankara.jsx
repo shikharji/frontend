@@ -98,7 +98,10 @@ export function AllTirthankara() {
       try {
         const { data } = await axios.get(`${apiUrl}/tirthankar`);
         if (data?.success) {
-          setTirthankar(data?.tirthankar);
+          const sortedTirthankar = data.tirthankar.sort(
+            (a, b) => a.rank - b.rank
+          );
+          setTirthankar(sortedTirthankar);
           setLoading(false);
         }
       } catch (error) {
@@ -128,6 +131,7 @@ export function AllTirthankara() {
                   name={t.name}
                   symbol={t.symbol}
                   birthPlace={t.birthPlace}
+                  deathplace={t.additionalInfo.deathPlace}
                 />
               </div>
             ))}{" "}

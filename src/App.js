@@ -58,6 +58,7 @@ import Login from "./Components/user/Login";
 import VerifyEmail from "./Components/user/VerifyEmail";
 import Shop from "./Components/shop/Shop";
 import DetailProduct from "./Components/shop/DetailProduct";
+import ScrollToTop from "./Components/elements/ScrollToTop";
 
 function App() {
   return (
@@ -66,6 +67,7 @@ function App() {
       <SpeedInsights />
       <Sidenav />
       <Gototop />
+      <ScrollToTop />
 
       <Routes>
         <Route path="/" element={<Home />} />

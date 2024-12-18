@@ -1,30 +1,5 @@
 import { Link } from "react-router-dom";
 
-export default function BlogJainism({ id, title, desc }) {
-  return (
-    <>
-      <div className="Jain-blog-blog-card">
-        <div className="Jain-blog-meta">
-          <div
-            className="Jain-blog-photo"
-            style={{
-              backgroundImage:
-                "url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)",
-            }}
-          ></div>
-        </div>
-        <div className="Jain-blog-description">
-          <h1>{title}</h1>
-          <p>{desc}</p>
-          <p className="Jain-blog-read-more">
-            <Link to={`/blog-detail/${id}`}>Read More</Link>
-          </p>
-        </div>
-      </div>
-    </>
-  );
-}
-
 export function BlogJainism2({ id, img, title, desc }) {
   return (
     <>
